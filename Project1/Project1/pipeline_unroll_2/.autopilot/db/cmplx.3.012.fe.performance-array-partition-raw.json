@@ -1,0 +1,19 @@
+{
+  "0": {
+    "basicblocks": 41,
+    "calls": "",
+    "file": "conv2D0.cpp",
+    "fileloc": 7,
+    "instructions": 294,
+    "loads": {
+      "L": 64,
+      "T": 4
+    },
+    "name": "conv2D0",
+    "stores": {
+      "L": 26,
+      "T": 1
+    },
+    "total_instructions": 294
+  }
+}

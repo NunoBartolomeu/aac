@@ -1,0 +1,429 @@
+
+
+================================================================
+== Vitis HLS Report for 'conv2D0'
+================================================================
+* Date:           Thu Apr 11 20:50:57 2024
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        Project1
+* Solution:       block_best_unroll_best (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z010i-clg225-1L
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.492 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       12|       12|  0.120 us|  0.120 us|   13|   13|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 13
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.32>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%img_in_addr_10 = getelementptr i8 %img_in, i64 0, i64 10" [conv2D0.cpp:15]   --->   Operation 14 'getelementptr' 'img_in_addr_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [2/2] (2.32ns)   --->   "%img_inT_10 = load i4 %img_in_addr_10" [conv2D0.cpp:15]   --->   Operation 15 'load' 'img_inT_10' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%img_in_addr_11 = getelementptr i8 %img_in, i64 0, i64 11" [conv2D0.cpp:15]   --->   Operation 16 'getelementptr' 'img_in_addr_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [2/2] (2.32ns)   --->   "%img_inT_11 = load i4 %img_in_addr_11" [conv2D0.cpp:15]   --->   Operation 17 'load' 'img_inT_11' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 2 <SV = 1> <Delay = 2.32>
+ST_2 : Operation 18 [1/2] (2.32ns)   --->   "%img_inT_10 = load i4 %img_in_addr_10" [conv2D0.cpp:15]   --->   Operation 18 'load' 'img_inT_10' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 19 [1/2] (2.32ns)   --->   "%img_inT_11 = load i4 %img_in_addr_11" [conv2D0.cpp:15]   --->   Operation 19 'load' 'img_inT_11' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%img_in_addr_14 = getelementptr i8 %img_in, i64 0, i64 14" [conv2D0.cpp:15]   --->   Operation 20 'getelementptr' 'img_in_addr_14' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [2/2] (2.32ns)   --->   "%img_inT_14 = load i4 %img_in_addr_14" [conv2D0.cpp:15]   --->   Operation 21 'load' 'img_inT_14' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%img_in_addr_15 = getelementptr i8 %img_in, i64 0, i64 15" [conv2D0.cpp:15]   --->   Operation 22 'getelementptr' 'img_in_addr_15' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [2/2] (2.32ns)   --->   "%img_inT_15 = load i4 %img_in_addr_15" [conv2D0.cpp:15]   --->   Operation 23 'load' 'img_inT_15' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 3 <SV = 2> <Delay = 2.32>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%img_in_addr = getelementptr i8 %img_in, i64 0, i64 0" [conv2D0.cpp:15]   --->   Operation 24 'getelementptr' 'img_in_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [2/2] (2.32ns)   --->   "%img_inT = load i4 %img_in_addr" [conv2D0.cpp:15]   --->   Operation 25 'load' 'img_inT' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%img_in_addr_1 = getelementptr i8 %img_in, i64 0, i64 1" [conv2D0.cpp:15]   --->   Operation 26 'getelementptr' 'img_in_addr_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 27 [2/2] (2.32ns)   --->   "%img_inT_1 = load i4 %img_in_addr_1" [conv2D0.cpp:15]   --->   Operation 27 'load' 'img_inT_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 28 [1/2] (2.32ns)   --->   "%img_inT_14 = load i4 %img_in_addr_14" [conv2D0.cpp:15]   --->   Operation 28 'load' 'img_inT_14' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 29 [1/2] (2.32ns)   --->   "%img_inT_15 = load i4 %img_in_addr_15" [conv2D0.cpp:15]   --->   Operation 29 'load' 'img_inT_15' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%weights_addr_8 = getelementptr i8 %weights, i64 0, i64 8" [conv2D0.cpp:18]   --->   Operation 30 'getelementptr' 'weights_addr_8' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 31 [2/2] (2.32ns)   --->   "%weightsT_8 = load i4 %weights_addr_8" [conv2D0.cpp:18]   --->   Operation 31 'load' 'weightsT_8' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+
+State 4 <SV = 3> <Delay = 2.32>
+ST_4 : Operation 32 [1/2] (2.32ns)   --->   "%img_inT = load i4 %img_in_addr" [conv2D0.cpp:15]   --->   Operation 32 'load' 'img_inT' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 33 [1/2] (2.32ns)   --->   "%img_inT_1 = load i4 %img_in_addr_1" [conv2D0.cpp:15]   --->   Operation 33 'load' 'img_inT_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 34 [1/1] (0.00ns)   --->   "%img_in_addr_4 = getelementptr i8 %img_in, i64 0, i64 4" [conv2D0.cpp:15]   --->   Operation 34 'getelementptr' 'img_in_addr_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 35 [2/2] (2.32ns)   --->   "%img_inT_4 = load i4 %img_in_addr_4" [conv2D0.cpp:15]   --->   Operation 35 'load' 'img_inT_4' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 36 [1/1] (0.00ns)   --->   "%img_in_addr_5 = getelementptr i8 %img_in, i64 0, i64 5" [conv2D0.cpp:15]   --->   Operation 36 'getelementptr' 'img_in_addr_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 37 [2/2] (2.32ns)   --->   "%img_inT_5 = load i4 %img_in_addr_5" [conv2D0.cpp:15]   --->   Operation 37 'load' 'img_inT_5' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 38 [1/1] (0.00ns)   --->   "%weights_addr = getelementptr i8 %weights, i64 0, i64 0" [conv2D0.cpp:18]   --->   Operation 38 'getelementptr' 'weights_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 39 [2/2] (2.32ns)   --->   "%weightsT = load i4 %weights_addr" [conv2D0.cpp:18]   --->   Operation 39 'load' 'weightsT' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_4 : Operation 40 [1/1] (0.00ns)   --->   "%weights_addr_3 = getelementptr i8 %weights, i64 0, i64 3" [conv2D0.cpp:18]   --->   Operation 40 'getelementptr' 'weights_addr_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 41 [2/2] (2.32ns)   --->   "%weightsT_3 = load i4 %weights_addr_3" [conv2D0.cpp:18]   --->   Operation 41 'load' 'weightsT_3' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_4 : Operation 42 [1/2] (2.32ns)   --->   "%weightsT_8 = load i4 %weights_addr_8" [conv2D0.cpp:18]   --->   Operation 42 'load' 'weightsT_8' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+
+State 5 <SV = 4> <Delay = 2.32>
+ST_5 : Operation 43 [1/2] (2.32ns)   --->   "%img_inT_4 = load i4 %img_in_addr_4" [conv2D0.cpp:15]   --->   Operation 43 'load' 'img_inT_4' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_5 : Operation 44 [1/2] (2.32ns)   --->   "%img_inT_5 = load i4 %img_in_addr_5" [conv2D0.cpp:15]   --->   Operation 44 'load' 'img_inT_5' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_5 : Operation 45 [1/1] (0.00ns)   --->   "%img_in_addr_6 = getelementptr i8 %img_in, i64 0, i64 6" [conv2D0.cpp:15]   --->   Operation 45 'getelementptr' 'img_in_addr_6' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 46 [2/2] (2.32ns)   --->   "%img_inT_6 = load i4 %img_in_addr_6" [conv2D0.cpp:15]   --->   Operation 46 'load' 'img_inT_6' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_5 : Operation 47 [1/1] (0.00ns)   --->   "%img_in_addr_7 = getelementptr i8 %img_in, i64 0, i64 7" [conv2D0.cpp:15]   --->   Operation 47 'getelementptr' 'img_in_addr_7' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 48 [2/2] (2.32ns)   --->   "%img_inT_7 = load i4 %img_in_addr_7" [conv2D0.cpp:15]   --->   Operation 48 'load' 'img_inT_7' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_5 : Operation 49 [1/2] (2.32ns)   --->   "%weightsT = load i4 %weights_addr" [conv2D0.cpp:18]   --->   Operation 49 'load' 'weightsT' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_5 : Operation 50 [1/2] (2.32ns)   --->   "%weightsT_3 = load i4 %weights_addr_3" [conv2D0.cpp:18]   --->   Operation 50 'load' 'weightsT_3' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_5 : Operation 51 [1/1] (0.00ns)   --->   "%weights_addr_5 = getelementptr i8 %weights, i64 0, i64 5" [conv2D0.cpp:18]   --->   Operation 51 'getelementptr' 'weights_addr_5' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 52 [2/2] (2.32ns)   --->   "%weightsT_5 = load i4 %weights_addr_5" [conv2D0.cpp:18]   --->   Operation 52 'load' 'weightsT_5' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_5 : Operation 53 [1/1] (0.00ns)   --->   "%weights_addr_6 = getelementptr i8 %weights, i64 0, i64 6" [conv2D0.cpp:18]   --->   Operation 53 'getelementptr' 'weights_addr_6' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 54 [2/2] (2.32ns)   --->   "%weightsT_6 = load i4 %weights_addr_6" [conv2D0.cpp:18]   --->   Operation 54 'load' 'weightsT_6' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+
+State 6 <SV = 5> <Delay = 2.32>
+ST_6 : Operation 55 [1/2] (2.32ns)   --->   "%img_inT_6 = load i4 %img_in_addr_6" [conv2D0.cpp:15]   --->   Operation 55 'load' 'img_inT_6' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_6 : Operation 56 [1/2] (2.32ns)   --->   "%img_inT_7 = load i4 %img_in_addr_7" [conv2D0.cpp:15]   --->   Operation 56 'load' 'img_inT_7' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_6 : Operation 57 [1/1] (0.00ns)   --->   "%img_in_addr_8 = getelementptr i8 %img_in, i64 0, i64 8" [conv2D0.cpp:15]   --->   Operation 57 'getelementptr' 'img_in_addr_8' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 58 [2/2] (2.32ns)   --->   "%img_inT_8 = load i4 %img_in_addr_8" [conv2D0.cpp:15]   --->   Operation 58 'load' 'img_inT_8' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_6 : Operation 59 [1/1] (0.00ns)   --->   "%img_in_addr_9 = getelementptr i8 %img_in, i64 0, i64 9" [conv2D0.cpp:15]   --->   Operation 59 'getelementptr' 'img_in_addr_9' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 60 [2/2] (2.32ns)   --->   "%img_inT_9 = load i4 %img_in_addr_9" [conv2D0.cpp:15]   --->   Operation 60 'load' 'img_inT_9' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_6 : Operation 61 [1/1] (0.00ns)   --->   "%weights_addr_1 = getelementptr i8 %weights, i64 0, i64 1" [conv2D0.cpp:18]   --->   Operation 61 'getelementptr' 'weights_addr_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 62 [2/2] (2.32ns)   --->   "%weightsT_1 = load i4 %weights_addr_1" [conv2D0.cpp:18]   --->   Operation 62 'load' 'weightsT_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_6 : Operation 63 [1/2] (2.32ns)   --->   "%weightsT_5 = load i4 %weights_addr_5" [conv2D0.cpp:18]   --->   Operation 63 'load' 'weightsT_5' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_6 : Operation 64 [1/2] (2.32ns)   --->   "%weightsT_6 = load i4 %weights_addr_6" [conv2D0.cpp:18]   --->   Operation 64 'load' 'weightsT_6' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_6 : Operation 65 [1/1] (0.00ns)   --->   "%weights_addr_7 = getelementptr i8 %weights, i64 0, i64 7" [conv2D0.cpp:18]   --->   Operation 65 'getelementptr' 'weights_addr_7' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 66 [2/2] (2.32ns)   --->   "%weightsT_7 = load i4 %weights_addr_7" [conv2D0.cpp:18]   --->   Operation 66 'load' 'weightsT_7' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_6 : Operation 67 [3/3] (1.05ns) (grouped into DSP with root node add_ln31)   --->   "%acc = mul i8 %weightsT, i8 %img_inT" [conv2D0.cpp:31]   --->   Operation 67 'mul' 'acc' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 68 [3/3] (1.05ns) (grouped into DSP with root node add_ln31_4)   --->   "%mul_ln31_7 = mul i8 %weightsT_8, i8 %img_inT_10" [conv2D0.cpp:31]   --->   Operation 68 'mul' 'mul_ln31_7' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 69 [3/3] (1.05ns) (grouped into DSP with root node add_ln31_12)   --->   "%mul_ln31_16 = mul i8 %weightsT_8, i8 %img_inT_11" [conv2D0.cpp:31]   --->   Operation 69 'mul' 'mul_ln31_16' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 70 [3/3] (1.05ns) (grouped into DSP with root node add_ln31_28)   --->   "%mul_ln31_34 = mul i8 %weightsT_8, i8 %img_inT_15" [conv2D0.cpp:31]   --->   Operation 70 'mul' 'mul_ln31_34' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 7 <SV = 6> <Delay = 3.37>
+ST_7 : Operation 71 [1/2] (2.32ns)   --->   "%img_inT_8 = load i4 %img_in_addr_8" [conv2D0.cpp:15]   --->   Operation 71 'load' 'img_inT_8' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_7 : Operation 72 [1/2] (2.32ns)   --->   "%img_inT_9 = load i4 %img_in_addr_9" [conv2D0.cpp:15]   --->   Operation 72 'load' 'img_inT_9' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_7 : Operation 73 [1/1] (0.00ns)   --->   "%img_in_addr_12 = getelementptr i8 %img_in, i64 0, i64 12" [conv2D0.cpp:15]   --->   Operation 73 'getelementptr' 'img_in_addr_12' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 74 [2/2] (2.32ns)   --->   "%img_inT_12 = load i4 %img_in_addr_12" [conv2D0.cpp:15]   --->   Operation 74 'load' 'img_inT_12' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_7 : Operation 75 [1/1] (0.00ns)   --->   "%img_in_addr_13 = getelementptr i8 %img_in, i64 0, i64 13" [conv2D0.cpp:15]   --->   Operation 75 'getelementptr' 'img_in_addr_13' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 76 [2/2] (2.32ns)   --->   "%img_inT_13 = load i4 %img_in_addr_13" [conv2D0.cpp:15]   --->   Operation 76 'load' 'img_inT_13' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_7 : Operation 77 [1/2] (2.32ns)   --->   "%weightsT_1 = load i4 %weights_addr_1" [conv2D0.cpp:18]   --->   Operation 77 'load' 'weightsT_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_7 : Operation 78 [1/1] (0.00ns)   --->   "%weights_addr_4 = getelementptr i8 %weights, i64 0, i64 4" [conv2D0.cpp:18]   --->   Operation 78 'getelementptr' 'weights_addr_4' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 79 [2/2] (2.32ns)   --->   "%weightsT_4 = load i4 %weights_addr_4" [conv2D0.cpp:18]   --->   Operation 79 'load' 'weightsT_4' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_7 : Operation 80 [1/2] (2.32ns)   --->   "%weightsT_7 = load i4 %weights_addr_7" [conv2D0.cpp:18]   --->   Operation 80 'load' 'weightsT_7' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_7 : Operation 81 [2/3] (1.05ns) (grouped into DSP with root node add_ln31)   --->   "%acc = mul i8 %weightsT, i8 %img_inT" [conv2D0.cpp:31]   --->   Operation 81 'mul' 'acc' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 82 [3/3] (1.05ns) (grouped into DSP with root node add_ln31_3)   --->   "%mul_ln31_4 = mul i8 %weightsT_5, i8 %img_inT_6" [conv2D0.cpp:31]   --->   Operation 82 'mul' 'mul_ln31_4' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 83 [3/3] (1.05ns) (grouped into DSP with root node add_ln31_5)   --->   "%mul_ln31_5 = mul i8 %weightsT_6, i8 %img_inT_8" [conv2D0.cpp:31]   --->   Operation 83 'mul' 'mul_ln31_5' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 84 [2/3] (1.05ns) (grouped into DSP with root node add_ln31_4)   --->   "%mul_ln31_7 = mul i8 %weightsT_8, i8 %img_inT_10" [conv2D0.cpp:31]   --->   Operation 84 'mul' 'mul_ln31_7' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 85 [3/3] (1.05ns) (grouped into DSP with root node add_ln31_11)   --->   "%mul_ln31_13 = mul i8 %weightsT_5, i8 %img_inT_7" [conv2D0.cpp:31]   --->   Operation 85 'mul' 'mul_ln31_13' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 86 [3/3] (1.05ns) (grouped into DSP with root node add_ln31_13)   --->   "%mul_ln31_14 = mul i8 %weightsT_6, i8 %img_inT_9" [conv2D0.cpp:31]   --->   Operation 86 'mul' 'mul_ln31_14' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 87 [2/3] (1.05ns) (grouped into DSP with root node add_ln31_12)   --->   "%mul_ln31_16 = mul i8 %weightsT_8, i8 %img_inT_11" [conv2D0.cpp:31]   --->   Operation 87 'mul' 'mul_ln31_16' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 88 [3/3] (1.05ns) (grouped into DSP with root node add_ln31_19)   --->   "%mul_ln31_22 = mul i8 %weightsT_5, i8 %img_inT_10" [conv2D0.cpp:31]   --->   Operation 88 'mul' 'mul_ln31_22' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 89 [3/3] (1.05ns) (grouped into DSP with root node add_ln31_20)   --->   "%mul_ln31_25 = mul i8 %weightsT_8, i8 %img_inT_14" [conv2D0.cpp:31]   --->   Operation 89 'mul' 'mul_ln31_25' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 90 [3/3] (1.05ns) (grouped into DSP with root node add_ln31_27)   --->   "%mul_ln31_31 = mul i8 %weightsT_5, i8 %img_inT_11" [conv2D0.cpp:31]   --->   Operation 90 'mul' 'mul_ln31_31' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 91 [2/3] (1.05ns) (grouped into DSP with root node add_ln31_28)   --->   "%mul_ln31_34 = mul i8 %weightsT_8, i8 %img_inT_15" [conv2D0.cpp:31]   --->   Operation 91 'mul' 'mul_ln31_34' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 8 <SV = 7> <Delay = 6.49>
+ST_8 : Operation 92 [1/1] (0.00ns)   --->   "%img_in_addr_2 = getelementptr i8 %img_in, i64 0, i64 2" [conv2D0.cpp:15]   --->   Operation 92 'getelementptr' 'img_in_addr_2' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 93 [2/2] (2.32ns)   --->   "%img_inT_2 = load i4 %img_in_addr_2" [conv2D0.cpp:15]   --->   Operation 93 'load' 'img_inT_2' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_8 : Operation 94 [1/1] (0.00ns)   --->   "%img_in_addr_3 = getelementptr i8 %img_in, i64 0, i64 3" [conv2D0.cpp:15]   --->   Operation 94 'getelementptr' 'img_in_addr_3' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 95 [2/2] (2.32ns)   --->   "%img_inT_3 = load i4 %img_in_addr_3" [conv2D0.cpp:15]   --->   Operation 95 'load' 'img_inT_3' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_8 : Operation 96 [1/2] (2.32ns)   --->   "%img_inT_12 = load i4 %img_in_addr_12" [conv2D0.cpp:15]   --->   Operation 96 'load' 'img_inT_12' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_8 : Operation 97 [1/2] (2.32ns)   --->   "%img_inT_13 = load i4 %img_in_addr_13" [conv2D0.cpp:15]   --->   Operation 97 'load' 'img_inT_13' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_8 : Operation 98 [1/1] (0.00ns)   --->   "%weights_addr_2 = getelementptr i8 %weights, i64 0, i64 2" [conv2D0.cpp:18]   --->   Operation 98 'getelementptr' 'weights_addr_2' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 99 [2/2] (2.32ns)   --->   "%weightsT_2 = load i4 %weights_addr_2" [conv2D0.cpp:18]   --->   Operation 99 'load' 'weightsT_2' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_8 : Operation 100 [1/2] (2.32ns)   --->   "%weightsT_4 = load i4 %weights_addr_4" [conv2D0.cpp:18]   --->   Operation 100 'load' 'weightsT_4' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_8 : Operation 101 [1/3] (0.00ns) (grouped into DSP with root node add_ln31)   --->   "%acc = mul i8 %weightsT, i8 %img_inT" [conv2D0.cpp:31]   --->   Operation 101 'mul' 'acc' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 102 [1/1] (4.17ns)   --->   "%mul_ln31 = mul i8 %weightsT_1, i8 %img_inT_1" [conv2D0.cpp:31]   --->   Operation 102 'mul' 'mul_ln31' <Predicate = true> <Delay = 4.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 4.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 103 [3/3] (1.05ns) (grouped into DSP with root node add_ln31_1)   --->   "%mul_ln31_2 = mul i8 %weightsT_3, i8 %img_inT_4" [conv2D0.cpp:31]   --->   Operation 103 'mul' 'mul_ln31_2' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 104 [2/3] (1.05ns) (grouped into DSP with root node add_ln31_3)   --->   "%mul_ln31_4 = mul i8 %weightsT_5, i8 %img_inT_6" [conv2D0.cpp:31]   --->   Operation 104 'mul' 'mul_ln31_4' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 105 [2/3] (1.05ns) (grouped into DSP with root node add_ln31_5)   --->   "%mul_ln31_5 = mul i8 %weightsT_6, i8 %img_inT_8" [conv2D0.cpp:31]   --->   Operation 105 'mul' 'mul_ln31_5' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 106 [1/1] (4.17ns)   --->   "%mul_ln31_6 = mul i8 %weightsT_7, i8 %img_inT_9" [conv2D0.cpp:31]   --->   Operation 106 'mul' 'mul_ln31_6' <Predicate = true> <Delay = 4.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 4.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 107 [1/3] (0.00ns) (grouped into DSP with root node add_ln31_4)   --->   "%mul_ln31_7 = mul i8 %weightsT_8, i8 %img_inT_10" [conv2D0.cpp:31]   --->   Operation 107 'mul' 'mul_ln31_7' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 108 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31 = add i8 %mul_ln31, i8 %acc" [conv2D0.cpp:31]   --->   Operation 108 'add' 'add_ln31' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 109 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_4 = add i8 %mul_ln31_6, i8 %mul_ln31_7" [conv2D0.cpp:31]   --->   Operation 109 'add' 'add_ln31_4' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 110 [3/3] (1.05ns) (grouped into DSP with root node add_ln31_8)   --->   "%acc_2 = mul i8 %weightsT, i8 %img_inT_1" [conv2D0.cpp:31]   --->   Operation 110 'mul' 'acc_2' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 111 [3/3] (1.05ns) (grouped into DSP with root node add_ln31_9)   --->   "%mul_ln31_11 = mul i8 %weightsT_3, i8 %img_inT_5" [conv2D0.cpp:31]   --->   Operation 111 'mul' 'mul_ln31_11' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 112 [2/3] (1.05ns) (grouped into DSP with root node add_ln31_11)   --->   "%mul_ln31_13 = mul i8 %weightsT_5, i8 %img_inT_7" [conv2D0.cpp:31]   --->   Operation 112 'mul' 'mul_ln31_13' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 113 [2/3] (1.05ns) (grouped into DSP with root node add_ln31_13)   --->   "%mul_ln31_14 = mul i8 %weightsT_6, i8 %img_inT_9" [conv2D0.cpp:31]   --->   Operation 113 'mul' 'mul_ln31_14' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 114 [1/1] (4.17ns)   --->   "%mul_ln31_15 = mul i8 %weightsT_7, i8 %img_inT_10" [conv2D0.cpp:31]   --->   Operation 114 'mul' 'mul_ln31_15' <Predicate = true> <Delay = 4.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 4.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 115 [1/3] (0.00ns) (grouped into DSP with root node add_ln31_12)   --->   "%mul_ln31_16 = mul i8 %weightsT_8, i8 %img_inT_11" [conv2D0.cpp:31]   --->   Operation 115 'mul' 'mul_ln31_16' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 116 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_12 = add i8 %mul_ln31_15, i8 %mul_ln31_16" [conv2D0.cpp:31]   --->   Operation 116 'add' 'add_ln31_12' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 117 [3/3] (1.05ns) (grouped into DSP with root node add_ln31_16)   --->   "%acc_4 = mul i8 %weightsT, i8 %img_inT_4" [conv2D0.cpp:31]   --->   Operation 117 'mul' 'acc_4' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 118 [3/3] (1.05ns) (grouped into DSP with root node add_ln31_17)   --->   "%mul_ln31_20 = mul i8 %weightsT_3, i8 %img_inT_8" [conv2D0.cpp:31]   --->   Operation 118 'mul' 'mul_ln31_20' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 119 [2/3] (1.05ns) (grouped into DSP with root node add_ln31_19)   --->   "%mul_ln31_22 = mul i8 %weightsT_5, i8 %img_inT_10" [conv2D0.cpp:31]   --->   Operation 119 'mul' 'mul_ln31_22' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 120 [3/3] (1.05ns) (grouped into DSP with root node add_ln31_21)   --->   "%mul_ln31_23 = mul i8 %weightsT_6, i8 %img_inT_12" [conv2D0.cpp:31]   --->   Operation 120 'mul' 'mul_ln31_23' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 121 [1/1] (4.17ns)   --->   "%mul_ln31_24 = mul i8 %weightsT_7, i8 %img_inT_13" [conv2D0.cpp:31]   --->   Operation 121 'mul' 'mul_ln31_24' <Predicate = true> <Delay = 4.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 4.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 122 [2/3] (1.05ns) (grouped into DSP with root node add_ln31_20)   --->   "%mul_ln31_25 = mul i8 %weightsT_8, i8 %img_inT_14" [conv2D0.cpp:31]   --->   Operation 122 'mul' 'mul_ln31_25' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 123 [3/3] (1.05ns) (grouped into DSP with root node add_ln31_24)   --->   "%acc_6 = mul i8 %weightsT, i8 %img_inT_5" [conv2D0.cpp:31]   --->   Operation 123 'mul' 'acc_6' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 124 [3/3] (1.05ns) (grouped into DSP with root node add_ln31_25)   --->   "%mul_ln31_29 = mul i8 %weightsT_3, i8 %img_inT_9" [conv2D0.cpp:31]   --->   Operation 124 'mul' 'mul_ln31_29' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 125 [2/3] (1.05ns) (grouped into DSP with root node add_ln31_27)   --->   "%mul_ln31_31 = mul i8 %weightsT_5, i8 %img_inT_11" [conv2D0.cpp:31]   --->   Operation 125 'mul' 'mul_ln31_31' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 126 [3/3] (1.05ns) (grouped into DSP with root node add_ln31_29)   --->   "%mul_ln31_32 = mul i8 %weightsT_6, i8 %img_inT_13" [conv2D0.cpp:31]   --->   Operation 126 'mul' 'mul_ln31_32' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 127 [1/1] (4.17ns)   --->   "%mul_ln31_33 = mul i8 %weightsT_7, i8 %img_inT_14" [conv2D0.cpp:31]   --->   Operation 127 'mul' 'mul_ln31_33' <Predicate = true> <Delay = 4.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 4.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 128 [1/3] (0.00ns) (grouped into DSP with root node add_ln31_28)   --->   "%mul_ln31_34 = mul i8 %weightsT_8, i8 %img_inT_15" [conv2D0.cpp:31]   --->   Operation 128 'mul' 'mul_ln31_34' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 129 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_28 = add i8 %mul_ln31_33, i8 %mul_ln31_34" [conv2D0.cpp:31]   --->   Operation 129 'add' 'add_ln31_28' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 9 <SV = 8> <Delay = 6.27>
+ST_9 : Operation 130 [1/2] (2.32ns)   --->   "%img_inT_2 = load i4 %img_in_addr_2" [conv2D0.cpp:15]   --->   Operation 130 'load' 'img_inT_2' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_9 : Operation 131 [1/2] (2.32ns)   --->   "%img_inT_3 = load i4 %img_in_addr_3" [conv2D0.cpp:15]   --->   Operation 131 'load' 'img_inT_3' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_9 : Operation 132 [1/2] (2.32ns)   --->   "%weightsT_2 = load i4 %weights_addr_2" [conv2D0.cpp:18]   --->   Operation 132 'load' 'weightsT_2' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_9 : Operation 133 [2/3] (1.05ns) (grouped into DSP with root node add_ln31_1)   --->   "%mul_ln31_2 = mul i8 %weightsT_3, i8 %img_inT_4" [conv2D0.cpp:31]   --->   Operation 133 'mul' 'mul_ln31_2' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 134 [1/1] (4.17ns)   --->   "%mul_ln31_3 = mul i8 %weightsT_4, i8 %img_inT_5" [conv2D0.cpp:31]   --->   Operation 134 'mul' 'mul_ln31_3' <Predicate = true> <Delay = 4.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 4.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 135 [1/3] (0.00ns) (grouped into DSP with root node add_ln31_3)   --->   "%mul_ln31_4 = mul i8 %weightsT_5, i8 %img_inT_6" [conv2D0.cpp:31]   --->   Operation 135 'mul' 'mul_ln31_4' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 136 [1/3] (0.00ns) (grouped into DSP with root node add_ln31_5)   --->   "%mul_ln31_5 = mul i8 %weightsT_6, i8 %img_inT_8" [conv2D0.cpp:31]   --->   Operation 136 'mul' 'mul_ln31_5' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 137 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31 = add i8 %mul_ln31, i8 %acc" [conv2D0.cpp:31]   --->   Operation 137 'add' 'add_ln31' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 138 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_3 = add i8 %mul_ln31_3, i8 %mul_ln31_4" [conv2D0.cpp:31]   --->   Operation 138 'add' 'add_ln31_3' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 139 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_4 = add i8 %mul_ln31_6, i8 %mul_ln31_7" [conv2D0.cpp:31]   --->   Operation 139 'add' 'add_ln31_4' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 140 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_5 = add i8 %add_ln31_4, i8 %mul_ln31_5" [conv2D0.cpp:31]   --->   Operation 140 'add' 'add_ln31_5' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 141 [2/3] (1.05ns) (grouped into DSP with root node add_ln31_8)   --->   "%acc_2 = mul i8 %weightsT, i8 %img_inT_1" [conv2D0.cpp:31]   --->   Operation 141 'mul' 'acc_2' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 142 [2/3] (1.05ns) (grouped into DSP with root node add_ln31_9)   --->   "%mul_ln31_11 = mul i8 %weightsT_3, i8 %img_inT_5" [conv2D0.cpp:31]   --->   Operation 142 'mul' 'mul_ln31_11' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 143 [1/1] (4.17ns)   --->   "%mul_ln31_12 = mul i8 %weightsT_4, i8 %img_inT_6" [conv2D0.cpp:31]   --->   Operation 143 'mul' 'mul_ln31_12' <Predicate = true> <Delay = 4.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 4.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 144 [1/3] (0.00ns) (grouped into DSP with root node add_ln31_11)   --->   "%mul_ln31_13 = mul i8 %weightsT_5, i8 %img_inT_7" [conv2D0.cpp:31]   --->   Operation 144 'mul' 'mul_ln31_13' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 145 [1/3] (0.00ns) (grouped into DSP with root node add_ln31_13)   --->   "%mul_ln31_14 = mul i8 %weightsT_6, i8 %img_inT_9" [conv2D0.cpp:31]   --->   Operation 145 'mul' 'mul_ln31_14' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 146 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_11 = add i8 %mul_ln31_12, i8 %mul_ln31_13" [conv2D0.cpp:31]   --->   Operation 146 'add' 'add_ln31_11' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 147 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_12 = add i8 %mul_ln31_15, i8 %mul_ln31_16" [conv2D0.cpp:31]   --->   Operation 147 'add' 'add_ln31_12' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 148 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_13 = add i8 %add_ln31_12, i8 %mul_ln31_14" [conv2D0.cpp:31]   --->   Operation 148 'add' 'add_ln31_13' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 149 [2/3] (1.05ns) (grouped into DSP with root node add_ln31_16)   --->   "%acc_4 = mul i8 %weightsT, i8 %img_inT_4" [conv2D0.cpp:31]   --->   Operation 149 'mul' 'acc_4' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 150 [2/3] (1.05ns) (grouped into DSP with root node add_ln31_17)   --->   "%mul_ln31_20 = mul i8 %weightsT_3, i8 %img_inT_8" [conv2D0.cpp:31]   --->   Operation 150 'mul' 'mul_ln31_20' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 151 [1/1] (4.17ns)   --->   "%mul_ln31_21 = mul i8 %weightsT_4, i8 %img_inT_9" [conv2D0.cpp:31]   --->   Operation 151 'mul' 'mul_ln31_21' <Predicate = true> <Delay = 4.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 4.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 152 [1/3] (0.00ns) (grouped into DSP with root node add_ln31_19)   --->   "%mul_ln31_22 = mul i8 %weightsT_5, i8 %img_inT_10" [conv2D0.cpp:31]   --->   Operation 152 'mul' 'mul_ln31_22' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 153 [2/3] (1.05ns) (grouped into DSP with root node add_ln31_21)   --->   "%mul_ln31_23 = mul i8 %weightsT_6, i8 %img_inT_12" [conv2D0.cpp:31]   --->   Operation 153 'mul' 'mul_ln31_23' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 154 [1/3] (0.00ns) (grouped into DSP with root node add_ln31_20)   --->   "%mul_ln31_25 = mul i8 %weightsT_8, i8 %img_inT_14" [conv2D0.cpp:31]   --->   Operation 154 'mul' 'mul_ln31_25' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 155 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_19 = add i8 %mul_ln31_21, i8 %mul_ln31_22" [conv2D0.cpp:31]   --->   Operation 155 'add' 'add_ln31_19' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 156 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_20 = add i8 %mul_ln31_24, i8 %mul_ln31_25" [conv2D0.cpp:31]   --->   Operation 156 'add' 'add_ln31_20' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 157 [2/3] (1.05ns) (grouped into DSP with root node add_ln31_24)   --->   "%acc_6 = mul i8 %weightsT, i8 %img_inT_5" [conv2D0.cpp:31]   --->   Operation 157 'mul' 'acc_6' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 158 [2/3] (1.05ns) (grouped into DSP with root node add_ln31_25)   --->   "%mul_ln31_29 = mul i8 %weightsT_3, i8 %img_inT_9" [conv2D0.cpp:31]   --->   Operation 158 'mul' 'mul_ln31_29' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 159 [1/1] (4.17ns)   --->   "%mul_ln31_30 = mul i8 %weightsT_4, i8 %img_inT_10" [conv2D0.cpp:31]   --->   Operation 159 'mul' 'mul_ln31_30' <Predicate = true> <Delay = 4.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 4.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 160 [1/3] (0.00ns) (grouped into DSP with root node add_ln31_27)   --->   "%mul_ln31_31 = mul i8 %weightsT_5, i8 %img_inT_11" [conv2D0.cpp:31]   --->   Operation 160 'mul' 'mul_ln31_31' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 161 [2/3] (1.05ns) (grouped into DSP with root node add_ln31_29)   --->   "%mul_ln31_32 = mul i8 %weightsT_6, i8 %img_inT_13" [conv2D0.cpp:31]   --->   Operation 161 'mul' 'mul_ln31_32' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 162 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_27 = add i8 %mul_ln31_30, i8 %mul_ln31_31" [conv2D0.cpp:31]   --->   Operation 162 'add' 'add_ln31_27' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 163 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_28 = add i8 %mul_ln31_33, i8 %mul_ln31_34" [conv2D0.cpp:31]   --->   Operation 163 'add' 'add_ln31_28' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 10 <SV = 9> <Delay = 6.27>
+ST_10 : Operation 164 [1/1] (4.17ns)   --->   "%mul_ln31_1 = mul i8 %weightsT_2, i8 %img_inT_2" [conv2D0.cpp:31]   --->   Operation 164 'mul' 'mul_ln31_1' <Predicate = true> <Delay = 4.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 4.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 165 [1/3] (0.00ns) (grouped into DSP with root node add_ln31_1)   --->   "%mul_ln31_2 = mul i8 %weightsT_3, i8 %img_inT_4" [conv2D0.cpp:31]   --->   Operation 165 'mul' 'mul_ln31_2' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 166 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_1 = add i8 %mul_ln31_1, i8 %mul_ln31_2" [conv2D0.cpp:31]   --->   Operation 166 'add' 'add_ln31_1' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 167 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_3 = add i8 %mul_ln31_3, i8 %mul_ln31_4" [conv2D0.cpp:31]   --->   Operation 167 'add' 'add_ln31_3' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 168 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_5 = add i8 %add_ln31_4, i8 %mul_ln31_5" [conv2D0.cpp:31]   --->   Operation 168 'add' 'add_ln31_5' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 169 [1/1] (1.91ns)   --->   "%add_ln31_6 = add i8 %add_ln31_5, i8 %add_ln31_3" [conv2D0.cpp:31]   --->   Operation 169 'add' 'add_ln31_6' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 170 [1/3] (0.00ns) (grouped into DSP with root node add_ln31_8)   --->   "%acc_2 = mul i8 %weightsT, i8 %img_inT_1" [conv2D0.cpp:31]   --->   Operation 170 'mul' 'acc_2' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 171 [1/1] (4.17ns)   --->   "%mul_ln31_9 = mul i8 %weightsT_1, i8 %img_inT_2" [conv2D0.cpp:31]   --->   Operation 171 'mul' 'mul_ln31_9' <Predicate = true> <Delay = 4.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 4.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 172 [1/1] (4.17ns)   --->   "%mul_ln31_10 = mul i8 %weightsT_2, i8 %img_inT_3" [conv2D0.cpp:31]   --->   Operation 172 'mul' 'mul_ln31_10' <Predicate = true> <Delay = 4.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 4.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 173 [1/3] (0.00ns) (grouped into DSP with root node add_ln31_9)   --->   "%mul_ln31_11 = mul i8 %weightsT_3, i8 %img_inT_5" [conv2D0.cpp:31]   --->   Operation 173 'mul' 'mul_ln31_11' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 174 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_8 = add i8 %mul_ln31_9, i8 %acc_2" [conv2D0.cpp:31]   --->   Operation 174 'add' 'add_ln31_8' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 175 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_9 = add i8 %mul_ln31_10, i8 %mul_ln31_11" [conv2D0.cpp:31]   --->   Operation 175 'add' 'add_ln31_9' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 176 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_11 = add i8 %mul_ln31_12, i8 %mul_ln31_13" [conv2D0.cpp:31]   --->   Operation 176 'add' 'add_ln31_11' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 177 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_13 = add i8 %add_ln31_12, i8 %mul_ln31_14" [conv2D0.cpp:31]   --->   Operation 177 'add' 'add_ln31_13' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 178 [1/1] (1.91ns)   --->   "%add_ln31_14 = add i8 %add_ln31_13, i8 %add_ln31_11" [conv2D0.cpp:31]   --->   Operation 178 'add' 'add_ln31_14' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 179 [1/3] (0.00ns) (grouped into DSP with root node add_ln31_16)   --->   "%acc_4 = mul i8 %weightsT, i8 %img_inT_4" [conv2D0.cpp:31]   --->   Operation 179 'mul' 'acc_4' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 180 [1/1] (4.17ns)   --->   "%mul_ln31_18 = mul i8 %weightsT_1, i8 %img_inT_5" [conv2D0.cpp:31]   --->   Operation 180 'mul' 'mul_ln31_18' <Predicate = true> <Delay = 4.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 4.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 181 [1/1] (4.17ns)   --->   "%mul_ln31_19 = mul i8 %weightsT_2, i8 %img_inT_6" [conv2D0.cpp:31]   --->   Operation 181 'mul' 'mul_ln31_19' <Predicate = true> <Delay = 4.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 4.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 182 [1/3] (0.00ns) (grouped into DSP with root node add_ln31_17)   --->   "%mul_ln31_20 = mul i8 %weightsT_3, i8 %img_inT_8" [conv2D0.cpp:31]   --->   Operation 182 'mul' 'mul_ln31_20' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 183 [1/3] (0.00ns) (grouped into DSP with root node add_ln31_21)   --->   "%mul_ln31_23 = mul i8 %weightsT_6, i8 %img_inT_12" [conv2D0.cpp:31]   --->   Operation 183 'mul' 'mul_ln31_23' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 184 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_16 = add i8 %mul_ln31_18, i8 %acc_4" [conv2D0.cpp:31]   --->   Operation 184 'add' 'add_ln31_16' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 185 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_17 = add i8 %mul_ln31_19, i8 %mul_ln31_20" [conv2D0.cpp:31]   --->   Operation 185 'add' 'add_ln31_17' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 186 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_19 = add i8 %mul_ln31_21, i8 %mul_ln31_22" [conv2D0.cpp:31]   --->   Operation 186 'add' 'add_ln31_19' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 187 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_20 = add i8 %mul_ln31_24, i8 %mul_ln31_25" [conv2D0.cpp:31]   --->   Operation 187 'add' 'add_ln31_20' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 188 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_21 = add i8 %add_ln31_20, i8 %mul_ln31_23" [conv2D0.cpp:31]   --->   Operation 188 'add' 'add_ln31_21' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 189 [1/3] (0.00ns) (grouped into DSP with root node add_ln31_24)   --->   "%acc_6 = mul i8 %weightsT, i8 %img_inT_5" [conv2D0.cpp:31]   --->   Operation 189 'mul' 'acc_6' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 190 [1/1] (4.17ns)   --->   "%mul_ln31_27 = mul i8 %weightsT_1, i8 %img_inT_6" [conv2D0.cpp:31]   --->   Operation 190 'mul' 'mul_ln31_27' <Predicate = true> <Delay = 4.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 4.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 191 [1/1] (4.17ns)   --->   "%mul_ln31_28 = mul i8 %weightsT_2, i8 %img_inT_7" [conv2D0.cpp:31]   --->   Operation 191 'mul' 'mul_ln31_28' <Predicate = true> <Delay = 4.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 4.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 192 [1/3] (0.00ns) (grouped into DSP with root node add_ln31_25)   --->   "%mul_ln31_29 = mul i8 %weightsT_3, i8 %img_inT_9" [conv2D0.cpp:31]   --->   Operation 192 'mul' 'mul_ln31_29' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 193 [1/3] (0.00ns) (grouped into DSP with root node add_ln31_29)   --->   "%mul_ln31_32 = mul i8 %weightsT_6, i8 %img_inT_13" [conv2D0.cpp:31]   --->   Operation 193 'mul' 'mul_ln31_32' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 194 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_24 = add i8 %mul_ln31_27, i8 %acc_6" [conv2D0.cpp:31]   --->   Operation 194 'add' 'add_ln31_24' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 195 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_25 = add i8 %mul_ln31_28, i8 %mul_ln31_29" [conv2D0.cpp:31]   --->   Operation 195 'add' 'add_ln31_25' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 196 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_27 = add i8 %mul_ln31_30, i8 %mul_ln31_31" [conv2D0.cpp:31]   --->   Operation 196 'add' 'add_ln31_27' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 197 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_29 = add i8 %add_ln31_28, i8 %mul_ln31_32" [conv2D0.cpp:31]   --->   Operation 197 'add' 'add_ln31_29' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 11 <SV = 10> <Delay = 5.76>
+ST_11 : Operation 198 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_1 = add i8 %mul_ln31_1, i8 %mul_ln31_2" [conv2D0.cpp:31]   --->   Operation 198 'add' 'add_ln31_1' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 199 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln31_2 = add i8 %add_ln31_1, i8 %add_ln31" [conv2D0.cpp:31]   --->   Operation 199 'add' 'add_ln31_2' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.83> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 200 [1/1] (3.66ns) (root node of TernaryAdder)   --->   "%acc_8 = add i8 %add_ln31_6, i8 %add_ln31_2" [conv2D0.cpp:31]   --->   Operation 200 'add' 'acc_8' <Predicate = true> <Delay = 3.66> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.83> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 201 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_8 = add i8 %mul_ln31_9, i8 %acc_2" [conv2D0.cpp:31]   --->   Operation 201 'add' 'add_ln31_8' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 202 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_9 = add i8 %mul_ln31_10, i8 %mul_ln31_11" [conv2D0.cpp:31]   --->   Operation 202 'add' 'add_ln31_9' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 203 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln31_10 = add i8 %add_ln31_9, i8 %add_ln31_8" [conv2D0.cpp:31]   --->   Operation 203 'add' 'add_ln31_10' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.83> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 204 [1/1] (3.66ns) (root node of TernaryAdder)   --->   "%acc_9 = add i8 %add_ln31_14, i8 %add_ln31_10" [conv2D0.cpp:31]   --->   Operation 204 'add' 'acc_9' <Predicate = true> <Delay = 3.66> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.83> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 205 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_16 = add i8 %mul_ln31_18, i8 %acc_4" [conv2D0.cpp:31]   --->   Operation 205 'add' 'add_ln31_16' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 206 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_17 = add i8 %mul_ln31_19, i8 %mul_ln31_20" [conv2D0.cpp:31]   --->   Operation 206 'add' 'add_ln31_17' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 207 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_21 = add i8 %add_ln31_20, i8 %mul_ln31_23" [conv2D0.cpp:31]   --->   Operation 207 'add' 'add_ln31_21' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 208 [1/1] (1.91ns)   --->   "%add_ln31_22 = add i8 %add_ln31_21, i8 %add_ln31_19" [conv2D0.cpp:31]   --->   Operation 208 'add' 'add_ln31_22' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 209 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_24 = add i8 %mul_ln31_27, i8 %acc_6" [conv2D0.cpp:31]   --->   Operation 209 'add' 'add_ln31_24' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 210 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_25 = add i8 %mul_ln31_28, i8 %mul_ln31_29" [conv2D0.cpp:31]   --->   Operation 210 'add' 'add_ln31_25' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 211 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln31_29 = add i8 %add_ln31_28, i8 %mul_ln31_32" [conv2D0.cpp:31]   --->   Operation 211 'add' 'add_ln31_29' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 212 [1/1] (1.91ns)   --->   "%add_ln31_30 = add i8 %add_ln31_29, i8 %add_ln31_27" [conv2D0.cpp:31]   --->   Operation 212 'add' 'add_ln31_30' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 3.66>
+ST_12 : Operation 213 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln31_18 = add i8 %add_ln31_17, i8 %add_ln31_16" [conv2D0.cpp:31]   --->   Operation 213 'add' 'add_ln31_18' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.83> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_12 : Operation 214 [1/1] (3.66ns) (root node of TernaryAdder)   --->   "%acc_10 = add i8 %add_ln31_22, i8 %add_ln31_18" [conv2D0.cpp:31]   --->   Operation 214 'add' 'acc_10' <Predicate = true> <Delay = 3.66> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.83> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_12 : Operation 215 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln31_26 = add i8 %add_ln31_25, i8 %add_ln31_24" [conv2D0.cpp:31]   --->   Operation 215 'add' 'add_ln31_26' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.83> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_12 : Operation 216 [1/1] (3.66ns) (root node of TernaryAdder)   --->   "%acc_11 = add i8 %add_ln31_30, i8 %add_ln31_26" [conv2D0.cpp:31]   --->   Operation 216 'add' 'acc_11' <Predicate = true> <Delay = 3.66> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.83> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_12 : Operation 217 [1/1] (0.00ns)   --->   "%img_out_addr = getelementptr i8 %img_out, i64 0, i64 0" [conv2D0.cpp:40]   --->   Operation 217 'getelementptr' 'img_out_addr' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 218 [1/1] (2.32ns)   --->   "%store_ln40 = store i8 %acc_8, i2 %img_out_addr" [conv2D0.cpp:40]   --->   Operation 218 'store' 'store_ln40' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 4> <RAM>
+ST_12 : Operation 219 [1/1] (0.00ns)   --->   "%img_out_addr_1 = getelementptr i8 %img_out, i64 0, i64 1" [conv2D0.cpp:40]   --->   Operation 219 'getelementptr' 'img_out_addr_1' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 220 [1/1] (2.32ns)   --->   "%store_ln40 = store i8 %acc_9, i2 %img_out_addr_1" [conv2D0.cpp:40]   --->   Operation 220 'store' 'store_ln40' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 4> <RAM>
+
+State 13 <SV = 12> <Delay = 2.32>
+ST_13 : Operation 221 [1/1] (0.00ns)   --->   "%spectopmodule_ln7 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1" [conv2D0.cpp:7]   --->   Operation 221 'spectopmodule' 'spectopmodule_ln7' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 222 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %img_in, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 222 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 223 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %img_in"   --->   Operation 223 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 224 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %img_out, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 224 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 225 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %img_out"   --->   Operation 225 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 226 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %weights, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 226 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 227 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %weights"   --->   Operation 227 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 228 [1/1] (0.00ns)   --->   "%img_out_addr_2 = getelementptr i8 %img_out, i64 0, i64 2" [conv2D0.cpp:40]   --->   Operation 228 'getelementptr' 'img_out_addr_2' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 229 [1/1] (2.32ns)   --->   "%store_ln40 = store i8 %acc_10, i2 %img_out_addr_2" [conv2D0.cpp:40]   --->   Operation 229 'store' 'store_ln40' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 4> <RAM>
+ST_13 : Operation 230 [1/1] (0.00ns)   --->   "%img_out_addr_3 = getelementptr i8 %img_out, i64 0, i64 3" [conv2D0.cpp:40]   --->   Operation 230 'getelementptr' 'img_out_addr_3' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 231 [1/1] (2.32ns)   --->   "%store_ln40 = store i8 %acc_11, i2 %img_out_addr_3" [conv2D0.cpp:40]   --->   Operation 231 'store' 'store_ln40' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 4> <RAM>
+ST_13 : Operation 232 [1/1] (0.00ns)   --->   "%ret_ln41 = ret" [conv2D0.cpp:41]   --->   Operation 232 'ret' 'ret_ln41' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 2.322ns
+The critical path consists of the following:
+	'getelementptr' operation 4 bit ('img_in_addr_10', conv2D0.cpp:15) [31]  (0.000 ns)
+	'load' operation 8 bit ('img_inT', conv2D0.cpp:15) on array 'img_in' [32]  (2.322 ns)
+
+ <State 2>: 2.322ns
+The critical path consists of the following:
+	'load' operation 8 bit ('img_inT', conv2D0.cpp:15) on array 'img_in' [32]  (2.322 ns)
+
+ <State 3>: 2.322ns
+The critical path consists of the following:
+	'getelementptr' operation 4 bit ('img_in_addr', conv2D0.cpp:15) [11]  (0.000 ns)
+	'load' operation 8 bit ('img_inT', conv2D0.cpp:15) on array 'img_in' [12]  (2.322 ns)
+
+ <State 4>: 2.322ns
+The critical path consists of the following:
+	'load' operation 8 bit ('img_inT', conv2D0.cpp:15) on array 'img_in' [12]  (2.322 ns)
+
+ <State 5>: 2.322ns
+The critical path consists of the following:
+	'load' operation 8 bit ('img_inT', conv2D0.cpp:15) on array 'img_in' [20]  (2.322 ns)
+
+ <State 6>: 2.322ns
+The critical path consists of the following:
+	'load' operation 8 bit ('img_inT', conv2D0.cpp:15) on array 'img_in' [24]  (2.322 ns)
+
+ <State 7>: 3.372ns
+The critical path consists of the following:
+	'load' operation 8 bit ('img_inT', conv2D0.cpp:15) on array 'img_in' [28]  (2.322 ns)
+	'mul' operation 8 bit of DSP[75] ('mul_ln31_5', conv2D0.cpp:31) [67]  (1.050 ns)
+
+ <State 8>: 6.492ns
+The critical path consists of the following:
+	'load' operation 8 bit ('img_inT', conv2D0.cpp:15) on array 'img_in' [38]  (2.322 ns)
+	'mul' operation 8 bit ('mul_ln31_24', conv2D0.cpp:31) [102]  (4.170 ns)
+
+ <State 9>: 6.270ns
+The critical path consists of the following:
+	'mul' operation 8 bit ('mul_ln31_3', conv2D0.cpp:31) [65]  (4.170 ns)
+	'add' operation 8 bit of DSP[73] ('add_ln31_3', conv2D0.cpp:31) [73]  (2.100 ns)
+
+ <State 10>: 6.270ns
+The critical path consists of the following:
+	'mul' operation 8 bit ('mul_ln31_1', conv2D0.cpp:31) [63]  (4.170 ns)
+	'add' operation 8 bit of DSP[71] ('add_ln31_1', conv2D0.cpp:31) [71]  (2.100 ns)
+
+ <State 11>: 5.769ns
+The critical path consists of the following:
+	'add' operation 8 bit of DSP[71] ('add_ln31_1', conv2D0.cpp:31) [71]  (2.100 ns)
+	'add' operation 8 bit ('add_ln31_2', conv2D0.cpp:31) [72]  (0.000 ns)
+	'add' operation 8 bit ('acc', conv2D0.cpp:31) [77]  (3.669 ns)
+
+ <State 12>: 3.669ns
+The critical path consists of the following:
+	'add' operation 8 bit ('add_ln31_18', conv2D0.cpp:31) [106]  (0.000 ns)
+	'add' operation 8 bit ('acc', conv2D0.cpp:31) [111]  (3.669 ns)
+
+ <State 13>: 2.322ns
+The critical path consists of the following:
+	'getelementptr' operation 2 bit ('img_out_addr_2', conv2D0.cpp:40) [133]  (0.000 ns)
+	'store' operation 0 bit ('store_ln40', conv2D0.cpp:40) of variable 'acc', conv2D0.cpp:31 on array 'img_out' [134]  (2.322 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
