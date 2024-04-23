@@ -1,0 +1,85 @@
+{
+    "1": {
+        "name": "funcC",
+        "file": "functionDF.cpp",
+        "fileloc": "23",
+        "instructions": "19",
+        "total_instructions": "19",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "funcA",
+        "file": "functionDF.cpp",
+        "fileloc": "3",
+        "instructions": "24",
+        "total_instructions": "24",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1",
+            "T": "1"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "funcB",
+        "file": "functionDF.cpp",
+        "fileloc": "14",
+        "instructions": "18",
+        "total_instructions": "18",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "funcD",
+        "file": "functionDF.cpp",
+        "fileloc": "32",
+        "instructions": "23",
+        "total_instructions": "23",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2",
+            "T": "1"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "functionDF",
+        "file": "functionDF.cpp",
+        "fileloc": "41",
+        "instructions": "21",
+        "total_instructions": "105",
+        "calls": "2 3 1 4",
+        "basicblocks": "1"
+    }
+}

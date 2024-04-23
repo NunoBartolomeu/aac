@@ -1,0 +1,174 @@
+
+
+================================================================
+== Vitis HLS Report for 'conv2D0_Pipeline_readweights'
+================================================================
+* Date:           Thu Apr 11 18:38:51 2024
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        Project1
+* Solution:       partition_all (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z010i-clg225-1L
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.911 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       11|       11|  0.110 us|  0.110 us|   11|   11|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |               |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |   Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- readweights  |        9|        9|         1|          1|          1|     9|       yes|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+----+-------+-------+-----+
+|       Name      | BRAM_18K| DSP|   FF  |  LUT  | URAM|
++-----------------+---------+----+-------+-------+-----+
+|DSP              |        -|   -|      -|      -|    -|
+|Expression       |        -|   -|      0|     26|    -|
+|FIFO             |        -|   -|      -|      -|    -|
+|Instance         |        -|   -|      0|     48|    -|
+|Memory           |        -|   -|      -|      -|    -|
+|Multiplexer      |        -|   -|      -|     27|    -|
+|Register         |        -|   -|     78|      -|    -|
++-----------------+---------+----+-------+-------+-----+
+|Total            |        0|   0|     78|    101|    0|
++-----------------+---------+----+-------+-------+-----+
+|Available        |      120|  80|  35200|  17600|    0|
++-----------------+---------+----+-------+-------+-----+
+|Utilization (%)  |        0|   0|     ~0|     ~0|    0|
++-----------------+---------+----+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+----------------------+---------+----+---+----+-----+
+    |         Instance         |        Module        | BRAM_18K| DSP| FF| LUT| URAM|
+    +--------------------------+----------------------+---------+----+---+----+-----+
+    |sparsemux_19_4_8_1_1_U35  |sparsemux_19_4_8_1_1  |        0|   0|  0|  48|    0|
+    +--------------------------+----------------------+---------+----+---+----+-----+
+    |Total                     |                      |        0|   0|  0|  48|    0|
+    +--------------------------+----------------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |add_ln23_fu_253_p2   |         +|   0|  0|  13|           4|           1|
+    |icmp_ln23_fu_247_p2  |      icmp|   0|  0|  13|           4|           4|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  26|           8|           5|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------+----+-----------+-----+-----------+
+    |        Name        | LUT| Input Size| Bits| Total Bits|
+    +--------------------+----+-----------+-----+-----------+
+    |ap_done_int         |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i  |   9|          2|    4|          8|
+    |i_1_fu_82           |   9|          2|    4|          8|
+    +--------------------+----+-----------+-----+-----------+
+    |Total               |  27|          6|    9|         18|
+    +--------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------+---+----+-----+-----------+
+    |        Name       | FF| LUT| Bits| Const Bits|
+    +-------------------+---+----+-----+-----------+
+    |ap_CS_fsm          |  1|   0|    1|          0|
+    |ap_done_reg        |  1|   0|    1|          0|
+    |i_1_fu_82          |  4|   0|    4|          0|
+    |weightsT_1_fu_90   |  8|   0|    8|          0|
+    |weightsT_2_fu_94   |  8|   0|    8|          0|
+    |weightsT_3_fu_98   |  8|   0|    8|          0|
+    |weightsT_4_fu_102  |  8|   0|    8|          0|
+    |weightsT_5_fu_106  |  8|   0|    8|          0|
+    |weightsT_6_fu_110  |  8|   0|    8|          0|
+    |weightsT_7_fu_114  |  8|   0|    8|          0|
+    |weightsT_8_fu_118  |  8|   0|    8|          0|
+    |weightsT_fu_86     |  8|   0|    8|          0|
+    +-------------------+---+----+-----+-----------+
+    |Total              | 78|   0|   78|          0|
+    +-------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+------------------------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  |         Source Object        |    C Type    |
++-----------------------+-----+-----+------------+------------------------------+--------------+
+|ap_clk                 |   in|    1|  ap_ctrl_hs|  conv2D0_Pipeline_readweights|  return value|
+|ap_rst                 |   in|    1|  ap_ctrl_hs|  conv2D0_Pipeline_readweights|  return value|
+|ap_start               |   in|    1|  ap_ctrl_hs|  conv2D0_Pipeline_readweights|  return value|
+|ap_done                |  out|    1|  ap_ctrl_hs|  conv2D0_Pipeline_readweights|  return value|
+|ap_idle                |  out|    1|  ap_ctrl_hs|  conv2D0_Pipeline_readweights|  return value|
+|ap_ready               |  out|    1|  ap_ctrl_hs|  conv2D0_Pipeline_readweights|  return value|
+|weights_0_load         |   in|    8|     ap_none|                weights_0_load|        scalar|
+|weights_1_load         |   in|    8|     ap_none|                weights_1_load|        scalar|
+|weights_2_load         |   in|    8|     ap_none|                weights_2_load|        scalar|
+|weights_3_load         |   in|    8|     ap_none|                weights_3_load|        scalar|
+|weights_4_load         |   in|    8|     ap_none|                weights_4_load|        scalar|
+|weights_5_load         |   in|    8|     ap_none|                weights_5_load|        scalar|
+|weights_6_load         |   in|    8|     ap_none|                weights_6_load|        scalar|
+|weights_7_load         |   in|    8|     ap_none|                weights_7_load|        scalar|
+|weights_8_load         |   in|    8|     ap_none|                weights_8_load|        scalar|
+|weightsT_8_out         |  out|    8|      ap_vld|                weightsT_8_out|       pointer|
+|weightsT_8_out_ap_vld  |  out|    1|      ap_vld|                weightsT_8_out|       pointer|
+|weightsT_7_out         |  out|    8|      ap_vld|                weightsT_7_out|       pointer|
+|weightsT_7_out_ap_vld  |  out|    1|      ap_vld|                weightsT_7_out|       pointer|
+|weightsT_6_out         |  out|    8|      ap_vld|                weightsT_6_out|       pointer|
+|weightsT_6_out_ap_vld  |  out|    1|      ap_vld|                weightsT_6_out|       pointer|
+|weightsT_5_out         |  out|    8|      ap_vld|                weightsT_5_out|       pointer|
+|weightsT_5_out_ap_vld  |  out|    1|      ap_vld|                weightsT_5_out|       pointer|
+|weightsT_4_out         |  out|    8|      ap_vld|                weightsT_4_out|       pointer|
+|weightsT_4_out_ap_vld  |  out|    1|      ap_vld|                weightsT_4_out|       pointer|
+|weightsT_3_out         |  out|    8|      ap_vld|                weightsT_3_out|       pointer|
+|weightsT_3_out_ap_vld  |  out|    1|      ap_vld|                weightsT_3_out|       pointer|
+|weightsT_2_out         |  out|    8|      ap_vld|                weightsT_2_out|       pointer|
+|weightsT_2_out_ap_vld  |  out|    1|      ap_vld|                weightsT_2_out|       pointer|
+|weightsT_1_out         |  out|    8|      ap_vld|                weightsT_1_out|       pointer|
+|weightsT_1_out_ap_vld  |  out|    1|      ap_vld|                weightsT_1_out|       pointer|
+|weightsT_out           |  out|    8|      ap_vld|                  weightsT_out|       pointer|
+|weightsT_out_ap_vld    |  out|    1|      ap_vld|                  weightsT_out|       pointer|
++-----------------------+-----+-----+------------+------------------------------+--------------+
+

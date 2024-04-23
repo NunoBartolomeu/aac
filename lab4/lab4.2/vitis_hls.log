@@ -1,0 +1,132 @@
+ECHO is off.
+ECHO is off.
+INFO: [HLS 200-10] Running 'D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'nunob' on host 'dariaispeach' (Windows NT_amd64 version 6.2) on Tue Mar 19 12:13:43 +0000 2024
+INFO: [HLS 200-10] In directory 'D:/Cadeiras/AAC/aac/lab4/lab4.2'
+INFO: [HLS 200-2053] The vitis_hls executable is being deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script 'D:/Cadeiras/AAC/aac/lab4/lab4.2/lab42/solution2/csynth.tcl'
+INFO: [HLS 200-1510] Running: source D:/Cadeiras/AAC/aac/lab4/lab4.2/lab42/solution2/csynth.tcl
+INFO: [HLS 200-1510] Running: open_project lab42 
+INFO: [HLS 200-10] Opening project 'D:/Cadeiras/AAC/aac/lab4/lab4.2/lab42'.
+INFO: [HLS 200-1510] Running: set_top matrixmul 
+INFO: [HLS 200-1510] Running: add_files ../../../labs/Lab4/Lab4/matrixmul.cpp 
+INFO: [HLS 200-10] Adding design file '../../../labs/Lab4/Lab4/matrixmul.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files ../../../labs/Lab4/Lab4/matrixmul.h 
+INFO: [HLS 200-10] Adding design file '../../../labs/Lab4/Lab4/matrixmul.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../../../labs/Lab4/Lab4/matrixmul_test.cpp 
+INFO: [HLS 200-10] Adding test bench file '../../../labs/Lab4/Lab4/matrixmul_test.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution2 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'D:/Cadeiras/AAC/aac/lab4/lab4.2/lab42/solution2'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z010i-clg225-1L'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z010iclg225-1L 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.126 seconds; current allocated memory: 109.602 MB.
+INFO: [HLS 200-10] Analyzing design file '../../../labs/Lab4/Lab4/matrixmul.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.002 seconds; current allocated memory: 110.891 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 55 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4.2/lab42/solution2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 55 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4.2/lab42/solution2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 44 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4.2/lab42/solution2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 41 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4.2/lab42/solution2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 41 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4.2/lab42/solution2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 41 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4.2/lab42/solution2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 41 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4.2/lab42/solution2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 41 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4.2/lab42/solution2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 41 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4.2/lab42/solution2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 41 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4.2/lab42/solution2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 41 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4.2/lab42/solution2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 78 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4.2/lab42/solution2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 78 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4.2/lab42/solution2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 78 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4.2/lab42/solution2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 84 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4.2/lab42/solution2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 89 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4.2/lab42/solution2/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-359] Unrolling loop 'Product' (../../../labs/Lab4/Lab4/matrixmul.cpp:14:16) in function 'matrixmul': changing partial unrolling into complete unrolling since the unrolling factor (=3) is no less than the loop trip count (=3). (../../../labs/Lab4/Lab4/matrixmul.cpp:7:0)
+INFO: [HLS 214-186] Unrolling loop 'Product' (../../../labs/Lab4/Lab4/matrixmul.cpp:14:16) in function 'matrixmul' completely with a factor of 3 (../../../labs/Lab4/Lab4/matrixmul.cpp:7:0)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< Row> at ../../../labs/Lab4/Lab4/matrixmul.cpp:9:8 
+INFO: [HLS 214-291] Loop 'Col' is marked as complete unroll implied by the pipeline pragma (../../../labs/Lab4/Lab4/matrixmul.cpp:11:10)
+INFO: [HLS 214-186] Unrolling loop 'Col' (../../../labs/Lab4/Lab4/matrixmul.cpp:11:10) in function 'matrixmul' completely with a factor of 3 (../../../labs/Lab4/Lab4/matrixmul.cpp:7:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.682 seconds; current allocated memory: 113.371 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.007 seconds; current allocated memory: 113.371 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.024 seconds; current allocated memory: 117.980 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.022 seconds; current allocated memory: 119.340 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.046 seconds; current allocated memory: 140.820 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.037 seconds; current allocated memory: 144.156 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrixmul' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrixmul_Pipeline_Row' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln16_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln16_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln16_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln16_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln16_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln16) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'Row'.
+WARNING: [HLS 200-885] The II Violation in module 'matrixmul_Pipeline_Row' (loop 'Row'): Unable to schedule 'load' operation 8 bit ('a_load', ../../../labs/Lab4/Lab4/matrixmul.cpp:9) on array 'a' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'a'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 7, loop 'Row'
+WARNING: [HLS 200-871] Estimated clock period (7.380 ns) exceeds the target (target clock period: 10.000 ns, clock uncertainty: 2.700 ns, effective delay budget: 7.300 ns).
+Resolution: For help on HLS 200-871 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'matrixmul_Pipeline_Row' consists of the following:
+	'store' operation 0 bit ('i_write_ln9', ../../../labs/Lab4/Lab4/matrixmul.cpp:9) of constant 0 on local variable 'i', ../../../labs/Lab4/Lab4/matrixmul.cpp:9 [33]  (1.588 ns)
+	'load' operation 2 bit ('i', ../../../labs/Lab4/Lab4/matrixmul.cpp:9) on local variable 'i', ../../../labs/Lab4/Lab4/matrixmul.cpp:9 [36]  (0.000 ns)
+	'sub' operation 4 bit ('empty', ../../../labs/Lab4/Lab4/matrixmul.cpp:9) [43]  (1.735 ns)
+	'add' operation 4 bit ('empty_7', ../../../labs/Lab4/Lab4/matrixmul.cpp:9) [49]  (1.735 ns)
+	'getelementptr' operation 4 bit ('a_addr_2', ../../../labs/Lab4/Lab4/matrixmul.cpp:9) [51]  (0.000 ns)
+	'load' operation 8 bit ('a_load_2', ../../../labs/Lab4/Lab4/matrixmul.cpp:9) on array 'a' [60]  (2.322 ns)
+
+Resolution: For help on HLS 200-1016 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.359 seconds; current allocated memory: 148.645 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 150.051 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrixmul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 150.410 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.053 seconds; current allocated memory: 150.672 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrixmul_Pipeline_Row' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matrixmul_Pipeline_Row' pipeline 'Row' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_8s_16ns_16_4_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_8s_16s_16_4_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8s_8s_16_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrixmul_Pipeline_Row'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.092 seconds; current allocated memory: 153.516 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrixmul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul/a' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul/b' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul/res' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrixmul' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrixmul'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.209 seconds; current allocated memory: 155.863 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.363 seconds; current allocated memory: 159.875 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.724 seconds; current allocated memory: 165.594 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrixmul.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrixmul.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 135.50 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 10.994 seconds; current allocated memory: 56.359 MB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 12.628 seconds; peak allocated memory: 166.059 MB.

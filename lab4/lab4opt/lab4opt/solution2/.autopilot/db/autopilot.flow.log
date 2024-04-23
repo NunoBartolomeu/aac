@@ -1,0 +1,719 @@
+INFO-FLOW: Workspace D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2 opened at Tue Mar 19 12:32:00 +0000 2024
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xc7z010iclg225-1L 
+Execute       create_platform xc7z010iclg225-1L -board  
+DBG:HLSDevice: Trying to load device library: D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: D:/Cadeiras/AAC/xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z010i-clg225-1L'
+Command       create_platform done; 0.38 sec.
+Execute       source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute         source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.108 sec.
+Execute       ap_part_info -name xc7z010i-clg225-1L -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 0.5 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1464@%s config_cosim -tool=xsim 
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+Execute     config_cosim -tool=xsim 
+Execute     send_msg_by_id INFO @200-1464@%s config_cosim -trace_level=all 
+INFO: [HLS 200-1464] Running solution command: config_cosim -trace_level=all
+Execute     config_cosim -trace_level=all 
+Command   open_solution done; 0.645 sec.
+Execute   set_part xc7z010iclg225-1L 
+INFO: [HLS 200-1510] Running: set_part xc7z010iclg225-1L 
+Execute     create_platform xc7z010iclg225-1L -board  
+Execute     source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute       source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute       source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute       source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.107 sec.
+Execute     ap_part_info -name xc7z010i-clg225-1L -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.214 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   config_cosim -tool xsim -trace_level all 
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim -trace_level all 
+Execute   csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO-FLOW: Running SLX 'csynth' proc: ::SLX::run_csynth
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.126 seconds; current allocated memory: 109.625 MB.
+Execute       set_directive_top functionDF -name=functionDF 
+Execute       source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO: [HLS 200-10] Analyzing design file '../../../labs/Lab4/Lab4/functionDF.cpp' ... 
+INFO-FLOW: Compiling one TU...
+INFO-FLOW: Handling ../../../labs/Lab4/Lab4/functionDF.cpp as C++
+Execute       ap_part_info -name xc7z010i-clg225-1L -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+INFO-FLOW: run_clang exec: D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/win64/tools/clang-3.9-csynth/bin/clang ../../../labs/Lab4/Lab4/functionDF.cpp -foptimization-record-file=D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info --sysroot D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/tps/mingw/8.3.0/win64.o/nt -fhls -fno-exceptions -insert-hls-directive=D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/all.directive.json -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -hls-clock-period=10 -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/autopilot -I D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.pp.0.cpp {-hls-platform-db-name=D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2\common/technology\xilinx/common/platform.db} -hls-platform-name=zynq_slow -device-resource-info=BRAM_120.000000_DSP_80.000000_FF_35200.000000_LUT_17600.000000_SLICE_4400.000000_URAM_0.000000 -device-name-info=xc7z010iclg225-1L > D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.cpp.clang.out.log 2> D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.cpp.clang.err.log
+INFO-FLOW: Done: GCC PP 39 time: 0.3 seconds per iteration
+INFO-FLOW: Source syntax check for synthesis
+INFO-FLOW: run_clang exec: D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.pp.0.cpp {-hls-platform-db-name=D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2\common/technology\xilinx/common/platform.db} -hls-platform-name=zynq_slow -device-resource-info=BRAM_120.000000_DSP_80.000000_FF_35200.000000_LUT_17600.000000_SLICE_4400.000000_URAM_0.000000 -device-name-info=xc7z010iclg225-1L > D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/clang.out.log 2> D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/clang.err.log
+Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.pp.0.cpp std=gnu++14 -target fpga  -directive=D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/.systemc_flag -fix-errors D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.pp.0.cpp std=gnu++14 -target fpga  -directive=D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/all.directive.json 
+INFO-FLOW: exec D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/all.directive.json -fix-errors D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.1 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: run_clang exec: D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.pp.0.cpp.clang-tidy.loop-label.out.log 2> D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.pp.0.cpp.clang-tidy.loop-label.err.log
+INFO-FLOW: run_clang exec: D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.pp.0.cpp.xilinx-dataflow-lawyer.err.log
+Execute       ap_part_info -name xc7z010i-clg225-1L -data info 
+INFO-FLOW: compiling source code to llvm bc
+INFO-FLOW: run_clang exec: D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing -hls-emit-hint-scope D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -hls-clock-period=10 -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/autopilot -I D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.bc {-hls-platform-db-name=D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2\common/technology\xilinx/common/platform.db} -hls-platform-name=zynq_slow -device-resource-info=BRAM_120.000000_DSP_80.000000_FF_35200.000000_LUT_17600.000000_SLICE_4400.000000_URAM_0.000000 -device-name-info=xc7z010iclg225-1L > D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.pp.0.cpp.clang.out.log 2> D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.pp.0.cpp.clang.err.log
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.998 seconds; current allocated memory: 111.223 MB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute       run_link_or_opt -out D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.0.bc -args  "D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.g.bc"  
+INFO-FLOW: run_clang exec: D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/win64/tools/clang-3.9-csynth/bin/llvm-link D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.g.bc -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.0.bc > D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.1.lower.bc -args D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+INFO-FLOW: run_clang exec: D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.1.lower.bc > D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+INFO-FLOW: Linking math bc lib
+Execute       run_link_or_opt -out D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.2.m1.bc -args D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.1.lower.bc -only-needed D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/win64/lib/libhlsm_39.bc D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/win64/lib/libhlsmc++_39.bc 
+INFO-FLOW: run_clang exec: D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/win64/tools/clang-3.9-csynth/bin/llvm-link D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.1.lower.bc -only-needed D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/win64/lib/libhlsm_39.bc D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/win64/lib/libhlsmc++_39.bc -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.2.m1.bc > D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log
+INFO-FLOW: 
+Command       run_link_or_opt done; 1.881 sec.
+Execute       run_link_or_opt -opt -out D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.3.fpc.bc -args D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=functionDF -reflow-float-conversion 
+INFO-FLOW: run_clang exec: D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=functionDF -reflow-float-conversion -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.3.fpc.bc > D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+Command       run_link_or_opt done; 0.808 sec.
+Execute       run_link_or_opt -out D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.4.m2.bc -args D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.3.fpc.bc -only-needed D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/win64/lib/libfloatconversion_39.bc 
+INFO-FLOW: run_clang exec: D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/win64/tools/clang-3.9-csynth/bin/llvm-link D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.3.fpc.bc -only-needed D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/win64/lib/libfloatconversion_39.bc -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.4.m2.bc > D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.5.gdce.bc -args D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=functionDF 
+INFO-FLOW: run_clang exec: D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=functionDF -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.5.gdce.bc > D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+Execute       send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+Execute       is_m_axi_addr64 
+INFO-FLOW: Doing LTO.
+INFO-FLOW: run_clang (background poll_ms 5000) exec: D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.0.bc.clang.reflow.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=functionDF -mllvm -hls-db-dir -mllvm D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -enable-fp-thr=0 -mllvm -reflow-bdd-simplify-threshold=1048576 -mllvm -reflow-fanout-threshold=16 -mllvm -assume-maxi-align=1 -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -ftime-report -mllvm -time-passes -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-reserved-saxilite-registers=0 -mllvm -enable-reflow-auto-loop-pipeline -mllvm -reflow-max-unroll-threshold=409600 -mllvm -reflow-assume-no-address-wrap=true -mllvm -reflow-enable-occurrence-inference=true -mllvm -reflow-emit-hint-scope=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=10 -x ir D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.5.gdce.bc -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.lto.bc {-hls-platform-db-name=D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2\common/technology\xilinx/common/platform.db} -hls-platform-name=zynq_slow -device-resource-info=BRAM_120.000000_DSP_80.000000_FF_35200.000000_LUT_17600.000000_SLICE_4400.000000_URAM_0.000000 -device-name-info=xc7z010iclg225-1L 2> D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.ld.0.bc.clang.reflow.err.log bg_poll_cmd: ::AP::poll_clang_39_closed_source
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 118 Compile/Link D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 118 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 94 Unroll/Inline (step 1) D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 94 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 76 Unroll/Inline (step 2) D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 76 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 72 Unroll/Inline (step 3) D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 72 Unroll/Inline (step 4) D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 58 Array/Struct (step 1) D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 58 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 58 Array/Struct (step 2) D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 58 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 58 Array/Struct (step 3) D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 58 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 58 Array/Struct (step 4) D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 58 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 58 Array/Struct (step 5) D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 58 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 58 Performance (step 1) D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 58 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 58 Performance (step 2) D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 58 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 58 Performance (step 3) D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 58 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 58 Performance (step 4) D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 58 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 62 HW Transforms (step 1) D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 62 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 81 HW Transforms (step 2) D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 81 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth_design_size.rpt
+Execute       source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< Loop0> at ../../../labs/Lab4/Lab4/functionDF.cpp:35:3 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< Loop0> at ../../../labs/Lab4/Lab4/functionDF.cpp:26:3 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< Loop0> at ../../../labs/Lab4/Lab4/functionDF.cpp:17:3 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< Loop0> at ../../../labs/Lab4/Lab4/functionDF.cpp:6:3 
+INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 8.11 seconds; current allocated memory: 113.527 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.005 seconds; current allocated memory: 113.527 MB.
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top functionDF -deadargelim -mem2reg -instcombine -dce -presyn-prepare -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -auto-shift-reg-idiom -promote-dbg-pointer -norm-name D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.0.bc -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.028 seconds; current allocated memory: 118.238 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.1.bc -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.2.prechk.bc -f 
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.2.prechk.bc -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.027 seconds; current allocated memory: 119.633 MB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.g.1.bc to D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db -interface-port-rename -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -dce -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -globaldce -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -scalar-stream -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -clean-array-spec -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.o.1.bc -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-712] Applying dataflow to function 'functionDF' (../../../labs/Lab4/Lab4/functionDF.cpp:41:1), detected/extracted 4 process function(s): 
+	 'funcA'
+	 'funcB'
+	 'funcC'
+	 'funcD'.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.o.1.tmp.bc -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.093 seconds; current allocated memory: 141.992 MB.
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg-lite -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg-lite -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -inst-simplify -inst-rectify -instcombine -adce -deadargelim -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -mem2reg -instcombine -gvn -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg-lite -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg-lite -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg-lite -loop-simplify -mergereturn -inst-simplify -inst-rectify -globaldce -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dce -dump-loop-dep-to-ir -check-all-ssdm -dump-complexity-metric -cdfg-build D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.o.2.bc -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Execute           auto_get_db
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.057 seconds; current allocated memory: 170.406 MB.
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 0.211 sec.
+Command     elaborate done; 9.354 sec.
+Execute     ap_eval exec zip -j D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'functionDF' ...
+Execute       ap_set_top_model functionDF 
+Execute       get_model_list functionDF -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model functionDF 
+Execute       preproc_iomode -model funcD 
+Execute       preproc_iomode -model funcC 
+Execute       preproc_iomode -model funcB 
+Execute       preproc_iomode -model funcA 
+Execute       get_model_list functionDF -filter all-wo-channel 
+INFO-FLOW: Model list for configure: funcA funcB funcC funcD functionDF
+INFO-FLOW: Configuring Module : funcA ...
+Execute       set_default_model funcA 
+Execute       apply_spec_resource_limit funcA 
+INFO-FLOW: Configuring Module : funcB ...
+Execute       set_default_model funcB 
+Execute       apply_spec_resource_limit funcB 
+INFO-FLOW: Configuring Module : funcC ...
+Execute       set_default_model funcC 
+Execute       apply_spec_resource_limit funcC 
+INFO-FLOW: Configuring Module : funcD ...
+Execute       set_default_model funcD 
+Execute       apply_spec_resource_limit funcD 
+INFO-FLOW: Configuring Module : functionDF ...
+Execute       set_default_model functionDF 
+Execute       apply_spec_resource_limit functionDF 
+INFO-FLOW: Model list for preprocess: funcA funcB funcC funcD functionDF
+INFO-FLOW: Preprocessing Module: funcA ...
+Execute       set_default_model funcA 
+Execute       cdfg_preprocess -model funcA 
+Execute       rtl_gen_preprocess funcA 
+INFO-FLOW: Preprocessing Module: funcB ...
+Execute       set_default_model funcB 
+Execute       cdfg_preprocess -model funcB 
+Execute       rtl_gen_preprocess funcB 
+INFO-FLOW: Preprocessing Module: funcC ...
+Execute       set_default_model funcC 
+Execute       cdfg_preprocess -model funcC 
+Execute       rtl_gen_preprocess funcC 
+INFO-FLOW: Preprocessing Module: funcD ...
+Execute       set_default_model funcD 
+Execute       cdfg_preprocess -model funcD 
+Execute       rtl_gen_preprocess funcD 
+INFO-FLOW: Preprocessing Module: functionDF ...
+Execute       set_default_model functionDF 
+Execute       cdfg_preprocess -model functionDF 
+Execute       rtl_gen_preprocess functionDF 
+INFO-FLOW: Model list for synthesis: funcA funcB funcC funcD functionDF
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'funcA' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model funcA 
+Execute       schedule -model funcA 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop0'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'Loop0'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.162 seconds; current allocated memory: 174.523 MB.
+Execute       syn_report -verbosereport -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcA.verbose.sched.rpt 
+Execute         list_part -family xc7z010i-clg225-1L 
+Execute           ap_family_info -name xc7z010i-clg225-1L -data names 
+Execute           ap_part_info -quiet -name xc7z010i-clg225-1L -data family 
+Execute       db_write -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcA.sched.adb -f 
+INFO-FLOW: Finish scheduling funcA.
+Execute       set_default_model funcA 
+Execute       bind -model funcA 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.046 seconds; current allocated memory: 175.801 MB.
+Execute       syn_report -verbosereport -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcA.verbose.bind.rpt 
+Execute         list_part -family xc7z010i-clg225-1L 
+Execute           ap_family_info -name xc7z010i-clg225-1L -data names 
+Execute           ap_part_info -quiet -name xc7z010i-clg225-1L -data family 
+Execute       db_write -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcA.bind.adb -f 
+INFO-FLOW: Finish binding funcA.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'funcB' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model funcB 
+Execute       schedule -model funcB 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop0'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'Loop0'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.064 seconds; current allocated memory: 176.223 MB.
+Execute       syn_report -verbosereport -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcB.verbose.sched.rpt 
+Execute         list_part -family xc7z010i-clg225-1L 
+Execute           ap_family_info -name xc7z010i-clg225-1L -data names 
+Execute           ap_part_info -quiet -name xc7z010i-clg225-1L -data family 
+Execute       db_write -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcB.sched.adb -f 
+INFO-FLOW: Finish scheduling funcB.
+Execute       set_default_model funcB 
+Execute       bind -model funcB 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.048 seconds; current allocated memory: 176.285 MB.
+Execute       syn_report -verbosereport -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcB.verbose.bind.rpt 
+Execute         list_part -family xc7z010i-clg225-1L 
+Execute           ap_family_info -name xc7z010i-clg225-1L -data names 
+Execute           ap_part_info -quiet -name xc7z010i-clg225-1L -data family 
+Execute       db_write -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcB.bind.adb -f 
+INFO-FLOW: Finish binding funcB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'funcC' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model funcC 
+Execute       schedule -model funcC 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop0'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'Loop0'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.063 seconds; current allocated memory: 176.586 MB.
+Execute       syn_report -verbosereport -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcC.verbose.sched.rpt 
+Execute         list_part -family xc7z010i-clg225-1L 
+Execute           ap_family_info -name xc7z010i-clg225-1L -data names 
+Execute           ap_part_info -quiet -name xc7z010i-clg225-1L -data family 
+Execute       db_write -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcC.sched.adb -f 
+INFO-FLOW: Finish scheduling funcC.
+Execute       set_default_model funcC 
+Execute       bind -model funcC 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.064 seconds; current allocated memory: 176.645 MB.
+Execute       syn_report -verbosereport -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcC.verbose.bind.rpt 
+Execute         list_part -family xc7z010i-clg225-1L 
+Execute           ap_family_info -name xc7z010i-clg225-1L -data names 
+Execute           ap_part_info -quiet -name xc7z010i-clg225-1L -data family 
+Execute       db_write -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcC.bind.adb -f 
+INFO-FLOW: Finish binding funcC.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'funcD' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model funcD 
+Execute       schedule -model funcD 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop0'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'Loop0'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.064 seconds; current allocated memory: 176.965 MB.
+Execute       syn_report -verbosereport -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcD.verbose.sched.rpt 
+Execute         list_part -family xc7z010i-clg225-1L 
+Execute           ap_family_info -name xc7z010i-clg225-1L -data names 
+Execute           ap_part_info -quiet -name xc7z010i-clg225-1L -data family 
+Execute       db_write -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcD.sched.adb -f 
+INFO-FLOW: Finish scheduling funcD.
+Execute       set_default_model funcD 
+Execute       bind -model funcD 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.054 seconds; current allocated memory: 177.090 MB.
+Execute       syn_report -verbosereport -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcD.verbose.bind.rpt 
+Execute         list_part -family xc7z010i-clg225-1L 
+Execute           ap_family_info -name xc7z010i-clg225-1L -data names 
+Execute           ap_part_info -quiet -name xc7z010i-clg225-1L -data family 
+Execute       db_write -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcD.bind.adb -f 
+INFO-FLOW: Finish binding funcD.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'functionDF' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model functionDF 
+Execute       schedule -model functionDF 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 177.480 MB.
+Execute       syn_report -verbosereport -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.verbose.sched.rpt 
+Execute         list_part -family xc7z010i-clg225-1L 
+Execute           ap_family_info -name xc7z010i-clg225-1L -data names 
+Execute           ap_part_info -quiet -name xc7z010i-clg225-1L -data family 
+Execute       db_write -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.sched.adb -f 
+INFO-FLOW: Finish scheduling functionDF.
+Execute       set_default_model functionDF 
+Execute       bind -model functionDF 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.048 seconds; current allocated memory: 177.516 MB.
+Execute       syn_report -verbosereport -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.verbose.bind.rpt 
+Execute         list_part -family xc7z010i-clg225-1L 
+Execute           ap_family_info -name xc7z010i-clg225-1L -data names 
+Execute           ap_part_info -quiet -name xc7z010i-clg225-1L -data family 
+Execute       db_write -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.bind.adb -f 
+INFO-FLOW: Finish binding functionDF.
+Execute       get_model_list functionDF -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess funcA 
+Execute       rtl_gen_preprocess funcB 
+Execute       rtl_gen_preprocess funcC 
+Execute       rtl_gen_preprocess funcD 
+Execute       rtl_gen_preprocess functionDF 
+INFO-FLOW: Model list for RTL generation: funcA funcB funcC funcD functionDF
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'funcA' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model funcA -top_prefix functionDF_ -sub_prefix functionDF_ -mg_file D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcA.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'funcA' pipeline 'Loop0' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'funcA'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.078 seconds; current allocated memory: 179.285 MB.
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.rtl_wrap.cfg.tcl 
+Execute       gen_rtl funcA -style xilinx -f -lang vhdl -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/vhdl/functionDF_funcA 
+Execute       gen_rtl funcA -style xilinx -f -lang vlog -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/verilog/functionDF_funcA 
+Execute       syn_report -csynth -model funcA -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/funcA_csynth.rpt 
+Execute         list_part -family xc7z010i-clg225-1L 
+Execute           ap_family_info -name xc7z010i-clg225-1L -data names 
+Execute           ap_part_info -quiet -name xc7z010i-clg225-1L -data family 
+Execute       syn_report -rtlxml -model funcA -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/funcA_csynth.xml 
+Execute         list_part -family xc7z010i-clg225-1L 
+Execute           ap_family_info -name xc7z010i-clg225-1L -data names 
+Execute           ap_part_info -quiet -name xc7z010i-clg225-1L -data family 
+Execute       syn_report -verbosereport -model funcA -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcA.verbose.rpt 
+Execute         list_part -family xc7z010i-clg225-1L 
+Execute           ap_family_info -name xc7z010i-clg225-1L -data names 
+Execute           ap_part_info -quiet -name xc7z010i-clg225-1L -data family 
+Execute       db_write -model funcA -f -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcA.adb 
+Execute       db_write -model funcA -bindview -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info funcA -p D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcA 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'funcB' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model funcB -top_prefix functionDF_ -sub_prefix functionDF_ -mg_file D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcB.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'funcB' pipeline 'Loop0' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'funcB'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.124 seconds; current allocated memory: 181.035 MB.
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.rtl_wrap.cfg.tcl 
+Execute       gen_rtl funcB -style xilinx -f -lang vhdl -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/vhdl/functionDF_funcB 
+Execute       gen_rtl funcB -style xilinx -f -lang vlog -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/verilog/functionDF_funcB 
+Execute       syn_report -csynth -model funcB -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/funcB_csynth.rpt 
+Execute         list_part -family xc7z010i-clg225-1L 
+Execute           ap_family_info -name xc7z010i-clg225-1L -data names 
+Execute           ap_part_info -quiet -name xc7z010i-clg225-1L -data family 
+Execute       syn_report -rtlxml -model funcB -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/funcB_csynth.xml 
+Execute         list_part -family xc7z010i-clg225-1L 
+Execute           ap_family_info -name xc7z010i-clg225-1L -data names 
+Execute           ap_part_info -quiet -name xc7z010i-clg225-1L -data family 
+Execute       syn_report -verbosereport -model funcB -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcB.verbose.rpt 
+Execute         list_part -family xc7z010i-clg225-1L 
+Execute           ap_family_info -name xc7z010i-clg225-1L -data names 
+Execute           ap_part_info -quiet -name xc7z010i-clg225-1L -data family 
+Execute       db_write -model funcB -f -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcB.adb 
+Execute       db_write -model funcB -bindview -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info funcB -p D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcB 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'funcC' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model funcC -top_prefix functionDF_ -sub_prefix functionDF_ -mg_file D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcC.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'funcC' pipeline 'Loop0' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'funcC'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.153 seconds; current allocated memory: 181.824 MB.
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.rtl_wrap.cfg.tcl 
+Execute       gen_rtl funcC -style xilinx -f -lang vhdl -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/vhdl/functionDF_funcC 
+Execute       gen_rtl funcC -style xilinx -f -lang vlog -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/verilog/functionDF_funcC 
+Execute       syn_report -csynth -model funcC -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/funcC_csynth.rpt 
+Execute         list_part -family xc7z010i-clg225-1L 
+Execute           ap_family_info -name xc7z010i-clg225-1L -data names 
+Execute           ap_part_info -quiet -name xc7z010i-clg225-1L -data family 
+Execute       syn_report -rtlxml -model funcC -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/funcC_csynth.xml 
+Execute         list_part -family xc7z010i-clg225-1L 
+Execute           ap_family_info -name xc7z010i-clg225-1L -data names 
+Execute           ap_part_info -quiet -name xc7z010i-clg225-1L -data family 
+Execute       syn_report -verbosereport -model funcC -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcC.verbose.rpt 
+Execute         list_part -family xc7z010i-clg225-1L 
+Execute           ap_family_info -name xc7z010i-clg225-1L -data names 
+Execute           ap_part_info -quiet -name xc7z010i-clg225-1L -data family 
+Execute       db_write -model funcC -f -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcC.adb 
+Execute       db_write -model funcC -bindview -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info funcC -p D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcC 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'funcD' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model funcD -top_prefix functionDF_ -sub_prefix functionDF_ -mg_file D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcD.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'funcD' pipeline 'Loop0' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'funcD'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.106 seconds; current allocated memory: 182.578 MB.
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.rtl_wrap.cfg.tcl 
+Execute       gen_rtl funcD -style xilinx -f -lang vhdl -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/vhdl/functionDF_funcD 
+Execute       gen_rtl funcD -style xilinx -f -lang vlog -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/verilog/functionDF_funcD 
+Execute       syn_report -csynth -model funcD -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/funcD_csynth.rpt 
+Execute         list_part -family xc7z010i-clg225-1L 
+Execute           ap_family_info -name xc7z010i-clg225-1L -data names 
+Execute           ap_part_info -quiet -name xc7z010i-clg225-1L -data family 
+Execute       syn_report -rtlxml -model funcD -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/funcD_csynth.xml 
+Execute         list_part -family xc7z010i-clg225-1L 
+Execute           ap_family_info -name xc7z010i-clg225-1L -data names 
+Execute           ap_part_info -quiet -name xc7z010i-clg225-1L -data family 
+Execute       syn_report -verbosereport -model funcD -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcD.verbose.rpt 
+Execute         list_part -family xc7z010i-clg225-1L 
+Execute           ap_family_info -name xc7z010i-clg225-1L -data names 
+Execute           ap_part_info -quiet -name xc7z010i-clg225-1L -data family 
+Execute       db_write -model funcD -f -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcD.adb 
+Execute       db_write -model funcD -bindview -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info funcD -p D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcD 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'functionDF' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model functionDF -top_prefix  -sub_prefix functionDF_ -mg_file D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'functionDF/vecIn' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'functionDF/vecOut' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'functionDF' to 'ap_ctrl_hs'.
+WARNING: [HLS 200-656] Deadlocks can occur since process funcA is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'functionDF'.
+INFO: [HLS 200-741] Implementing PIPO functionDF_c1_RAM_AUTO_1R1W using a single memory for all blocks
+INFO: [RTMG 210-278] Implementing memory 'functionDF_c1_RAM_AUTO_1R1W_memcore' using auto RAMs.
+INFO: [HLS 200-741] Implementing PIPO functionDF_c2_RAM_AUTO_1R1W using a single memory for all blocks
+INFO: [RTMG 210-278] Implementing memory 'functionDF_c2_RAM_AUTO_1R1W_memcore' using auto RAMs.
+INFO: [HLS 200-741] Implementing PIPO functionDF_c4_RAM_AUTO_1R1W using a single memory for all blocks
+INFO: [RTMG 210-278] Implementing memory 'functionDF_c4_RAM_AUTO_1R1W_memcore' using auto RAMs.
+Command       create_rtl_model done; 0.11 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.209 seconds; current allocated memory: 184.172 MB.
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.rtl_wrap.cfg.tcl 
+Execute       gen_rtl functionDF -istop -style xilinx -f -lang vhdl -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/vhdl/functionDF 
+Execute       gen_rtl functionDF -istop -style xilinx -f -lang vlog -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/verilog/functionDF 
+Execute       syn_report -csynth -model functionDF -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/functionDF_csynth.rpt 
+Execute         list_part -family xc7z010i-clg225-1L 
+Execute           ap_family_info -name xc7z010i-clg225-1L -data names 
+Execute           ap_part_info -quiet -name xc7z010i-clg225-1L -data family 
+Execute       syn_report -rtlxml -model functionDF -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/functionDF_csynth.xml 
+Execute         list_part -family xc7z010i-clg225-1L 
+Execute           ap_family_info -name xc7z010i-clg225-1L -data names 
+Execute           ap_part_info -quiet -name xc7z010i-clg225-1L -data family 
+Execute       syn_report -verbosereport -model functionDF -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.verbose.rpt 
+Execute         list_part -family xc7z010i-clg225-1L 
+Execute           ap_family_info -name xc7z010i-clg225-1L -data names 
+Execute           ap_part_info -quiet -name xc7z010i-clg225-1L -data family 
+Execute       db_write -model functionDF -f -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.adb 
+Execute       db_write -model functionDF -bindview -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info functionDF -p D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF 
+Execute       export_constraint_db -f -tool general -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.constraint.tcl 
+Execute       syn_report -designview -model functionDF -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.design.xml 
+Execute       syn_report -csynthDesign -model functionDF -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth.rpt -MHOut D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/kernel_module_hierarchy.tcl 
+Execute         list_part -family xc7z010i-clg225-1L 
+Execute           ap_family_info -name xc7z010i-clg225-1L -data names 
+Execute           ap_part_info -quiet -name xc7z010i-clg225-1L -data family 
+Execute       syn_report -wcfg -model functionDF -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model functionDF -o D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.protoinst 
+Execute       sc_get_clocks functionDF 
+Execute       sc_get_portdomain functionDF 
+INFO-FLOW: Model list for RTL component generation: funcA funcB funcC funcD functionDF
+INFO-FLOW: Handling components in module [funcA] ... 
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcA.compgen.tcl 
+INFO-FLOW: Found component functionDF_flow_control_loop_pipe.
+INFO-FLOW: Append model functionDF_flow_control_loop_pipe
+INFO-FLOW: Handling components in module [funcB] ... 
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcB.compgen.tcl 
+INFO-FLOW: Found component functionDF_flow_control_loop_pipe.
+INFO-FLOW: Append model functionDF_flow_control_loop_pipe
+INFO-FLOW: Handling components in module [funcC] ... 
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcC.compgen.tcl 
+INFO-FLOW: Found component functionDF_flow_control_loop_pipe.
+INFO-FLOW: Append model functionDF_flow_control_loop_pipe
+INFO-FLOW: Handling components in module [funcD] ... 
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcD.compgen.tcl 
+INFO-FLOW: Found component functionDF_flow_control_loop_pipe.
+INFO-FLOW: Append model functionDF_flow_control_loop_pipe
+INFO-FLOW: Handling components in module [functionDF] ... 
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.compgen.tcl 
+INFO-FLOW: Found component functionDF_c1_RAM_AUTO_1R1W_memcore.
+INFO-FLOW: Append model functionDF_c1_RAM_AUTO_1R1W_memcore
+INFO-FLOW: Found component functionDF_c1_RAM_AUTO_1R1W.
+INFO-FLOW: Append model functionDF_c1_RAM_AUTO_1R1W
+INFO-FLOW: Found component functionDF_c2_RAM_AUTO_1R1W_memcore.
+INFO-FLOW: Append model functionDF_c2_RAM_AUTO_1R1W_memcore
+INFO-FLOW: Found component functionDF_c2_RAM_AUTO_1R1W.
+INFO-FLOW: Append model functionDF_c2_RAM_AUTO_1R1W
+INFO-FLOW: Found component functionDF_c4_RAM_AUTO_1R1W_memcore.
+INFO-FLOW: Append model functionDF_c4_RAM_AUTO_1R1W_memcore
+INFO-FLOW: Found component functionDF_c4_RAM_AUTO_1R1W.
+INFO-FLOW: Append model functionDF_c4_RAM_AUTO_1R1W
+INFO-FLOW: Append model funcA
+INFO-FLOW: Append model funcB
+INFO-FLOW: Append model funcC
+INFO-FLOW: Append model funcD
+INFO-FLOW: Append model functionDF
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: functionDF_flow_control_loop_pipe functionDF_flow_control_loop_pipe functionDF_flow_control_loop_pipe functionDF_flow_control_loop_pipe functionDF_c1_RAM_AUTO_1R1W_memcore functionDF_c1_RAM_AUTO_1R1W functionDF_c2_RAM_AUTO_1R1W_memcore functionDF_c2_RAM_AUTO_1R1W functionDF_c4_RAM_AUTO_1R1W_memcore functionDF_c4_RAM_AUTO_1R1W funcA funcB funcC funcD functionDF
+INFO-FLOW: Generating D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/autopilot.rtl.models.txt file...
+INFO-FLOW: To file: write model functionDF_flow_control_loop_pipe
+INFO-FLOW: To file: write model functionDF_flow_control_loop_pipe
+INFO-FLOW: To file: write model functionDF_flow_control_loop_pipe
+INFO-FLOW: To file: write model functionDF_flow_control_loop_pipe
+INFO-FLOW: To file: write model functionDF_c1_RAM_AUTO_1R1W_memcore
+INFO-FLOW: To file: write model functionDF_c1_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model functionDF_c2_RAM_AUTO_1R1W_memcore
+INFO-FLOW: To file: write model functionDF_c2_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model functionDF_c4_RAM_AUTO_1R1W_memcore
+INFO-FLOW: To file: write model functionDF_c4_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model funcA
+INFO-FLOW: To file: write model funcB
+INFO-FLOW: To file: write model funcC
+INFO-FLOW: To file: write model funcD
+INFO-FLOW: To file: write model functionDF
+INFO-FLOW: Generating D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/autopilot.rtl.models.tcl file...
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate_csynth_design
+INFO-FLOW: DBG:PUTS: read_platform_lib D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/global.setting.tcl
+Execute       source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/generic/autopilot/common.gen 
+Execute         source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/generic/autopilot/op.gen 
+Execute       source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/global.setting.tcl 
+Execute       source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute         source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source D:/Cadeiras/AAC/xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.104 sec.
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/vhdl' dstVlogDir='D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/vlog' tclDir='D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db' modelList='functionDF_flow_control_loop_pipe
+functionDF_flow_control_loop_pipe
+functionDF_flow_control_loop_pipe
+functionDF_flow_control_loop_pipe
+functionDF_c1_RAM_AUTO_1R1W_memcore
+functionDF_c1_RAM_AUTO_1R1W
+functionDF_c2_RAM_AUTO_1R1W_memcore
+functionDF_c2_RAM_AUTO_1R1W
+functionDF_c4_RAM_AUTO_1R1W_memcore
+functionDF_c4_RAM_AUTO_1R1W
+funcA
+funcB
+funcC
+funcD
+functionDF
+' expOnly='0'
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z010i-clg225-1L -data names -quiet 
+Execute       ap_part_info -name xc7z010i-clg225-1L -data info -quiet 
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/global.setting.tcl 
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/global.setting.tcl 
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcA.compgen.tcl 
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcB.compgen.tcl 
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcC.compgen.tcl 
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcD.compgen.tcl 
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.compgen.tcl 
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.414 seconds; current allocated memory: 188.129 MB.
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='functionDF_' outfile=''
+INFO-FLOW: Running: create_csynth_xml read xml data
+INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml bind info
+INFO-FLOW: Done: create_csynth_xml bind info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml config info
+INFO-FLOW: Done: create_csynth_xml config info time: 0.4 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml write xml
+INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/syn/report/csynth.xml
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='functionDF_flow_control_loop_pipe
+functionDF_flow_control_loop_pipe
+functionDF_flow_control_loop_pipe
+functionDF_flow_control_loop_pipe
+functionDF_c1_RAM_AUTO_1R1W_memcore
+functionDF_c1_RAM_AUTO_1R1W
+functionDF_c2_RAM_AUTO_1R1W_memcore
+functionDF_c2_RAM_AUTO_1R1W
+functionDF_c4_RAM_AUTO_1R1W_memcore
+functionDF_c4_RAM_AUTO_1R1W
+funcA
+funcB
+funcC
+funcD
+functionDF
+' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/global.setting.tcl 
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/global.setting.tcl 
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/top-io-be.tcl 
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.tbgen.tcl 
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.rtl_wrap.cfg.tcl 
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.compgen.dataonly.tcl 
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcA.tbgen.tcl 
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcB.tbgen.tcl 
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcC.tbgen.tcl 
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/funcD.tbgen.tcl 
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.tbgen.tcl 
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z010i-clg225-1L -data names -quiet 
+Execute       ap_part_info -name xc7z010i-clg225-1L -data info -quiet 
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/functionDF.constraint.tcl 
+Execute       sc_get_clocks functionDF 
+Execute       source D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution2/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {} report_dict {TOPINST functionDF MODULE2INSTS {functionDF functionDF funcA funcA_U0 funcB funcB_U0 funcC funcC_U0 funcD funcD_U0} INST2MODULE {functionDF functionDF funcA_U0 funcA funcB_U0 funcB funcC_U0 funcC funcD_U0 funcD} INSTDATA {functionDF {DEPTH 1 CHILDREN {funcA_U0 funcB_U0 funcC_U0 funcD_U0}} funcA_U0 {DEPTH 2 CHILDREN {}} funcB_U0 {DEPTH 2 CHILDREN {}} funcC_U0 {DEPTH 2 CHILDREN {}} funcD_U0 {DEPTH 2 CHILDREN {}}} MODULEDATA {funcA {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln6_fu_95_p2 SOURCE ../../../labs/Lab4/Lab4/functionDF.cpp:6 VARIABLE add_ln6 LOOP Loop0 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME t_fu_117_p2 SOURCE ../../../labs/Lab4/Lab4/functionDF.cpp:8 VARIABLE t LOOP Loop0 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op sub}}} AREA {DSP 0 BRAM 0 URAM 0}} funcB {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln17_fu_76_p2 SOURCE ../../../labs/Lab4/Lab4/functionDF.cpp:17 VARIABLE add_ln17 LOOP Loop0 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME out_r_d0 SOURCE ../../../labs/Lab4/Lab4/functionDF.cpp:19 VARIABLE add_ln19 LOOP Loop0 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} funcC {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln26_fu_78_p2 SOURCE ../../../labs/Lab4/Lab4/functionDF.cpp:26 VARIABLE add_ln26 LOOP Loop0 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} funcD {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln35_fu_97_p2 SOURCE ../../../labs/Lab4/Lab4/functionDF.cpp:35 VARIABLE add_ln35 LOOP Loop0 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME vecOut_d0 SOURCE ../../../labs/Lab4/Lab4/functionDF.cpp:37 VARIABLE add_ln37 LOOP Loop0 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} functionDF {BINDINFO {{BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME c1_U SOURCE ../../../labs/Lab4/Lab4/functionDF.cpp:43 VARIABLE c1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE pipo STORAGESIZE {32 10 2} STORAGEUSAGE {ram_1p channel} DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME c2_U SOURCE ../../../labs/Lab4/Lab4/functionDF.cpp:43 VARIABLE c2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE pipo STORAGESIZE {30 10 2} STORAGEUSAGE {ram_1p channel} DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME c3_U SOURCE ../../../labs/Lab4/Lab4/functionDF.cpp:43 VARIABLE c3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE pipo STORAGESIZE {32 10 2} STORAGEUSAGE {ram_1p channel} DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME c4_U SOURCE ../../../labs/Lab4/Lab4/functionDF.cpp:43 VARIABLE c4 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE pipo STORAGESIZE {31 10 2} STORAGEUSAGE {ram_1p channel} DISPNAME {bind_storage ram_1p}}} AREA {DSP 0 BRAM 0 URAM 0}}}}'
+INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
+INFO-FLOW: Running: gen_csynth_sec_pragma
+INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
+INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.801 seconds; current allocated memory: 193.590 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for functionDF.
+INFO: [VLOG 209-307] Generating Verilog RTL for functionDF.
+Execute       syn_report -model functionDF -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 138.97 MHz
+Command     autosyn done; 2.636 sec.
+Command   csynth_design done; 12.169 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 12.169 seconds; current allocated memory: 84.352 MB.
+Command ap_source done; 13.093 sec.
+Execute cleanup_all 

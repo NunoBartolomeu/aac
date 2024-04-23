@@ -1,0 +1,16 @@
+D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution3/csynth.tcl:16:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=functionDF_XLX_SEP_ PragmaOptions=name=functionDF_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=functionDF
+        ^
+../../../labs/Lab4/Lab4/functionDF.cpp:45:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=functionDF_XLX_SEP_ PragmaOptions=type=fifo variable=c1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM type=fifo variable=c1
+        ^
+../../../labs/Lab4/Lab4/functionDF.cpp:46:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=functionDF_XLX_SEP_ PragmaOptions=type=fifo variable=c3_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM type=fifo variable=c3
+        ^
+../../../labs/Lab4/Lab4/functionDF.cpp:47:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=functionDF_XLX_SEP_ PragmaOptions=type=fifo variable=c4_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM type=fifo variable=c4
+        ^
+../../../labs/Lab4/Lab4/functionDF.cpp:48:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=functionDF_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS dataflow
+        ^
+5 warnings generated.

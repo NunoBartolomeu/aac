@@ -1,0 +1,40 @@
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        Loop0
+  - String:          '> at '
+  - LoopLoc:         '../../../labs/Lab4/Lab4/functionDF.cpp:35:3'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        Loop0
+  - String:          '> at '
+  - LoopLoc:         '../../../labs/Lab4/Lab4/functionDF.cpp:26:3'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        Loop0
+  - String:          '> at '
+  - LoopLoc:         '../../../labs/Lab4/Lab4/functionDF.cpp:17:3'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        Loop0
+  - String:          '> at '
+  - LoopLoc:         '../../../labs/Lab4/Lab4/functionDF.cpp:6:3'
+  - String:          ' '
+...

@@ -1,0 +1,14 @@
+{
+  "0": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "vectorProduct.cpp",
+    "fileloc": 1,
+    "instructions": 26,
+    "loads": {
+      "T": 4
+    },
+    "name": "vectorProduct",
+    "total_instructions": 26
+  }
+}

@@ -1,0 +1,139 @@
+
+
+================================================================
+== Synthesis Summary Report of 'conv2D0'
+================================================================
++ General Information: 
+    * Date:           Thu Apr 11 21:04:25 2024
+    * Version:        2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:        Project1
+    * Solution:       pipeline_off (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z010i-clg225-1L
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------+------+------+---------+-----------+----------+---------+------+----------+------+--------+-----------+----------+-----+
+    |     Modules    | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |      |        |           |          |     |
+    |     & Loops    | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM |   DSP  |     FF    |    LUT   | URAM|
+    +----------------+------+------+---------+-----------+----------+---------+------+----------+------+--------+-----------+----------+-----+
+    |+ conv2D0       |     -|  2.66|      274|  2.740e+03|         -|      275|     -|        no|     -|  1 (1%)|  123 (~0%)|  403 (2%)|    -|
+    | o readImg      |     -|  7.30|       32|    320.000|         2|        -|    16|        no|     -|       -|          -|         -|    -|
+    | o readweights  |     -|  7.30|       18|    180.000|         2|        -|     9|        no|     -|       -|          -|         -|    -|
+    | o loop_orow    |     -|  7.30|      216|  2.160e+03|       108|        -|     2|        no|     -|       -|          -|         -|    -|
+    |  o loop_ocol   |     -|  7.30|      106|  1.060e+03|        53|        -|     2|        no|     -|       -|          -|         -|    -|
+    |   o loop_k1    |     -|  7.30|       51|    510.000|        17|        -|     3|        no|     -|       -|          -|         -|    -|
+    |    o loop_k2   |     -|  7.30|       15|    150.000|         5|        -|     3|        no|     -|       -|          -|         -|    -|
+    | o writeImg     |     -|  7.30|        4|     40.000|         1|        -|     4|        no|     -|       -|          -|         -|    -|
+    +----------------+------+------+---------+-----------+----------+---------+------+----------+------+--------+-----------+----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++------------------+-----------+----------+
+| Port             | Direction | Bitwidth |
++------------------+-----------+----------+
+| img_in_address0  | out       | 4        |
+| img_in_q0        | in        | 8        |
+| img_out_address0 | out       | 2        |
+| img_out_d0       | out       | 8        |
+| weights_address0 | out       | 4        |
+| weights_q0       | in        | 8        |
++------------------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------------+
+| Argument | Direction | Datatype       |
++----------+-----------+----------------+
+| img_in   | in        | unsigned char* |
+| img_out  | out       | signed char*   |
+| weights  | in        | signed char*   |
++----------+-----------+----------------+
+
+* SW-to-HW Mapping
++----------+------------------+---------+----------+
+| Argument | HW Interface     | HW Type | HW Usage |
++----------+------------------+---------+----------+
+| img_in   | img_in_address0  | port    | offset   |
+| img_in   | img_in_ce0       | port    |          |
+| img_in   | img_in_q0        | port    |          |
+| img_out  | img_out_address0 | port    | offset   |
+| img_out  | img_out_ce0      | port    |          |
+| img_out  | img_out_we0      | port    |          |
+| img_out  | img_out_d0       | port    |          |
+| weights  | weights_address0 | port    | offset   |
+| weights  | weights_ce0      | port    |          |
+| weights  | weights_q0       | port    |          |
++----------+------------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++---------------------------------+-----+--------+----------+-----+-----------+---------+
+| Name                            | DSP | Pragma | Variable | Op  | Impl      | Latency |
++---------------------------------+-----+--------+----------+-----+-----------+---------+
+| + conv2D0                       | 1   |        |          |     |           |         |
+|   add_ln13_fu_281_p2            |     |        | add_ln13 | add | fabric    | 0       |
+|   add_ln16_fu_311_p2            |     |        | add_ln16 | add | fabric    | 0       |
+|   add_ln20_fu_341_p2            |     |        | add_ln20 | add | fabric    | 0       |
+|   add_ln22_fu_366_p2            |     |        | add_ln22 | add | fabric    | 0       |
+|   add_ln25_fu_382_p2            |     |        | add_ln25 | add | fabric    | 0       |
+|   empty_12_fu_400_p2            |     |        | empty_12 | sub | fabric    | 0       |
+|   empty_13_fu_406_p2            |     |        | empty_13 | add | fabric    | 0       |
+|   add_ln27_fu_448_p2            |     |        | add_ln27 | add | fabric    | 0       |
+|   add_ln29_fu_458_p2            |     |        | add_ln29 | add | fabric    | 0       |
+|   add_ln30_fu_468_p2            |     |        | add_ln30 | add | fabric    | 0       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U2 | 1   |        | mul_ln31 | mul | dsp_slice | 3       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U2 | 1   |        | acc      | add | dsp_slice | 3       |
+|   add_ln38_fu_495_p2            |     |        | add_ln38 | add | fabric    | 0       |
++---------------------------------+-----+--------+----------+-----+-----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++--------------+--------------+------+------+------+--------+----------+------+---------+------------------+
+| Name         | Usage        | Type | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|              |              |      |      |      |        |          |      |         | Banks            |
++--------------+--------------+------+------+------+--------+----------+------+---------+------------------+
+| + conv2D0    |              |      | 0    | 0    |        |          |      |         |                  |
+|   img_inT_U  | ram_1p array |      |      |      |        | img_inT  | auto | 1       | 8, 16, 1         |
+|   weightsT_U | ram_1p array |      |      |      |        | weightsT | auto | 1       | 8, 9, 1          |
++--------------+--------------+------+------+------+--------+----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++----------+---------+---------------------------+
+| Type     | Options | Location                  |
++----------+---------+---------------------------+
+| pipeline | off     | conv2D0.cpp:14 in conv2d0 |
+| pipeline | off     | conv2D0.cpp:17 in conv2d0 |
+| pipeline | off     | conv2D0.cpp:21 in conv2d0 |
+| pipeline | off     | conv2D0.cpp:23 in conv2d0 |
+| pipeline | off     | conv2D0.cpp:26 in conv2d0 |
+| pipeline | off     | conv2D0.cpp:28 in conv2d0 |
+| pipeline | off     | conv2D0.cpp:39 in conv2d0 |
++----------+---------+---------------------------+
+
+

@@ -1,0 +1,5 @@
+conv2D0_mux_4_2_8_1_1
+conv2D0_mac_muladd_8s_8s_8ns_8_4_1
+conv2D0_img_inT_RAM_AUTO_1R1W
+conv2D0_weightsT_RAM_AUTO_1R1W
+conv2D0

@@ -1,0 +1,152 @@
+
+
+================================================================
+== Synthesis Summary Report of 'functionDF'
+================================================================
++ General Information: 
+    * Date:           Tue Mar 19 12:47:57 2024
+    * Version:        2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:        lab4opt
+    * Solution:       solution3 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z010i-clg225-1L
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------+------+------+---------+---------+----------+---------+------+----------+------+----+----------+-----------+-----+
+    |    Modules    | Issue|      | Latency | Latency | Iteration|         | Trip |          |      |    |          |           |     |
+    |    & Loops    | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|    FF    |    LUT    | URAM|
+    +---------------+------+------+---------+---------+----------+---------+------+----------+------+----+----------+-----------+-----+
+    |+ functionDF*  |     -|  0.10|       28|  280.000|         -|       14|     -|  dataflow|     -|   -|  472 (1%)|   676 (3%)|    -|
+    | + funcA       |     -|  0.10|       13|  130.000|         -|       13|     -|        no|     -|   -|  46 (~0%)|  125 (~0%)|    -|
+    |  o Loop0      |     -|  7.30|       11|  110.000|         3|        1|    10|       yes|     -|   -|         -|          -|    -|
+    | + funcB       |     -|  1.13|       13|  130.000|         -|       13|     -|        no|     -|   -|  42 (~0%)|  134 (~0%)|    -|
+    |  o Loop0      |     -|  7.30|       11|  110.000|         3|        1|    10|       yes|     -|   -|         -|          -|    -|
+    | + funcC       |     -|  1.37|       12|  120.000|         -|       12|     -|        no|     -|   -|   7 (~0%)|   77 (~0%)|    -|
+    |  o Loop0      |     -|  7.30|       10|  100.000|         2|        1|    10|       yes|     -|   -|         -|          -|    -|
+    | + funcD       |     -|  1.13|       13|  130.000|         -|       13|     -|        no|     -|   -|  49 (~0%)|  127 (~0%)|    -|
+    |  o Loop0      |     -|  7.30|       11|  110.000|         3|        1|    10|       yes|     -|   -|         -|          -|    -|
+    +---------------+------+------+---------+---------+----------+---------+------+----------+------+----+----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++-----------------+-----------+----------+
+| Port            | Direction | Bitwidth |
++-----------------+-----------+----------+
+| vecIn_address0  | out       | 4        |
+| vecIn_address1  | out       | 4        |
+| vecIn_d0        | out       | 32       |
+| vecIn_d1        | out       | 32       |
+| vecIn_q0        | in        | 32       |
+| vecIn_q1        | in        | 32       |
+| vecOut_address0 | out       | 4        |
+| vecOut_address1 | out       | 4        |
+| vecOut_d0       | out       | 32       |
+| vecOut_d1       | out       | 32       |
+| vecOut_q0       | in        | 32       |
+| vecOut_q1       | in        | 32       |
++-----------------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| vecIn    | in        | int*     |
+| vecOut   | out       | int*     |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+-----------------+---------+----------+
+| Argument | HW Interface    | HW Type | HW Usage |
++----------+-----------------+---------+----------+
+| vecIn    | vecIn_address0  | port    | offset   |
+| vecIn    | vecIn_ce0       | port    |          |
+| vecIn    | vecIn_d0        | port    |          |
+| vecIn    | vecIn_q0        | port    |          |
+| vecIn    | vecIn_we0       | port    |          |
+| vecIn    | vecIn_address1  | port    | offset   |
+| vecIn    | vecIn_ce1       | port    |          |
+| vecIn    | vecIn_d1        | port    |          |
+| vecIn    | vecIn_q1        | port    |          |
+| vecIn    | vecIn_we1       | port    |          |
+| vecOut   | vecOut_address0 | port    | offset   |
+| vecOut   | vecOut_ce0      | port    |          |
+| vecOut   | vecOut_d0       | port    |          |
+| vecOut   | vecOut_q0       | port    |          |
+| vecOut   | vecOut_we0      | port    |          |
+| vecOut   | vecOut_address1 | port    | offset   |
+| vecOut   | vecOut_ce1      | port    |          |
+| vecOut   | vecOut_d1       | port    |          |
+| vecOut   | vecOut_q1       | port    |          |
+| vecOut   | vecOut_we1      | port    |          |
++----------+-----------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------+-----+--------+----------+-----+--------+---------+
+| Name                  | DSP | Pragma | Variable | Op  | Impl   | Latency |
++-----------------------+-----+--------+----------+-----+--------+---------+
+| + functionDF          | 0   |        |          |     |        |         |
+|  + funcA              | 0   |        |          |     |        |         |
+|    add_ln6_fu_93_p2   |     |        | add_ln6  | add | fabric | 0       |
+|    t_fu_115_p2        |     |        | t        | sub | fabric | 0       |
+|  + funcB              | 0   |        |          |     |        |         |
+|    add_ln17_fu_69_p2  |     |        | add_ln17 | add | fabric | 0       |
+|    c3_din             |     |        | add_ln19 | add | fabric | 0       |
+|  + funcC              | 0   |        |          |     |        |         |
+|    add_ln26_fu_78_p2  |     |        | add_ln26 | add | fabric | 0       |
+|  + funcD              | 0   |        |          |     |        |         |
+|    add_ln35_fu_83_p2  |     |        | add_ln35 | add | fabric | 0       |
+|    add_ln37_fu_100_p2 |     |        | add_ln37 | add | fabric | 0       |
++-----------------------+-----+--------+----------+-----+--------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++--------------+----------------+--------+------+------+--------+----------+------+---------+------------------+
+| Name         | Usage          | Type   | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|              |                |        |      |      |        |          |      |         | Banks            |
++--------------+----------------+--------+------+------+--------+----------+------+---------+------------------+
+| + functionDF |                |        | 0    | 0    |        |          |      |         |                  |
+|   c1_U       | fifo channel   | stream |      |      |        | c1       | srl  | 0       | 32, 10, 1        |
+|   c2_U       | ram_1p channel | pipo   |      |      |        | c2       | auto | 1       | 31, 10, 2        |
+|   c3_U       | fifo channel   | stream |      |      |        | c3       | srl  | 0       | 32, 10, 1        |
+|   c4_U       | fifo channel   | stream |      |      |        | c4       | srl  | 0       | 32, 10, 1        |
++--------------+----------------+--------+------+------+--------+----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++----------+-----------------------+-------------------------------------------------------------+
+| Type     | Options               | Location                                                    |
++----------+-----------------------+-------------------------------------------------------------+
+| stream   | type=fifo variable=c1 | ../../../labs/Lab4/Lab4/functionDF.cpp:45 in functiondf, c1 |
+| stream   | type=fifo variable=c3 | ../../../labs/Lab4/Lab4/functionDF.cpp:46 in functiondf, c3 |
+| stream   | type=fifo variable=c4 | ../../../labs/Lab4/Lab4/functionDF.cpp:47 in functiondf, c4 |
+| dataflow |                       | ../../../labs/Lab4/Lab4/functionDF.cpp:48 in functiondf     |
++----------+-----------------------+-------------------------------------------------------------+
+
+

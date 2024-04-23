@@ -1,0 +1,186 @@
+
+
+================================================================
+== Synthesis Summary Report of 'conv2D0'
+================================================================
++ General Information: 
+    * Date:           Thu Apr 11 18:30:43 2024
+    * Version:        2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:        Project1
+    * Solution:       partition (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z010i-clg225-1L
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+--------+-----------+-----------+-----+
+    |                 Modules                 |  Issue |       | Latency | Latency | Iteration|         | Trip |          |      |        |           |           |     |
+    |                 & Loops                 |  Type  | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP  |     FF    |    LUT    | URAM|
+    +-----------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+--------+-----------+-----------+-----+
+    |+ conv2D0                                |  Timing|  -0.27|       39|  390.000|         -|       40|     -|        no|     -|  5 (6%)|   492 (1%)|  1011 (5%)|    -|
+    | + conv2D0_Pipeline_readImg              |       -|   2.34|       18|  180.000|         -|       18|     -|        no|     -|       -|  135 (~0%)|  119 (~0%)|    -|
+    |  o readImg                              |       -|   7.30|       16|  160.000|         1|        1|    16|       yes|     -|       -|          -|          -|    -|
+    | + conv2D0_Pipeline_readweights          |       -|   2.39|       11|  110.000|         -|       11|     -|        no|     -|       -|   78 (~0%)|  101 (~0%)|    -|
+    |  o readweights                          |       -|   7.30|        9|   90.000|         1|        1|     9|       yes|     -|       -|          -|          -|    -|
+    | + conv2D0_Pipeline_loop_orow_loop_ocol  |  Timing|  -0.27|       10|  100.000|         -|       10|     -|        no|     -|  5 (6%)|  264 (~0%)|   681 (3%)|    -|
+    |  o loop_orow_loop_ocol                  |       -|   7.30|        8|   80.000|         6|        1|     4|       yes|     -|       -|          -|          -|    -|
+    | + conv2D0_Pipeline_writeImg             |       -|   1.56|        6|   60.000|         -|        6|     -|        no|     -|       -|    5 (~0%)|   71 (~0%)|    -|
+    |  o writeImg                             |       -|   7.30|        4|   40.000|         1|        1|     4|       yes|     -|       -|          -|          -|    -|
+    +-----------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+--------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++------------------+-----------+----------+
+| Port             | Direction | Bitwidth |
++------------------+-----------+----------+
+| img_out_address0 | out       | 2        |
+| img_out_d0       | out       | 8        |
++------------------+-----------+----------+
+
+* Other Ports
++-----------+---------+-----------+----------+
+| Port      | Mode    | Direction | Bitwidth |
++-----------+---------+-----------+----------+
+| img_in_0  | ap_none | in        | 8        |
+| img_in_1  | ap_none | in        | 8        |
+| img_in_10 | ap_none | in        | 8        |
+| img_in_11 | ap_none | in        | 8        |
+| img_in_12 | ap_none | in        | 8        |
+| img_in_13 | ap_none | in        | 8        |
+| img_in_14 | ap_none | in        | 8        |
+| img_in_15 | ap_none | in        | 8        |
+| img_in_2  | ap_none | in        | 8        |
+| img_in_3  | ap_none | in        | 8        |
+| img_in_4  | ap_none | in        | 8        |
+| img_in_5  | ap_none | in        | 8        |
+| img_in_6  | ap_none | in        | 8        |
+| img_in_7  | ap_none | in        | 8        |
+| img_in_8  | ap_none | in        | 8        |
+| img_in_9  | ap_none | in        | 8        |
+| weights_0 | ap_none | in        | 8        |
+| weights_1 | ap_none | in        | 8        |
+| weights_2 | ap_none | in        | 8        |
+| weights_3 | ap_none | in        | 8        |
+| weights_4 | ap_none | in        | 8        |
+| weights_5 | ap_none | in        | 8        |
+| weights_6 | ap_none | in        | 8        |
+| weights_7 | ap_none | in        | 8        |
+| weights_8 | ap_none | in        | 8        |
++-----------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------------+
+| Argument | Direction | Datatype       |
++----------+-----------+----------------+
+| img_in   | in        | unsigned char* |
+| img_out  | out       | signed char*   |
+| weights  | in        | signed char*   |
++----------+-----------+----------------+
+
+* SW-to-HW Mapping
++----------+------------------+---------+----------+
+| Argument | HW Interface     | HW Type | HW Usage |
++----------+------------------+---------+----------+
+| img_in   | img_in_0         | port    |          |
+| img_in   | img_in_1         | port    |          |
+| img_in   | img_in_2         | port    |          |
+| img_in   | img_in_3         | port    |          |
+| img_in   | img_in_4         | port    |          |
+| img_in   | img_in_5         | port    |          |
+| img_in   | img_in_6         | port    |          |
+| img_in   | img_in_7         | port    |          |
+| img_in   | img_in_8         | port    |          |
+| img_in   | img_in_9         | port    |          |
+| img_in   | img_in_10        | port    |          |
+| img_in   | img_in_11        | port    |          |
+| img_in   | img_in_12        | port    |          |
+| img_in   | img_in_13        | port    |          |
+| img_in   | img_in_14        | port    |          |
+| img_in   | img_in_15        | port    |          |
+| img_out  | img_out_address0 | port    | offset   |
+| img_out  | img_out_ce0      | port    |          |
+| img_out  | img_out_we0      | port    |          |
+| img_out  | img_out_d0       | port    |          |
+| weights  | weights_0        | port    |          |
+| weights  | weights_1        | port    |          |
+| weights  | weights_2        | port    |          |
+| weights  | weights_3        | port    |          |
+| weights  | weights_4        | port    |          |
+| weights  | weights_5        | port    |          |
+| weights  | weights_6        | port    |          |
+| weights  | weights_7        | port    |          |
+| weights  | weights_8        | port    |          |
++----------+------------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------+-----+--------+------------+-----+-----------+---------+
+| Name                                    | DSP | Pragma | Variable   | Op  | Impl      | Latency |
++-----------------------------------------+-----+--------+------------+-----+-----------+---------+
+| + conv2D0                               | 5   |        |            |     |           |         |
+|  + conv2D0_Pipeline_readImg             | 0   |        |            |     |           |         |
+|    add_ln14_fu_418_p2                   |     |        | add_ln14   | add | fabric    | 0       |
+|  + conv2D0_Pipeline_readweights         | 0   |        |            |     |           |         |
+|    add_ln16_fu_253_p2                   |     |        | add_ln16   | add | fabric    | 0       |
+|  + conv2D0_Pipeline_loop_orow_loop_ocol | 5   |        |            |     |           |         |
+|    add_ln19_fu_334_p2                   |     |        | add_ln19   | add | fabric    | 0       |
+|    add_ln19_1_fu_360_p2                 |     |        | add_ln19_1 | add | fabric    | 0       |
+|    mul_8s_8s_8_1_1_U60                  |     |        | acc        | mul | auto      | 0       |
+|    add_ln25_fu_386_p2                   |     |        | add_ln25   | add | fabric    | 0       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U68       | 1   |        | mul_ln26   | mul | dsp_slice | 3       |
+|    mul_8s_8s_8_1_1_U62                  |     |        | mul_ln26_1 | mul | auto      | 0       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U72       | 1   |        | mul_ln26_2 | mul | dsp_slice | 3       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U69       | 1   |        | mul_ln26_3 | mul | dsp_slice | 3       |
+|    mul_8s_8s_8_1_1_U65                  |     |        | mul_ln26_4 | mul | auto      | 0       |
+|    mul_8s_8s_8_1_1_U67                  |     |        | mul_ln26_5 | mul | auto      | 0       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U70       | 1   |        | mul_ln26_6 | mul | dsp_slice | 3       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U71       | 1   |        | mul_ln26_7 | mul | dsp_slice | 3       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U70       | 1   |        | add_ln26   | add | dsp_slice | 3       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U69       | 1   |        | add_ln26_1 | add | dsp_slice | 3       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U68       | 1   |        | add_ln26_3 | add | dsp_slice | 3       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U71       | 1   |        | add_ln26_4 | add | dsp_slice | 3       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U72       | 1   |        | add_ln26_5 | add | dsp_slice | 3       |
+|    add_ln26_6_fu_692_p2                 |     |        | add_ln26_6 | add | fabric    | 0       |
+|    sub_ln29_fu_526_p2                   |     |        | sub_ln29   | sub | fabric    | 0       |
+|  + conv2D0_Pipeline_writeImg            | 0   |        |            |     |           |         |
+|    add_ln33_fu_99_p2                    |     |        | add_ln33   | add | fabric    | 0       |
++-----------------------------------------+-----+--------+------------+-----+-----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+--------------------------------+------------------------------------+
+| Type            | Options                        | Location                           |
++-----------------+--------------------------------+------------------------------------+
+| array_partition | variable=img_in type=complete  | conv2D0.cpp:11 in conv2d0, img_in  |
+| array_partition | variable=weights type=complete | conv2D0.cpp:12 in conv2d0, weights |
++-----------------+--------------------------------+------------------------------------+
+
+

@@ -1,0 +1,87 @@
+{
+    "1": {
+        "name": "conv2D0_Pipeline_writeImg",
+        "file": "conv2D0.cpp",
+        "fileloc": "40",
+        "instructions": "28",
+        "total_instructions": "28",
+        "calls": "",
+        "basicblocks": "9",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "conv2D0_Pipeline_readImg",
+        "file": "conv2D0.cpp",
+        "fileloc": "13",
+        "instructions": "112",
+        "total_instructions": "112",
+        "calls": "",
+        "basicblocks": "21",
+        "loads": {
+            "L": "17"
+        },
+        "stores": {
+            "L": "18"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "conv2D0",
+        "file": "conv2D0.cpp",
+        "fileloc": "7",
+        "instructions": "136",
+        "total_instructions": "483",
+        "calls": "2 4 3 1",
+        "basicblocks": "1",
+        "loads": {
+            "L": "29"
+        }
+    },
+    "3": {
+        "name": "conv2D0_Pipeline_loop_orow_loop_ocol",
+        "file": "conv2D0.cpp",
+        "fileloc": "14",
+        "instructions": "115",
+        "total_instructions": "115",
+        "calls": "",
+        "basicblocks": "9",
+        "loads": {
+            "L": "7"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "conv2D0_Pipeline_readweights",
+        "file": "conv2D0.cpp",
+        "fileloc": "23",
+        "instructions": "92",
+        "total_instructions": "92",
+        "calls": "",
+        "basicblocks": "10",
+        "loads": {
+            "L": "19",
+            "T": "5"
+        },
+        "stores": {
+            "L": "11"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

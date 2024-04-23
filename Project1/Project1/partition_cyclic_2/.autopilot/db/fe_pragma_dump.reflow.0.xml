@@ -1,0 +1,8 @@
+<pragmas>
+<pragma file="conv2D0.cpp" line="9" pragmaType="array_partition" parentfunction="conv2D0" dim="1" factor="2" mode="cyclic" dynamic="0" variable="img_in"/>
+<pragma file="conv2D0.cpp" line="10" pragmaType="array_partition" parentfunction="conv2D0" dim="1" factor="2" mode="cyclic" dynamic="0" variable="img_out"/>
+<pragma file="conv2D0.cpp" line="11" pragmaType="array_partition" parentfunction="conv2D0" dim="1" factor="2" mode="cyclic" dynamic="0" variable="weights"/>
+<pragma file="conv2D0.cpp" line="17" pragmaType="array_partition" parentfunction="conv2D0" dim="1" factor="2" mode="cyclic" dynamic="0" variable="img_inT"/>
+<pragma file="conv2D0.cpp" line="18" pragmaType="array_partition" parentfunction="conv2D0" dim="1" factor="2" mode="cyclic" dynamic="0" variable="img_outT"/>
+<pragma file="conv2D0.cpp" line="19" pragmaType="array_partition" parentfunction="conv2D0" dim="1" factor="2" mode="cyclic" dynamic="0" variable="weightsT"/>
+</pragmas>

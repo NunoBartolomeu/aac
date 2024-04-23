@@ -1,0 +1,1061 @@
+<profile>
+    <ReportVersion>
+        <Version>2023.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>zynq</ProductFamily>
+        <Part>xc7z010i-clg225-1L</Part>
+        <TopModelName>functionDF</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>dataflow</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>7.196</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>28</Best-caseLatency>
+            <Average-caseLatency>28</Average-caseLatency>
+            <Worst-caseLatency>28</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0.280 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0.280 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0.280 us</Worst-caseRealTimeLatency>
+            <DataflowPipelineThroughput>14</DataflowPipelineThroughput>
+            <Interval-min>14</Interval-min>
+            <Interval-max>14</Interval-max>
+        </SummaryOfOverallLatency>
+        <SummaryOfViolations>
+            <IssueType>-</IssueType>
+            <ViolationType>-</ViolationType>
+            <SourceLocation>../../../labs/Lab4/Lab4/functionDF.cpp:48</SourceLocation>
+        </SummaryOfViolations>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <BRAM_18K>0</BRAM_18K>
+            <FF>472</FF>
+            <LUT>676</LUT>
+            <URAM>0</URAM>
+            <DSP>0</DSP>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>120</BRAM_18K>
+            <DSP>80</DSP>
+            <FF>35200</FF>
+            <LUT>17600</LUT>
+            <URAM>0</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>functionDF</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst</name>
+            <Object>functionDF</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_start</name>
+            <Object>functionDF</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_done</name>
+            <Object>functionDF</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_ready</name>
+            <Object>functionDF</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_idle</name>
+            <Object>functionDF</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>vecIn_address0</name>
+            <Object>vecIn</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>vecIn_ce0</name>
+            <Object>vecIn</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>vecIn_d0</name>
+            <Object>vecIn</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>vecIn_q0</name>
+            <Object>vecIn</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>vecIn_we0</name>
+            <Object>vecIn</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>vecIn_address1</name>
+            <Object>vecIn</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>vecIn_ce1</name>
+            <Object>vecIn</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>vecIn_d1</name>
+            <Object>vecIn</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>vecIn_q1</name>
+            <Object>vecIn</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>vecIn_we1</name>
+            <Object>vecIn</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>vecOut_address0</name>
+            <Object>vecOut</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>vecOut_ce0</name>
+            <Object>vecOut</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>vecOut_d0</name>
+            <Object>vecOut</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>vecOut_q0</name>
+            <Object>vecOut</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>vecOut_we0</name>
+            <Object>vecOut</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>vecOut_address1</name>
+            <Object>vecOut</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>vecOut_ce1</name>
+            <Object>vecOut</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>vecOut_d1</name>
+            <Object>vecOut</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>vecOut_q1</name>
+            <Object>vecOut</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>vecOut_we1</name>
+            <Object>vecOut</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="3">
+            <ModuleName>functionDF</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>funcA_U0</InstName>
+                    <ModuleName>funcA</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>64</ID>
+                    <BindInstances>add_ln6_fu_93_p2 t_fu_115_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>funcB_U0</InstName>
+                    <ModuleName>funcB</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>73</ID>
+                    <BindInstances>add_ln17_fu_69_p2 c3_din</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>funcC_U0</InstName>
+                    <ModuleName>funcC</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>79</ID>
+                    <BindInstances>add_ln26_fu_78_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>funcD_U0</InstName>
+                    <ModuleName>funcD</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>85</ID>
+                    <BindInstances>add_ln35_fu_83_p2 add_ln37_fu_100_p2</BindInstances>
+                </Instance>
+            </InstancesList>
+            <BindInstances>c1_U c2_U c3_U c4_U</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>funcA</Name>
+            <Loops>
+                <Loop0/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.196</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>13</Best-caseLatency>
+                    <Average-caseLatency>13</Average-caseLatency>
+                    <Worst-caseLatency>13</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.130 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.130 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.130 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>13</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <Loop0>
+                        <Name>Loop0</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>10</TripCount>
+                        <Latency>11</Latency>
+                        <AbsoluteTimeLatency>0.110 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </Loop0>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../../../labs/Lab4/Lab4/functionDF.cpp:6</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <Loop0>
+                            <Name>Loop0</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>../../../labs/Lab4/Lab4/functionDF.cpp:6</SourceLocation>
+                        </Loop0>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>46</FF>
+                    <AVAIL_FF>35200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>125</LUT>
+                    <AVAIL_LUT>17600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>120</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>80</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln6_fu_93_p2" SOURCE="../../../labs/Lab4/Lab4/functionDF.cpp:6" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop0" OPTYPE="sub" PRAGMA="" RTLNAME="t_fu_115_p2" SOURCE="../../../labs/Lab4/Lab4/functionDF.cpp:8" STORAGESUBTYPE="" URAM="0" VARIABLE="t"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>funcB</Name>
+            <Loops>
+                <Loop0/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>6.165</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>13</Best-caseLatency>
+                    <Average-caseLatency>13</Average-caseLatency>
+                    <Worst-caseLatency>13</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.130 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.130 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.130 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>13</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <Loop0>
+                        <Name>Loop0</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>10</TripCount>
+                        <Latency>11</Latency>
+                        <AbsoluteTimeLatency>0.110 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </Loop0>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../../../labs/Lab4/Lab4/functionDF.cpp:17</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <Loop0>
+                            <Name>Loop0</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>../../../labs/Lab4/Lab4/functionDF.cpp:17</SourceLocation>
+                        </Loop0>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>42</FF>
+                    <AVAIL_FF>35200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>134</LUT>
+                    <AVAIL_LUT>17600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>120</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>80</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln17_fu_69_p2" SOURCE="../../../labs/Lab4/Lab4/functionDF.cpp:17" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln17"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop0" OPTYPE="add" PRAGMA="" RTLNAME="c3_din" SOURCE="../../../labs/Lab4/Lab4/functionDF.cpp:19" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln19"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>funcC</Name>
+            <Loops>
+                <Loop0/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>5.934</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>12</Best-caseLatency>
+                    <Average-caseLatency>12</Average-caseLatency>
+                    <Worst-caseLatency>12</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.120 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.120 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.120 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>12</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <Loop0>
+                        <Name>Loop0</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>10</TripCount>
+                        <Latency>10</Latency>
+                        <AbsoluteTimeLatency>0.100 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </Loop0>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../../../labs/Lab4/Lab4/functionDF.cpp:26</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <Loop0>
+                            <Name>Loop0</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>../../../labs/Lab4/Lab4/functionDF.cpp:26</SourceLocation>
+                        </Loop0>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>7</FF>
+                    <AVAIL_FF>35200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>77</LUT>
+                    <AVAIL_LUT>17600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>120</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>80</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln26_fu_78_p2" SOURCE="../../../labs/Lab4/Lab4/functionDF.cpp:26" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln26"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>funcD</Name>
+            <Loops>
+                <Loop0/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>6.165</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>13</Best-caseLatency>
+                    <Average-caseLatency>13</Average-caseLatency>
+                    <Worst-caseLatency>13</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.130 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.130 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.130 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>13</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <Loop0>
+                        <Name>Loop0</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>10</TripCount>
+                        <Latency>11</Latency>
+                        <AbsoluteTimeLatency>0.110 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </Loop0>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../../../labs/Lab4/Lab4/functionDF.cpp:35</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <Loop0>
+                            <Name>Loop0</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>../../../labs/Lab4/Lab4/functionDF.cpp:35</SourceLocation>
+                        </Loop0>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>49</FF>
+                    <AVAIL_FF>35200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>127</LUT>
+                    <AVAIL_LUT>17600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>120</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>80</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln35_fu_83_p2" SOURCE="../../../labs/Lab4/Lab4/functionDF.cpp:35" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln35"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_fu_100_p2" SOURCE="../../../labs/Lab4/Lab4/functionDF.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln37"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>functionDF</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.196</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>28</Best-caseLatency>
+                    <Average-caseLatency>28</Average-caseLatency>
+                    <Worst-caseLatency>28</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.280 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.280 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.280 us</Worst-caseRealTimeLatency>
+                    <DataflowPipelineThroughput>14</DataflowPipelineThroughput>
+                    <PipelineInitiationInterval>14</PipelineInitiationInterval>
+                    <PipelineType>dataflow</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../../../labs/Lab4/Lab4/functionDF.cpp:48</SourceLocation>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>120</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <FF>472</FF>
+                    <AVAIL_FF>35200</AVAIL_FF>
+                    <UTIL_FF>1</UTIL_FF>
+                    <LUT>676</LUT>
+                    <AVAIL_LUT>17600</AVAIL_LUT>
+                    <UTIL_LUT>3</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>80</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="c1_U" SOURCE="../../../labs/Lab4/Lab4/functionDF.cpp:43" STORAGESIZE="32 10 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="c1"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="c2_U" SOURCE="../../../labs/Lab4/Lab4/functionDF.cpp:43" STORAGESIZE="31 10 2" STORAGESUBTYPE="pipo" STORAGEUSAGE="ram_1p channel" URAM="0" VARIABLE="c2"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="c3_U" SOURCE="../../../labs/Lab4/Lab4/functionDF.cpp:43" STORAGESIZE="32 10 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="c3"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="c4_U" SOURCE="../../../labs/Lab4/Lab4/functionDF.cpp:43" STORAGESIZE="32 10 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="c4"/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation>
+        <FIFOInst>
+            <Name>c1_U</Name>
+            <ParentInst/>
+            <StaticDepth>10</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+        <FIFOInst>
+            <Name>c3_U</Name>
+            <ParentInst/>
+            <StaticDepth>10</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+        <FIFOInst>
+            <Name>c4_U</Name>
+            <ParentInst/>
+            <StaticDepth>10</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+    </FIFOInformation>
+    <UserConfigCommands>
+        <config_cosim trace_level="all"/>
+    </UserConfigCommands>
+    <Args>
+        <Arg ArgName="vecIn" index="0" direction="in" srcType="int*" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="vecIn_address0" name="vecIn_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="vecIn_ce0" name="vecIn_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="vecIn_d0" name="vecIn_d0" usage="data" direction="out"/>
+                <hwRef type="port" interface="vecIn_q0" name="vecIn_q0" usage="data" direction="in"/>
+                <hwRef type="port" interface="vecIn_we0" name="vecIn_we0" usage="control" direction="out"/>
+                <hwRef type="port" interface="vecIn_address1" name="vecIn_address1" usage="address" direction="out"/>
+                <hwRef type="port" interface="vecIn_ce1" name="vecIn_ce1" usage="control" direction="out"/>
+                <hwRef type="port" interface="vecIn_d1" name="vecIn_d1" usage="data" direction="out"/>
+                <hwRef type="port" interface="vecIn_q1" name="vecIn_q1" usage="data" direction="in"/>
+                <hwRef type="port" interface="vecIn_we1" name="vecIn_we1" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="vecOut" index="1" direction="out" srcType="int*" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="vecOut_address0" name="vecOut_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="vecOut_ce0" name="vecOut_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="vecOut_d0" name="vecOut_d0" usage="data" direction="out"/>
+                <hwRef type="port" interface="vecOut_q0" name="vecOut_q0" usage="data" direction="in"/>
+                <hwRef type="port" interface="vecOut_we0" name="vecOut_we0" usage="control" direction="out"/>
+                <hwRef type="port" interface="vecOut_address1" name="vecOut_address1" usage="address" direction="out"/>
+                <hwRef type="port" interface="vecOut_ce1" name="vecOut_ce1" usage="control" direction="out"/>
+                <hwRef type="port" interface="vecOut_d1" name="vecOut_d1" usage="data" direction="out"/>
+                <hwRef type="port" interface="vecOut_q1" name="vecOut_q1" usage="data" direction="in"/>
+                <hwRef type="port" interface="vecOut_we1" name="vecOut_we1" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+            <portMaps>
+                <portMap portMapName="ap_start">start</portMap>
+                <portMap portMapName="ap_done">done</portMap>
+                <portMap portMapName="ap_ready">ready</portMap>
+                <portMap portMapName="ap_idle">idle</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_done</port>
+                <port>ap_idle</port>
+                <port>ap_ready</port>
+                <port>ap_start</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="vecIn_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="4">
+            <portMaps>
+                <portMap portMapName="vecIn_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>vecIn_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="vecIn"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="vecIn_d0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="vecIn_d0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>vecIn_d0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="vecIn"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="vecIn_q0" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="vecIn_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>vecIn_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="vecIn"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="vecIn_address1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="4">
+            <portMaps>
+                <portMap portMapName="vecIn_address1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>vecIn_address1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="vecIn"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="vecIn_d1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="vecIn_d1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>vecIn_d1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="vecIn"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="vecIn_q1" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="vecIn_q1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>vecIn_q1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="vecIn"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="vecOut_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="4">
+            <portMaps>
+                <portMap portMapName="vecOut_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>vecOut_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="vecOut"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="vecOut_d0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="vecOut_d0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>vecOut_d0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="vecOut"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="vecOut_q0" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="vecOut_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>vecOut_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="vecOut"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="vecOut_address1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="4">
+            <portMaps>
+                <portMap portMapName="vecOut_address1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>vecOut_address1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="vecOut"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="vecOut_d1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="vecOut_d1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>vecOut_d1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="vecOut"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="vecOut_q1" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="vecOut_q1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>vecOut_q1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="vecOut"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="AP_MEMORY">
+                <table>
+                    <keys size="3">Port, Direction, Bitwidth</keys>
+                    <column name="vecIn_address0">out, 4</column>
+                    <column name="vecIn_address1">out, 4</column>
+                    <column name="vecIn_d0">out, 32</column>
+                    <column name="vecIn_d1">out, 32</column>
+                    <column name="vecIn_q0">in, 32</column>
+                    <column name="vecIn_q1">in, 32</column>
+                    <column name="vecOut_address0">out, 4</column>
+                    <column name="vecOut_address1">out, 4</column>
+                    <column name="vecOut_d0">out, 32</column>
+                    <column name="vecOut_d1">out, 32</column>
+                    <column name="vecOut_q0">in, 32</column>
+                    <column name="vecOut_q1">in, 32</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table>
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst">reset, ap_rst</column>
+                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start</column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table>
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="vecIn">in, int*</column>
+                    <column name="vecOut">out, int*</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table>
+                    <keys size="4">Argument, HW Interface, HW Type, HW Usage</keys>
+                    <column name="vecIn">vecIn_address0, port, offset</column>
+                    <column name="vecIn">vecIn_ce0, port, </column>
+                    <column name="vecIn">vecIn_d0, port, </column>
+                    <column name="vecIn">vecIn_q0, port, </column>
+                    <column name="vecIn">vecIn_we0, port, </column>
+                    <column name="vecIn">vecIn_address1, port, offset</column>
+                    <column name="vecIn">vecIn_ce1, port, </column>
+                    <column name="vecIn">vecIn_d1, port, </column>
+                    <column name="vecIn">vecIn_q1, port, </column>
+                    <column name="vecIn">vecIn_we1, port, </column>
+                    <column name="vecOut">vecOut_address0, port, offset</column>
+                    <column name="vecOut">vecOut_ce0, port, </column>
+                    <column name="vecOut">vecOut_d0, port, </column>
+                    <column name="vecOut">vecOut_q0, port, </column>
+                    <column name="vecOut">vecOut_we0, port, </column>
+                    <column name="vecOut">vecOut_address1, port, offset</column>
+                    <column name="vecOut">vecOut_ce1, port, </column>
+                    <column name="vecOut">vecOut_d1, port, </column>
+                    <column name="vecOut">vecOut_q1, port, </column>
+                    <column name="vecOut">vecOut_we1, port, </column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
+    <PragmaReport>
+        <Pragma type="stream" location="../../../labs/Lab4/Lab4/functionDF.cpp:45" status="valid" parentFunction="functiondf" variable="c1" isDirective="0" options="type=fifo variable=c1"/>
+        <Pragma type="stream" location="../../../labs/Lab4/Lab4/functionDF.cpp:46" status="valid" parentFunction="functiondf" variable="c3" isDirective="0" options="type=fifo variable=c3"/>
+        <Pragma type="stream" location="../../../labs/Lab4/Lab4/functionDF.cpp:47" status="valid" parentFunction="functiondf" variable="c4" isDirective="0" options="type=fifo variable=c4"/>
+        <Pragma type="dataflow" location="../../../labs/Lab4/Lab4/functionDF.cpp:48" status="valid" parentFunction="functiondf" variable="" isDirective="0" options=""/>
+    </PragmaReport>
+</profile>
+

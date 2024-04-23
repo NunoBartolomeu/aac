@@ -1,0 +1,133 @@
+
+
+================================================================
+== Synthesis Summary Report of 'conv2D0'
+================================================================
++ General Information: 
+    * Date:           Thu Apr 11 18:18:59 2024
+    * Version:        2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:        Project1
+    * Solution:       default (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z010i-clg225-1L
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+--------+-----------+----------+-----+
+    |                 Modules                 |  Issue |       | Latency | Latency | Iteration|         | Trip |          |      |        |           |          |     |
+    |                 & Loops                 |  Type  | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP  |     FF    |    LUT   | URAM|
+    +-----------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+--------+-----------+----------+-----+
+    |+ conv2D0                                |  Timing|  -0.27|       39|  390.000|         -|       40|     -|        no|     -|  5 (6%)|   502 (1%)|  920 (5%)|    -|
+    | + conv2D0_Pipeline_readImg              |       -|   2.34|       18|  180.000|         -|       18|     -|        no|     -|       -|  140 (~0%)|  65 (~0%)|    -|
+    |  o readImg                              |       -|   7.30|       16|  160.000|         2|        1|    16|       yes|     -|       -|          -|         -|    -|
+    | + conv2D0_Pipeline_readweights          |       -|   2.39|       11|  110.000|         -|       11|     -|        no|     -|       -|   83 (~0%)|  64 (~0%)|    -|
+    |  o readweights                          |       -|   7.30|        9|   90.000|         2|        1|     9|       yes|     -|       -|          -|         -|    -|
+    | + conv2D0_Pipeline_loop_orow_loop_ocol  |  Timing|  -0.27|       10|  100.000|         -|       10|     -|        no|     -|  5 (6%)|  264 (~0%)|  681 (3%)|    -|
+    |  o loop_orow_loop_ocol                  |       -|   7.30|        8|   80.000|         6|        1|     4|       yes|     -|       -|          -|         -|    -|
+    | + conv2D0_Pipeline_writeImg             |       -|   1.56|        6|   60.000|         -|        6|     -|        no|     -|       -|    5 (~0%)|  71 (~0%)|    -|
+    |  o writeImg                             |       -|   7.30|        4|   40.000|         1|        1|     4|       yes|     -|       -|          -|         -|    -|
+    +-----------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+--------+-----------+----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++------------------+-----------+----------+
+| Port             | Direction | Bitwidth |
++------------------+-----------+----------+
+| img_in_address0  | out       | 4        |
+| img_in_q0        | in        | 8        |
+| img_out_address0 | out       | 2        |
+| img_out_d0       | out       | 8        |
+| weights_address0 | out       | 4        |
+| weights_q0       | in        | 8        |
++------------------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------------+
+| Argument | Direction | Datatype       |
++----------+-----------+----------------+
+| img_in   | in        | unsigned char* |
+| img_out  | out       | signed char*   |
+| weights  | in        | signed char*   |
++----------+-----------+----------------+
+
+* SW-to-HW Mapping
++----------+------------------+---------+----------+
+| Argument | HW Interface     | HW Type | HW Usage |
++----------+------------------+---------+----------+
+| img_in   | img_in_address0  | port    | offset   |
+| img_in   | img_in_ce0       | port    |          |
+| img_in   | img_in_q0        | port    |          |
+| img_out  | img_out_address0 | port    | offset   |
+| img_out  | img_out_ce0      | port    |          |
+| img_out  | img_out_we0      | port    |          |
+| img_out  | img_out_d0       | port    |          |
+| weights  | weights_address0 | port    | offset   |
+| weights  | weights_ce0      | port    |          |
+| weights  | weights_q0       | port    |          |
++----------+------------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------+-----+--------+------------+-----+-----------+---------+
+| Name                                    | DSP | Pragma | Variable   | Op  | Impl      | Latency |
++-----------------------------------------+-----+--------+------------+-----+-----------+---------+
+| + conv2D0                               | 5   |        |            |     |           |         |
+|  + conv2D0_Pipeline_readImg             | 0   |        |            |     |           |         |
+|    add_ln12_fu_303_p2                   |     |        | add_ln12   | add | fabric    | 0       |
+|  + conv2D0_Pipeline_readweights         | 0   |        |            |     |           |         |
+|    add_ln14_fu_194_p2                   |     |        | add_ln14   | add | fabric    | 0       |
+|  + conv2D0_Pipeline_loop_orow_loop_ocol | 5   |        |            |     |           |         |
+|    add_ln17_fu_334_p2                   |     |        | add_ln17   | add | fabric    | 0       |
+|    add_ln17_1_fu_360_p2                 |     |        | add_ln17_1 | add | fabric    | 0       |
+|    mul_8s_8s_8_1_1_U33                  |     |        | acc        | mul | auto      | 0       |
+|    add_ln23_fu_386_p2                   |     |        | add_ln23   | add | fabric    | 0       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U41       | 1   |        | mul_ln24   | mul | dsp_slice | 3       |
+|    mul_8s_8s_8_1_1_U35                  |     |        | mul_ln24_1 | mul | auto      | 0       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U45       | 1   |        | mul_ln24_2 | mul | dsp_slice | 3       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U42       | 1   |        | mul_ln24_3 | mul | dsp_slice | 3       |
+|    mul_8s_8s_8_1_1_U38                  |     |        | mul_ln24_4 | mul | auto      | 0       |
+|    mul_8s_8s_8_1_1_U40                  |     |        | mul_ln24_5 | mul | auto      | 0       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U43       | 1   |        | mul_ln24_6 | mul | dsp_slice | 3       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U44       | 1   |        | mul_ln24_7 | mul | dsp_slice | 3       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U43       | 1   |        | add_ln24   | add | dsp_slice | 3       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U42       | 1   |        | add_ln24_1 | add | dsp_slice | 3       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U41       | 1   |        | add_ln24_3 | add | dsp_slice | 3       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U44       | 1   |        | add_ln24_4 | add | dsp_slice | 3       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U45       | 1   |        | add_ln24_5 | add | dsp_slice | 3       |
+|    add_ln24_6_fu_692_p2                 |     |        | add_ln24_6 | add | fabric    | 0       |
+|    sub_ln27_fu_526_p2                   |     |        | sub_ln27   | sub | fabric    | 0       |
+|  + conv2D0_Pipeline_writeImg            | 0   |        |            |     |           |         |
+|    add_ln31_fu_99_p2                    |     |        | add_ln31   | add | fabric    | 0       |
++-----------------------------------------+-----+--------+------------+-----+-----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+  No pragmas found
+

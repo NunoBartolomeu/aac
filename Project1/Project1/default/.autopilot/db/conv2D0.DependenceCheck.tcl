@@ -1,0 +1,32 @@
+
+
+set RtlHierarchyInfo {[
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST"},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_readImg_fu_148"},
+	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_readImg_fu_148.flow_control_loop_pipe_sequential_init_U"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_readweights_fu_170"},
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_readweights_fu_170.flow_control_loop_pipe_sequential_init_U"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_loop_orow_loop_ocol_fu_185"},
+	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_loop_orow_loop_ocol_fu_185.sparsemux_13_3_8_1_1_U28"},
+	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_loop_orow_loop_ocol_fu_185.sparsemux_13_3_8_1_1_U29"},
+	{"ID" : "8", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_loop_orow_loop_ocol_fu_185.sparsemux_13_3_8_1_1_U30"},
+	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_loop_orow_loop_ocol_fu_185.sparsemux_13_3_8_1_1_U31"},
+	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_loop_orow_loop_ocol_fu_185.sparsemux_13_3_8_1_1_U32"},
+	{"ID" : "11", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_loop_orow_loop_ocol_fu_185.mul_8s_8s_8_1_1_U33"},
+	{"ID" : "12", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_loop_orow_loop_ocol_fu_185.sparsemux_13_3_8_1_1_U34"},
+	{"ID" : "13", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_loop_orow_loop_ocol_fu_185.mul_8s_8s_8_1_1_U35"},
+	{"ID" : "14", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_loop_orow_loop_ocol_fu_185.sparsemux_13_3_8_1_1_U36"},
+	{"ID" : "15", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_loop_orow_loop_ocol_fu_185.sparsemux_13_3_8_1_1_U37"},
+	{"ID" : "16", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_loop_orow_loop_ocol_fu_185.mul_8s_8s_8_1_1_U38"},
+	{"ID" : "17", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_loop_orow_loop_ocol_fu_185.sparsemux_13_3_8_1_1_U39"},
+	{"ID" : "18", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_loop_orow_loop_ocol_fu_185.mul_8s_8s_8_1_1_U40"},
+	{"ID" : "19", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_loop_orow_loop_ocol_fu_185.mac_muladd_8s_8s_8ns_8_4_1_U41"},
+	{"ID" : "20", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_loop_orow_loop_ocol_fu_185.mac_muladd_8s_8s_8ns_8_4_1_U42"},
+	{"ID" : "21", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_loop_orow_loop_ocol_fu_185.mac_muladd_8s_8s_8ns_8_4_1_U43"},
+	{"ID" : "22", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_loop_orow_loop_ocol_fu_185.mac_muladd_8s_8s_8ns_8_4_1_U44"},
+	{"ID" : "23", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_loop_orow_loop_ocol_fu_185.mac_muladd_8s_8s_8ns_8_4_1_U45"},
+	{"ID" : "24", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_loop_orow_loop_ocol_fu_185.flow_control_loop_pipe_sequential_init_U"},
+	{"ID" : "25", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_writeImg_fu_218"},
+	{"ID" : "26", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_writeImg_fu_218.mux_4_2_8_1_1_U78"},
+	{"ID" : "27", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_conv2D0_Pipeline_writeImg_fu_218.flow_control_loop_pipe_sequential_init_U"}]}
+set DependenceCheckSize 0

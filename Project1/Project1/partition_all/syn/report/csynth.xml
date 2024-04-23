@@ -1,0 +1,1412 @@
+<profile>
+    <ReportVersion>
+        <Version>2023.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>zynq</ProductFamily>
+        <Part>xc7z010i-clg225-1L</Part>
+        <TopModelName>conv2D0</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>8.826</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>39</Best-caseLatency>
+            <Average-caseLatency>39</Average-caseLatency>
+            <Worst-caseLatency>39</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0.390 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0.390 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0.390 us</Worst-caseRealTimeLatency>
+            <Interval-min>40</Interval-min>
+            <Interval-max>40</Interval-max>
+        </SummaryOfOverallLatency>
+        <SummaryOfViolations>
+            <IssueType>-</IssueType>
+            <ViolationType>-</ViolationType>
+            <SourceLocation>conv2D0.cpp:7</SourceLocation>
+        </SummaryOfViolations>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <DSP>5</DSP>
+            <FF>493</FF>
+            <LUT>948</LUT>
+            <BRAM_18K>0</BRAM_18K>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>120</BRAM_18K>
+            <DSP>80</DSP>
+            <FF>35200</FF>
+            <LUT>17600</LUT>
+            <URAM>0</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>conv2D0</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst</name>
+            <Object>conv2D0</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_start</name>
+            <Object>conv2D0</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_done</name>
+            <Object>conv2D0</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_idle</name>
+            <Object>conv2D0</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_ready</name>
+            <Object>conv2D0</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>img_in_0</name>
+            <Object>img_in_0</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>img_in_1</name>
+            <Object>img_in_1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>img_in_2</name>
+            <Object>img_in_2</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>img_in_3</name>
+            <Object>img_in_3</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>img_in_4</name>
+            <Object>img_in_4</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>img_in_5</name>
+            <Object>img_in_5</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>img_in_6</name>
+            <Object>img_in_6</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>img_in_7</name>
+            <Object>img_in_7</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>img_in_8</name>
+            <Object>img_in_8</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>img_in_9</name>
+            <Object>img_in_9</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>img_in_10</name>
+            <Object>img_in_10</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>img_in_11</name>
+            <Object>img_in_11</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>img_in_12</name>
+            <Object>img_in_12</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>img_in_13</name>
+            <Object>img_in_13</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>img_in_14</name>
+            <Object>img_in_14</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>img_in_15</name>
+            <Object>img_in_15</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>img_out_0</name>
+            <Object>img_out_0</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>img_out_0_ap_vld</name>
+            <Object>img_out_0</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>img_out_1</name>
+            <Object>img_out_1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>img_out_1_ap_vld</name>
+            <Object>img_out_1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>img_out_2</name>
+            <Object>img_out_2</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>img_out_2_ap_vld</name>
+            <Object>img_out_2</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>img_out_3</name>
+            <Object>img_out_3</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>img_out_3_ap_vld</name>
+            <Object>img_out_3</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights_0</name>
+            <Object>weights_0</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights_1</name>
+            <Object>weights_1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights_2</name>
+            <Object>weights_2</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights_3</name>
+            <Object>weights_3</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights_4</name>
+            <Object>weights_4</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights_5</name>
+            <Object>weights_5</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights_6</name>
+            <Object>weights_6</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights_7</name>
+            <Object>weights_7</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>weights_8</name>
+            <Object>weights_8</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="3">
+            <ModuleName>conv2D0</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>grp_conv2D0_Pipeline_readImg_fu_352</InstName>
+                    <ModuleName>conv2D0_Pipeline_readImg</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>352</ID>
+                    <BindInstances>add_ln21_fu_418_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_conv2D0_Pipeline_readweights_fu_404</InstName>
+                    <ModuleName>conv2D0_Pipeline_readweights</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>404</ID>
+                    <BindInstances>add_ln23_fu_253_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_conv2D0_Pipeline_loop_orow_loop_ocol_fu_435</InstName>
+                    <ModuleName>conv2D0_Pipeline_loop_orow_loop_ocol</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>435</ID>
+                    <BindInstances>add_ln26_fu_394_p2 add_ln26_1_fu_420_p2 mul_8s_8s_8_1_1_U59 add_ln32_fu_442_p2 mac_muladd_8s_8s_8ns_8_4_1_U68 mul_8s_8s_8_1_1_U61 add_ln32_1_fu_666_p2 mac_muladd_8s_8s_8ns_8_4_1_U71 mac_muladd_8s_8s_8ns_8_4_1_U72 mul_8s_8s_8_1_1_U67 mul_8s_8s_8_1_1_U66 mac_muladd_8s_8s_8ns_8_4_1_U69 mac_muladd_8s_8s_8ns_8_4_1_U70 mac_muladd_8s_8s_8ns_8_4_1_U69 mac_muladd_8s_8s_8ns_8_4_1_U72 mac_muladd_8s_8s_8ns_8_4_1_U68 mac_muladd_8s_8s_8ns_8_4_1_U70 mac_muladd_8s_8s_8ns_8_4_1_U71 add_ln33_14_fu_820_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_conv2D0_Pipeline_writeImg_fu_468</InstName>
+                    <ModuleName>conv2D0_Pipeline_writeImg</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>468</ID>
+                    <BindInstances>add_ln40_fu_126_p2</BindInstances>
+                </Instance>
+            </InstancesList>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>conv2D0_Pipeline_readImg</Name>
+            <Loops>
+                <readImg/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>4.956</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>18</Best-caseLatency>
+                    <Average-caseLatency>18</Average-caseLatency>
+                    <Worst-caseLatency>18</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.180 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.180 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.180 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>18</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <readImg>
+                        <Name>readImg</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>16</TripCount>
+                        <Latency>16</Latency>
+                        <AbsoluteTimeLatency>0.160 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </readImg>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>conv2D0.cpp:21</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <readImg>
+                            <Name>readImg</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>conv2D0.cpp:21</SourceLocation>
+                        </readImg>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>135</FF>
+                    <AVAIL_FF>35200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>119</LUT>
+                    <AVAIL_LUT>17600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>120</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>80</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="readImg" OPTYPE="add" PRAGMA="" RTLNAME="add_ln21_fu_418_p2" SOURCE="conv2D0.cpp:21" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln21"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>conv2D0_Pipeline_readweights</Name>
+            <Loops>
+                <readweights/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>4.911</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>11</Best-caseLatency>
+                    <Average-caseLatency>11</Average-caseLatency>
+                    <Worst-caseLatency>11</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.110 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.110 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.110 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>11</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <readweights>
+                        <Name>readweights</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>9</TripCount>
+                        <Latency>9</Latency>
+                        <AbsoluteTimeLatency>90.000 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </readweights>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>conv2D0.cpp:23</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <readweights>
+                            <Name>readweights</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>conv2D0.cpp:23</SourceLocation>
+                        </readweights>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>78</FF>
+                    <AVAIL_FF>35200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>101</LUT>
+                    <AVAIL_LUT>17600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>120</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>80</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="readweights" OPTYPE="add" PRAGMA="" RTLNAME="add_ln23_fu_253_p2" SOURCE="conv2D0.cpp:23" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln23"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>conv2D0_Pipeline_loop_orow_loop_ocol</Name>
+            <Loops>
+                <loop_orow_loop_ocol/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>8.826</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>10</Best-caseLatency>
+                    <Average-caseLatency>10</Average-caseLatency>
+                    <Worst-caseLatency>10</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.100 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.100 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.100 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>10</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <loop_orow_loop_ocol>
+                        <Name>loop_orow_loop_ocol</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>4</TripCount>
+                        <Latency>8</Latency>
+                        <AbsoluteTimeLatency>80.000 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>6</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </loop_orow_loop_ocol>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>Timing Violation</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>conv2D0.cpp:27</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <loop_orow_loop_ocol>
+                            <Name>loop_orow_loop_ocol</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>conv2D0.cpp:26</SourceLocation>
+                        </loop_orow_loop_ocol>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>5</DSP>
+                    <AVAIL_DSP>80</AVAIL_DSP>
+                    <UTIL_DSP>6</UTIL_DSP>
+                    <FF>265</FF>
+                    <AVAIL_FF>35200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>618</LUT>
+                    <AVAIL_LUT>17600</AVAIL_LUT>
+                    <UTIL_LUT>3</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>120</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_orow_loop_ocol" OPTYPE="add" PRAGMA="" RTLNAME="add_ln26_fu_394_p2" SOURCE="conv2D0.cpp:26" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln26"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_orow_loop_ocol" OPTYPE="add" PRAGMA="" RTLNAME="add_ln26_1_fu_420_p2" SOURCE="conv2D0.cpp:26" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln26_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="loop_orow_loop_ocol" OPTYPE="mul" PRAGMA="" RTLNAME="mul_8s_8s_8_1_1_U59" SOURCE="conv2D0.cpp:33" STORAGESUBTYPE="" URAM="0" VARIABLE="img_outT_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_orow_loop_ocol" OPTYPE="add" PRAGMA="" RTLNAME="add_ln32_fu_442_p2" SOURCE="conv2D0.cpp:32" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln32"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="loop_orow_loop_ocol" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_8ns_8_4_1_U68" SOURCE="conv2D0.cpp:33" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln33"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="loop_orow_loop_ocol" OPTYPE="mul" PRAGMA="" RTLNAME="mul_8s_8s_8_1_1_U61" SOURCE="conv2D0.cpp:33" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln33_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_orow_loop_ocol" OPTYPE="add" PRAGMA="" RTLNAME="add_ln32_1_fu_666_p2" SOURCE="conv2D0.cpp:32" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln32_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="loop_orow_loop_ocol" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_8ns_8_4_1_U71" SOURCE="conv2D0.cpp:33" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln33_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="loop_orow_loop_ocol" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_8ns_8_4_1_U72" SOURCE="conv2D0.cpp:33" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln33_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="loop_orow_loop_ocol" OPTYPE="mul" PRAGMA="" RTLNAME="mul_8s_8s_8_1_1_U67" SOURCE="conv2D0.cpp:33" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln33_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="loop_orow_loop_ocol" OPTYPE="mul" PRAGMA="" RTLNAME="mul_8s_8s_8_1_1_U66" SOURCE="conv2D0.cpp:33" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln33_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="loop_orow_loop_ocol" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_8ns_8_4_1_U69" SOURCE="conv2D0.cpp:33" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln33_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="loop_orow_loop_ocol" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_8ns_8_4_1_U70" SOURCE="conv2D0.cpp:33" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln33_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="loop_orow_loop_ocol" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_8ns_8_4_1_U69" SOURCE="conv2D0.cpp:33" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln33"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="loop_orow_loop_ocol" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_8ns_8_4_1_U72" SOURCE="conv2D0.cpp:33" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln33_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="loop_orow_loop_ocol" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_8ns_8_4_1_U68" SOURCE="conv2D0.cpp:33" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln33_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="loop_orow_loop_ocol" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_8ns_8_4_1_U70" SOURCE="conv2D0.cpp:33" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln33_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="loop_orow_loop_ocol" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_8ns_8_4_1_U71" SOURCE="conv2D0.cpp:33" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln33_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_orow_loop_ocol" OPTYPE="add" PRAGMA="" RTLNAME="add_ln33_14_fu_820_p2" SOURCE="conv2D0.cpp:33" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln33_14"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>conv2D0_Pipeline_writeImg</Name>
+            <Loops>
+                <writeImg/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>4.826</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>6</Best-caseLatency>
+                    <Average-caseLatency>6</Average-caseLatency>
+                    <Worst-caseLatency>6</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>60.000 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>60.000 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>60.000 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>6</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <writeImg>
+                        <Name>writeImg</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>4</TripCount>
+                        <Latency>4</Latency>
+                        <AbsoluteTimeLatency>40.000 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </writeImg>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>conv2D0.cpp:40</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <writeImg>
+                            <Name>writeImg</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>conv2D0.cpp:40</SourceLocation>
+                        </writeImg>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>5</FF>
+                    <AVAIL_FF>35200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>71</LUT>
+                    <AVAIL_LUT>17600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>120</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>80</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="writeImg" OPTYPE="add" PRAGMA="" RTLNAME="add_ln40_fu_126_p2" SOURCE="conv2D0.cpp:40" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln40"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>conv2D0</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>8.826</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>39</Best-caseLatency>
+                    <Average-caseLatency>39</Average-caseLatency>
+                    <Worst-caseLatency>39</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.390 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.390 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.390 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>40</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>conv2D0.cpp:7</SourceLocation>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>5</DSP>
+                    <AVAIL_DSP>80</AVAIL_DSP>
+                    <UTIL_DSP>6</UTIL_DSP>
+                    <FF>493</FF>
+                    <AVAIL_FF>35200</AVAIL_FF>
+                    <UTIL_FF>1</UTIL_FF>
+                    <LUT>948</LUT>
+                    <AVAIL_LUT>17600</AVAIL_LUT>
+                    <UTIL_LUT>5</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>120</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands/>
+    <Args>
+        <Arg ArgName="img_in" index="0" direction="in" srcType="unsigned char*" srcSize="8">
+            <hwRefs>
+                <hwRef type="port" interface="img_in_0" name="img_in_0" usage="data" direction="in"/>
+                <hwRef type="port" interface="img_in_1" name="img_in_1" usage="data" direction="in"/>
+                <hwRef type="port" interface="img_in_2" name="img_in_2" usage="data" direction="in"/>
+                <hwRef type="port" interface="img_in_3" name="img_in_3" usage="data" direction="in"/>
+                <hwRef type="port" interface="img_in_4" name="img_in_4" usage="data" direction="in"/>
+                <hwRef type="port" interface="img_in_5" name="img_in_5" usage="data" direction="in"/>
+                <hwRef type="port" interface="img_in_6" name="img_in_6" usage="data" direction="in"/>
+                <hwRef type="port" interface="img_in_7" name="img_in_7" usage="data" direction="in"/>
+                <hwRef type="port" interface="img_in_8" name="img_in_8" usage="data" direction="in"/>
+                <hwRef type="port" interface="img_in_9" name="img_in_9" usage="data" direction="in"/>
+                <hwRef type="port" interface="img_in_10" name="img_in_10" usage="data" direction="in"/>
+                <hwRef type="port" interface="img_in_11" name="img_in_11" usage="data" direction="in"/>
+                <hwRef type="port" interface="img_in_12" name="img_in_12" usage="data" direction="in"/>
+                <hwRef type="port" interface="img_in_13" name="img_in_13" usage="data" direction="in"/>
+                <hwRef type="port" interface="img_in_14" name="img_in_14" usage="data" direction="in"/>
+                <hwRef type="port" interface="img_in_15" name="img_in_15" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="img_out" index="1" direction="out" srcType="signed char*" srcSize="8">
+            <hwRefs>
+                <hwRef type="port" interface="img_out_0" name="img_out_0" usage="data" direction="out"/>
+                <hwRef type="port" interface="img_out_0_ap_vld" name="img_out_0_ap_vld" usage="control" direction="out"/>
+                <hwRef type="port" interface="img_out_1" name="img_out_1" usage="data" direction="out"/>
+                <hwRef type="port" interface="img_out_1_ap_vld" name="img_out_1_ap_vld" usage="control" direction="out"/>
+                <hwRef type="port" interface="img_out_2" name="img_out_2" usage="data" direction="out"/>
+                <hwRef type="port" interface="img_out_2_ap_vld" name="img_out_2_ap_vld" usage="control" direction="out"/>
+                <hwRef type="port" interface="img_out_3" name="img_out_3" usage="data" direction="out"/>
+                <hwRef type="port" interface="img_out_3_ap_vld" name="img_out_3_ap_vld" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="weights" index="2" direction="in" srcType="signed char*" srcSize="8">
+            <hwRefs>
+                <hwRef type="port" interface="weights_0" name="weights_0" usage="data" direction="in"/>
+                <hwRef type="port" interface="weights_1" name="weights_1" usage="data" direction="in"/>
+                <hwRef type="port" interface="weights_2" name="weights_2" usage="data" direction="in"/>
+                <hwRef type="port" interface="weights_3" name="weights_3" usage="data" direction="in"/>
+                <hwRef type="port" interface="weights_4" name="weights_4" usage="data" direction="in"/>
+                <hwRef type="port" interface="weights_5" name="weights_5" usage="data" direction="in"/>
+                <hwRef type="port" interface="weights_6" name="weights_6" usage="data" direction="in"/>
+                <hwRef type="port" interface="weights_7" name="weights_7" usage="data" direction="in"/>
+                <hwRef type="port" interface="weights_8" name="weights_8" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+            <portMaps>
+                <portMap portMapName="ap_start">start</portMap>
+                <portMap portMapName="ap_done">done</portMap>
+                <portMap portMapName="ap_idle">idle</portMap>
+                <portMap portMapName="ap_ready">ready</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_done</port>
+                <port>ap_idle</port>
+                <port>ap_ready</port>
+                <port>ap_start</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="img_in_0" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="img_in_0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>img_in_0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="img_in"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="img_in_1" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="img_in_1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>img_in_1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="img_in"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="img_in_2" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="img_in_2">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>img_in_2</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="img_in"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="img_in_3" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="img_in_3">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>img_in_3</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="img_in"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="img_in_4" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="img_in_4">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>img_in_4</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="img_in"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="img_in_5" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="img_in_5">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>img_in_5</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="img_in"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="img_in_6" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="img_in_6">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>img_in_6</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="img_in"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="img_in_7" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="img_in_7">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>img_in_7</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="img_in"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="img_in_8" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="img_in_8">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>img_in_8</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="img_in"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="img_in_9" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="img_in_9">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>img_in_9</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="img_in"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="img_in_10" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="img_in_10">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>img_in_10</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="img_in"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="img_in_11" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="img_in_11">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>img_in_11</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="img_in"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="img_in_12" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="img_in_12">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>img_in_12</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="img_in"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="img_in_13" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="img_in_13">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>img_in_13</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="img_in"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="img_in_14" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="img_in_14">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>img_in_14</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="img_in"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="img_in_15" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="img_in_15">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>img_in_15</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="img_in"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="img_out_0" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="img_out_0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>img_out_0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="img_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="img_out_1" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="img_out_1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>img_out_1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="img_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="img_out_2" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="img_out_2">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>img_out_2</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="img_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="img_out_3" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="img_out_3">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>img_out_3</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="img_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="weights_0" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="weights_0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>weights_0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="weights"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="weights_1" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="weights_1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>weights_1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="weights"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="weights_2" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="weights_2">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>weights_2</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="weights"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="weights_3" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="weights_3">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>weights_3</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="weights"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="weights_4" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="weights_4">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>weights_4</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="weights"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="weights_5" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="weights_5">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>weights_5</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="weights"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="weights_6" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="weights_6">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>weights_6</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="weights"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="weights_7" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="weights_7">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>weights_7</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="weights"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="weights_8" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="weights_8">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>weights_8</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="weights"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="Other Ports">
+                <table>
+                    <keys size="4">Port, Mode, Direction, Bitwidth</keys>
+                    <column name="img_in_0">ap_none, in, 8</column>
+                    <column name="img_in_1">ap_none, in, 8</column>
+                    <column name="img_in_10">ap_none, in, 8</column>
+                    <column name="img_in_11">ap_none, in, 8</column>
+                    <column name="img_in_12">ap_none, in, 8</column>
+                    <column name="img_in_13">ap_none, in, 8</column>
+                    <column name="img_in_14">ap_none, in, 8</column>
+                    <column name="img_in_15">ap_none, in, 8</column>
+                    <column name="img_in_2">ap_none, in, 8</column>
+                    <column name="img_in_3">ap_none, in, 8</column>
+                    <column name="img_in_4">ap_none, in, 8</column>
+                    <column name="img_in_5">ap_none, in, 8</column>
+                    <column name="img_in_6">ap_none, in, 8</column>
+                    <column name="img_in_7">ap_none, in, 8</column>
+                    <column name="img_in_8">ap_none, in, 8</column>
+                    <column name="img_in_9">ap_none, in, 8</column>
+                    <column name="img_out_0">ap_vld, out, 8</column>
+                    <column name="img_out_1">ap_vld, out, 8</column>
+                    <column name="img_out_2">ap_vld, out, 8</column>
+                    <column name="img_out_3">ap_vld, out, 8</column>
+                    <column name="weights_0">ap_none, in, 8</column>
+                    <column name="weights_1">ap_none, in, 8</column>
+                    <column name="weights_2">ap_none, in, 8</column>
+                    <column name="weights_3">ap_none, in, 8</column>
+                    <column name="weights_4">ap_none, in, 8</column>
+                    <column name="weights_5">ap_none, in, 8</column>
+                    <column name="weights_6">ap_none, in, 8</column>
+                    <column name="weights_7">ap_none, in, 8</column>
+                    <column name="weights_8">ap_none, in, 8</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table>
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst">reset, ap_rst</column>
+                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start</column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table>
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="img_in">in, unsigned char*</column>
+                    <column name="img_out">out, signed char*</column>
+                    <column name="weights">in, signed char*</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table>
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="img_in">img_in_0, port</column>
+                    <column name="img_in">img_in_1, port</column>
+                    <column name="img_in">img_in_2, port</column>
+                    <column name="img_in">img_in_3, port</column>
+                    <column name="img_in">img_in_4, port</column>
+                    <column name="img_in">img_in_5, port</column>
+                    <column name="img_in">img_in_6, port</column>
+                    <column name="img_in">img_in_7, port</column>
+                    <column name="img_in">img_in_8, port</column>
+                    <column name="img_in">img_in_9, port</column>
+                    <column name="img_in">img_in_10, port</column>
+                    <column name="img_in">img_in_11, port</column>
+                    <column name="img_in">img_in_12, port</column>
+                    <column name="img_in">img_in_13, port</column>
+                    <column name="img_in">img_in_14, port</column>
+                    <column name="img_in">img_in_15, port</column>
+                    <column name="img_out">img_out_0, port</column>
+                    <column name="img_out">img_out_0_ap_vld, port</column>
+                    <column name="img_out">img_out_1, port</column>
+                    <column name="img_out">img_out_1_ap_vld, port</column>
+                    <column name="img_out">img_out_2, port</column>
+                    <column name="img_out">img_out_2_ap_vld, port</column>
+                    <column name="img_out">img_out_3, port</column>
+                    <column name="img_out">img_out_3_ap_vld, port</column>
+                    <column name="weights">weights_0, port</column>
+                    <column name="weights">weights_1, port</column>
+                    <column name="weights">weights_2, port</column>
+                    <column name="weights">weights_3, port</column>
+                    <column name="weights">weights_4, port</column>
+                    <column name="weights">weights_5, port</column>
+                    <column name="weights">weights_6, port</column>
+                    <column name="weights">weights_7, port</column>
+                    <column name="weights">weights_8, port</column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
+    <PragmaReport>
+        <Pragma type="array_partition" location="conv2D0.cpp:9" status="valid" parentFunction="conv2d0" variable="img_in" isDirective="0" options="variable=img_in type=complete"/>
+        <Pragma type="array_partition" location="conv2D0.cpp:10" status="valid" parentFunction="conv2d0" variable="img_out" isDirective="0" options="variable=img_out type=complete"/>
+        <Pragma type="array_partition" location="conv2D0.cpp:11" status="valid" parentFunction="conv2d0" variable="weights" isDirective="0" options="variable=weights type=complete"/>
+        <Pragma type="array_partition" location="conv2D0.cpp:17" status="valid" parentFunction="conv2d0" variable="img_inT" isDirective="0" options="variable=img_inT type=complete"/>
+        <Pragma type="array_partition" location="conv2D0.cpp:18" status="valid" parentFunction="conv2d0" variable="img_outT" isDirective="0" options="variable=img_outT type=complete"/>
+        <Pragma type="array_partition" location="conv2D0.cpp:19" status="valid" parentFunction="conv2d0" variable="weightsT" isDirective="0" options="variable=weightsT type=complete"/>
+    </PragmaReport>
+</profile>
+

@@ -1,0 +1,29 @@
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: ../../labs/Lab4/Lab4/vectorProduct.cpp, Line: 1, 
+                   Column: 0 }
+Function:        _Z13vectorProductPiS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        repete
+  - String:          ''' ('
+  - LoopLoc:         '../../labs/Lab4/Lab4/vectorProduct.cpp:7:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          vectorProduct
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '4'
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        repete
+  - String:          '> at '
+  - LoopLoc:         '../../labs/Lab4/Lab4/vectorProduct.cpp:7:11'
+  - String:          ' '
+...

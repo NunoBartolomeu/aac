@@ -1,0 +1,4 @@
+<pragmas>
+<pragma file="conv2D0.cpp" line="11" pragmaType="array_partition" parentfunction="conv2D0" dim="1" factor="0" mode="complete" dynamic="0" variable="img_in"/>
+<pragma file="conv2D0.cpp" line="12" pragmaType="array_partition" parentfunction="conv2D0" dim="1" factor="0" mode="complete" dynamic="0" variable="weights"/>
+</pragmas>

@@ -1,0 +1,236 @@
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        readImg
+  - String:          '> at '
+  - LoopLoc:         'conv2D0.cpp:12:11'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        readweights
+  - String:          '> at '
+  - LoopLoc:         'conv2D0.cpp:14:15'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        loop_ocol
+  - String:          '> at '
+  - LoopLoc:         'conv2D0.cpp:18:14'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        writeImg
+  - String:          '> at '
+  - LoopLoc:         'conv2D0.cpp:31:12'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 20, Column: 13 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        loop_k1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 21, Column: 14 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        loop_k2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k1
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:20:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:21:14'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:21:14'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:21:14'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: conv2D0.cpp, Line: 8, Column: 16 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=img_inT'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  conv2D0
+  - String:          ' '
+  - varLoc:          'conv2D0.cpp:8:16'
+  - String:          ' '
+  - VarName:         img_inT
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: conv2D0.cpp, Line: 8, Column: 16 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            img_inT
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: conv2D0.cpp, Line: 10, Column: 14 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=weightsT'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  conv2D0
+  - String:          ' '
+  - varLoc:          'conv2D0.cpp:10:14'
+  - String:          ' '
+  - VarName:         weightsT
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: conv2D0.cpp, Line: 10, Column: 14 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            weightsT
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: conv2D0.cpp, Line: 8, Column: 16 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          img_inT
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: conv2D0.cpp, Line: 10, Column: 14 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          weightsT
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...

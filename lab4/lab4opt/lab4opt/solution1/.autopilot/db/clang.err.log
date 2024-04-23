@@ -1,0 +1,4 @@
+../../../labs/Lab4/Lab4/functionDF.cpp:45:9: warning: missing argument for 'variable' [-Winvalid-hls-pragmas]
+#pragma HLS STREAM
+        ^
+1 warning generated.

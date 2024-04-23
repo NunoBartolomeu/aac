@@ -1,0 +1,9 @@
+<pragmas>
+<pragma file="conv2D0.cpp" line="39" pragmaType="pipeline" parentfunction="conv2D0" off="1" ii="0" rewind="0" style=""/>
+<pragma file="conv2D0.cpp" line="21" pragmaType="pipeline" parentfunction="conv2D0" off="1" ii="0" rewind="0" style=""/>
+<pragma file="conv2D0.cpp" line="23" pragmaType="pipeline" parentfunction="conv2D0" off="1" ii="0" rewind="0" style=""/>
+<pragma file="conv2D0.cpp" line="26" pragmaType="pipeline" parentfunction="conv2D0" off="1" ii="0" rewind="0" style=""/>
+<pragma file="conv2D0.cpp" line="28" pragmaType="pipeline" parentfunction="conv2D0" off="1" ii="0" rewind="0" style=""/>
+<pragma file="conv2D0.cpp" line="17" pragmaType="pipeline" parentfunction="conv2D0" off="1" ii="0" rewind="0" style=""/>
+<pragma file="conv2D0.cpp" line="14" pragmaType="pipeline" parentfunction="conv2D0" off="1" ii="0" rewind="0" style=""/>
+</pragmas>

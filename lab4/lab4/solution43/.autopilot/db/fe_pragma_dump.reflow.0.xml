@@ -1,0 +1,3 @@
+<pragmas>
+<pragma file="../../labs/Lab4/Lab4/vectorProduct.cpp" line="8" pragmaType="unroll" parentfunction="vectorProduct" factor="2" skip_exit_check="0"/>
+</pragmas>

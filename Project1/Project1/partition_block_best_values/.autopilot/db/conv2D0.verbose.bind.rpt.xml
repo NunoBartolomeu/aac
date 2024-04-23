@@ -1,0 +1,49 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'conv2D0'" level="0">
+<item name = "Date">Thu Apr 11 18:50:45 2024
+</item>
+<item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
+<item name = "Project">Project1</item>
+<item name = "Solution">partition_block_best_values (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z010i-clg225-1L</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 8.826 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">39, 39, 0.390 us, 0.390 us, 40, 40, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_conv2D0_Pipeline_readImg_fu_298">conv2D0_Pipeline_readImg, 18, 18, 0.180 us, 0.180 us, 18, 18, no</column>
+<column name="grp_conv2D0_Pipeline_readweights_fu_350">conv2D0_Pipeline_readweights, 11, 11, 0.110 us, 0.110 us, 11, 11, no</column>
+<column name="grp_conv2D0_Pipeline_loop_orow_loop_ocol_fu_373">conv2D0_Pipeline_loop_orow_loop_ocol, 10, 10, 0.100 us, 0.100 us, 10, 10, no</column>
+<column name="grp_conv2D0_Pipeline_writeImg_fu_406">conv2D0_Pipeline_writeImg, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

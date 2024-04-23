@@ -1,0 +1,159 @@
+
+
+================================================================
+== Vitis HLS Report for 'funcB'
+================================================================
+* Date:           Tue Mar 19 12:47:56 2024
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        lab4opt
+* Solution:       solution3 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z010i-clg225-1L
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.165 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       13|       13|  0.130 us|  0.130 us|   13|   13|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop0   |       11|       11|         3|          1|          1|    10|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+----+-------+-------+-----+
+|       Name      | BRAM_18K| DSP|   FF  |  LUT  | URAM|
++-----------------+---------+----+-------+-------+-----+
+|DSP              |        -|   -|      -|      -|    -|
+|Expression       |        -|   -|      0|     71|    -|
+|FIFO             |        -|   -|      -|      -|    -|
+|Instance         |        -|   -|      -|      -|    -|
+|Memory           |        -|   -|      -|      -|    -|
+|Multiplexer      |        -|   -|      -|     63|    -|
+|Register         |        -|   -|     42|      -|    -|
++-----------------+---------+----+-------+-------+-----+
+|Total            |        0|   0|     42|    134|    0|
++-----------------+---------+----+-------+-------+-----+
+|Available        |      120|  80|  35200|  17600|    0|
++-----------------+---------+----+-------+-------+-----+
+|Utilization (%)  |        0|   0|     ~0|     ~0|    0|
++-----------------+---------+----+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |add_ln17_fu_69_p2          |         +|   0|  0|  13|           4|           1|
+    |c3_din                     |         +|   0|  0|  39|          32|           5|
+    |ap_condition_115           |       and|   0|  0|   2|           1|           1|
+    |icmp_ln17_fu_63_p2         |      icmp|   0|  0|  13|           4|           4|
+    |ap_block_pp0_stage0_01001  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |Total                      |          |   0|  0|  71|          43|          14|
+    +---------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_3     |   9|          2|    4|          8|
+    |c1_blk_n                 |   9|          2|    1|          2|
+    |c3_blk_n                 |   9|          2|    1|          2|
+    |i_fu_38                  |   9|          2|    4|          8|
+    |real_start               |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  63|         14|   13|         26|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+----+----+-----+-----------+
+    |               Name               | FF | LUT| Bits| Const Bits|
+    +----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                         |   1|   0|    1|          0|
+    |ap_done_reg                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg  |   1|   0|    1|          0|
+    |c1_read_reg_97                    |  32|   0|   32|          0|
+    |i_fu_38                           |   4|   0|    4|          0|
+    |start_once_reg                    |   1|   0|    1|          0|
+    +----------------------------------+----+----+-----+-----------+
+    |Total                             |  42|   0|   42|          0|
+    +----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+--------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-------------------+-----+-----+------------+--------------+--------------+
+|ap_clk             |   in|    1|  ap_ctrl_hs|         funcB|  return value|
+|ap_rst             |   in|    1|  ap_ctrl_hs|         funcB|  return value|
+|ap_start           |   in|    1|  ap_ctrl_hs|         funcB|  return value|
+|start_full_n       |   in|    1|  ap_ctrl_hs|         funcB|  return value|
+|ap_done            |  out|    1|  ap_ctrl_hs|         funcB|  return value|
+|ap_continue        |   in|    1|  ap_ctrl_hs|         funcB|  return value|
+|ap_idle            |  out|    1|  ap_ctrl_hs|         funcB|  return value|
+|ap_ready           |  out|    1|  ap_ctrl_hs|         funcB|  return value|
+|start_out          |  out|    1|  ap_ctrl_hs|         funcB|  return value|
+|start_write        |  out|    1|  ap_ctrl_hs|         funcB|  return value|
+|c1_dout            |   in|   32|     ap_fifo|            c1|       pointer|
+|c1_num_data_valid  |   in|    5|     ap_fifo|            c1|       pointer|
+|c1_fifo_cap        |   in|    5|     ap_fifo|            c1|       pointer|
+|c1_empty_n         |   in|    1|     ap_fifo|            c1|       pointer|
+|c1_read            |  out|    1|     ap_fifo|            c1|       pointer|
+|c3_din             |  out|   32|     ap_fifo|            c3|       pointer|
+|c3_num_data_valid  |   in|    5|     ap_fifo|            c3|       pointer|
+|c3_fifo_cap        |   in|    5|     ap_fifo|            c3|       pointer|
+|c3_full_n          |   in|    1|     ap_fifo|            c3|       pointer|
+|c3_write           |  out|    1|     ap_fifo|            c3|       pointer|
++-------------------+-----+-----+------------+--------------+--------------+
+

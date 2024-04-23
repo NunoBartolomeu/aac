@@ -1,0 +1,34 @@
+{
+    "0": {
+        "name": "matrixmul",
+        "file": "..\/..\/..\/labs\/Lab4\/Lab4\/matrixmul.cpp",
+        "fileloc": "3",
+        "instructions": "27",
+        "total_instructions": "98",
+        "calls": "1",
+        "basicblocks": "1",
+        "loads": {
+            "T": "9"
+        }
+    },
+    "1": {
+        "name": "matrixmul_Pipeline_Row",
+        "file": "..\/..\/..\/labs\/Lab4\/Lab4\/matrixmul.cpp",
+        "fileloc": "9",
+        "instructions": "71",
+        "total_instructions": "71",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1",
+            "T": "3"
+        },
+        "stores": {
+            "L": "2",
+            "T": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

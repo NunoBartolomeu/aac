@@ -1,0 +1,6 @@
+<pragmas>
+<pragma file="../../../labs/Lab4/Lab4/functionDF.cpp" line="48" pragmaType="dataflow" parentfunction="functionDF" disable_start_propagation="0"/>
+<pragma file="../../../labs/Lab4/Lab4/functionDF.cpp" line="45" pragmaType="stream" parentfunction="functionDF" depth="0" type="fifo" variable="c1"/>
+<pragma file="../../../labs/Lab4/Lab4/functionDF.cpp" line="46" pragmaType="stream" parentfunction="functionDF" depth="0" type="fifo" variable="c3"/>
+<pragma file="../../../labs/Lab4/Lab4/functionDF.cpp" line="47" pragmaType="stream" parentfunction="functionDF" depth="0" type="fifo" variable="c4"/>
+</pragmas>

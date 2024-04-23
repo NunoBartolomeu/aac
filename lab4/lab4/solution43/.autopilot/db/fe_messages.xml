@@ -1,0 +1,12 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/Cadeiras/AAC/aac/lab4/lab4/solution43/csynth.tcl:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="vectorProduct" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=vectorProduct" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../labs/Lab4/Lab4/vectorProduct.cpp:8:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vectorProduct" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="../../labs/Lab4/Lab4/vectorProduct.cpp:1:0" msg_body="Unrolling loop 'repete' (../../labs/Lab4/Lab4/vectorProduct.cpp:7:11) in function 'vectorProduct' partially with a factor of 2">
+        <args Factor="2" LoopLoc="../../labs/Lab4/Lab4/vectorProduct.cpp:7:11" LoopName="repete"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

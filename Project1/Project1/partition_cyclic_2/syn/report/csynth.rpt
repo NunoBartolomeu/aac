@@ -1,0 +1,170 @@
+
+
+================================================================
+== Synthesis Summary Report of 'conv2D0'
+================================================================
++ General Information: 
+    * Date:           Thu Apr 11 18:43:51 2024
+    * Version:        2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:        Project1
+    * Solution:       partition_cyclic_2 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z010i-clg225-1L
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+--------+----------+-----------+-----+
+    |                 Modules                 |  Issue |       | Latency | Latency | Iteration|         | Trip |          |      |        |          |           |     |
+    |                 & Loops                 |  Type  | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP  |    FF    |    LUT    | URAM|
+    +-----------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+--------+----------+-----------+-----+
+    |+ conv2D0                                |  Timing|  -0.90|       43|  430.000|         -|       44|     -|        no|     -|  5 (6%)|  664 (1%)|  1170 (6%)|    -|
+    | + conv2D0_Pipeline_readImg              |       -|   1.41|       18|  180.000|         -|       18|     -|        no|     -|       -|  15 (~0%)|   73 (~0%)|    -|
+    |  o readImg                              |       -|   7.30|       16|  160.000|         2|        1|    16|       yes|     -|       -|         -|          -|    -|
+    | + conv2D0_Pipeline_readweights          |       -|   1.41|       11|  110.000|         -|       11|     -|        no|     -|       -|  14 (~0%)|   72 (~0%)|    -|
+    |  o readweights                          |       -|   7.30|        9|   90.000|         2|        1|     9|       yes|     -|       -|         -|          -|    -|
+    | + conv2D0_Pipeline_loop_orow_loop_ocol  |  Timing|  -0.90|       11|  110.000|         -|       11|     -|        no|     -|  5 (6%)|  369 (1%)|   554 (3%)|    -|
+    |  o loop_orow_loop_ocol                  |       -|   7.30|        9|   90.000|         7|        1|     4|       yes|     -|       -|         -|          -|    -|
+    | + conv2D0_Pipeline_writeImg             |       -|   0.89|        6|   60.000|         -|        6|     -|        no|     -|       -|   5 (~0%)|   75 (~0%)|    -|
+    |  o writeImg                             |       -|   7.30|        4|   40.000|         1|        1|     4|       yes|     -|       -|         -|          -|    -|
+    +-----------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+--------+----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++--------------------+-----------+----------+
+| Port               | Direction | Bitwidth |
++--------------------+-----------+----------+
+| img_in_0_address0  | out       | 3        |
+| img_in_0_q0        | in        | 8        |
+| img_in_1_address0  | out       | 3        |
+| img_in_1_q0        | in        | 8        |
+| img_out_0_address0 | out       | 1        |
+| img_out_0_d0       | out       | 8        |
+| img_out_1_address0 | out       | 1        |
+| img_out_1_d0       | out       | 8        |
+| weights_0_address0 | out       | 3        |
+| weights_0_q0       | in        | 8        |
+| weights_1_address0 | out       | 3        |
+| weights_1_q0       | in        | 8        |
++--------------------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------------+
+| Argument | Direction | Datatype       |
++----------+-----------+----------------+
+| img_in   | in        | unsigned char* |
+| img_out  | out       | signed char*   |
+| weights  | in        | signed char*   |
++----------+-----------+----------------+
+
+* SW-to-HW Mapping
++----------+--------------------+---------+----------+
+| Argument | HW Interface       | HW Type | HW Usage |
++----------+--------------------+---------+----------+
+| img_in   | img_in_0_address0  | port    | offset   |
+| img_in   | img_in_0_ce0       | port    |          |
+| img_in   | img_in_0_q0        | port    |          |
+| img_in   | img_in_1_address0  | port    | offset   |
+| img_in   | img_in_1_ce0       | port    |          |
+| img_in   | img_in_1_q0        | port    |          |
+| img_out  | img_out_0_address0 | port    | offset   |
+| img_out  | img_out_0_ce0      | port    |          |
+| img_out  | img_out_0_we0      | port    |          |
+| img_out  | img_out_0_d0       | port    |          |
+| img_out  | img_out_1_address0 | port    | offset   |
+| img_out  | img_out_1_ce0      | port    |          |
+| img_out  | img_out_1_we0      | port    |          |
+| img_out  | img_out_1_d0       | port    |          |
+| weights  | weights_0_address0 | port    | offset   |
+| weights  | weights_0_ce0      | port    |          |
+| weights  | weights_0_q0       | port    |          |
+| weights  | weights_1_address0 | port    | offset   |
+| weights  | weights_1_ce0      | port    |          |
+| weights  | weights_1_q0       | port    |          |
++----------+--------------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------+-----+--------+------------+-----+-----------+---------+
+| Name                                    | DSP | Pragma | Variable   | Op  | Impl      | Latency |
++-----------------------------------------+-----+--------+------------+-----+-----------+---------+
+| + conv2D0                               | 5   |        |            |     |           |         |
+|  + conv2D0_Pipeline_readImg             | 0   |        |            |     |           |         |
+|    add_ln21_fu_110_p2                   |     |        | add_ln21   | add | fabric    | 0       |
+|  + conv2D0_Pipeline_readweights         | 0   |        |            |     |           |         |
+|    add_ln23_fu_110_p2                   |     |        | add_ln23   | add | fabric    | 0       |
+|  + conv2D0_Pipeline_loop_orow_loop_ocol | 5   |        |            |     |           |         |
+|    add_ln26_fu_438_p2                   |     |        | add_ln26   | add | fabric    | 0       |
+|    add_ln26_1_fu_464_p2                 |     |        | add_ln26_1 | add | fabric    | 0       |
+|    mul_8s_8s_8_1_1_U9                   |     |        | acc        | mul | auto      | 0       |
+|    add_ln32_fu_520_p2                   |     |        | add_ln32   | add | fabric    | 0       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U13       | 1   |        | mul_ln33   | mul | dsp_slice | 3       |
+|    mul_8s_8s_8_1_1_U10                  |     |        | mul_ln33_1 | mul | auto      | 0       |
+|    empty_12_fu_580_p2                   |     |        | empty_12   | add | fabric    | 0       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U17       | 1   |        | mul_ln33_2 | mul | dsp_slice | 3       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U14       | 1   |        | mul_ln33_3 | mul | dsp_slice | 3       |
+|    mul_8s_8s_8_1_1_U11                  |     |        | mul_ln33_4 | mul | auto      | 0       |
+|    mul_8s_8s_8_1_1_U12                  |     |        | mul_ln33_5 | mul | auto      | 0       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U15       | 1   |        | mul_ln33_6 | mul | dsp_slice | 3       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U16       | 1   |        | mul_ln33_7 | mul | dsp_slice | 3       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U15       | 1   |        | add_ln33   | add | dsp_slice | 3       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U14       | 1   |        | add_ln33_1 | add | dsp_slice | 3       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U13       | 1   |        | add_ln33_3 | add | dsp_slice | 3       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U16       | 1   |        | add_ln33_4 | add | dsp_slice | 3       |
+|    mac_muladd_8s_8s_8ns_8_4_1_U17       | 1   |        | add_ln33_5 | add | dsp_slice | 3       |
+|    add_ln33_6_fu_786_p2                 |     |        | add_ln33_6 | add | fabric    | 0       |
+|  + conv2D0_Pipeline_writeImg            | 0   |        |            |     |           |         |
+|    add_ln40_fu_114_p2                   |     |        | add_ln40   | add | fabric    | 0       |
++-----------------------------------------+-----+--------+------------+-----+-----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++----------------+---------------+------+------+------+--------+------------+------+---------+------------------+
+| Name           | Usage         | Type | BRAM | URAM | Pragma | Variable   | Impl | Latency | Bitwidth, Depth, |
+|                |               |      |      |      |        |            |      |         | Banks            |
++----------------+---------------+------+------+------+--------+------------+------+---------+------------------+
+| + conv2D0      |               |      | 0    | 0    |        |            |      |         |                  |
+|   img_inT_U    | rom_np array  |      |      |      |        | img_inT    | auto | 1       | 8, 8, 1          |
+|   img_inT_1_U  | rom_np array  |      |      |      |        | img_inT_1  | auto | 1       | 8, 8, 1          |
+|   weightsT_U   | ram_s2p array |      |      |      |        | weightsT   | auto | 1       | 8, 5, 1          |
+|   weightsT_1_U | ram_s2p array |      |      |      |        | weightsT_1 | auto | 1       | 8, 5, 1          |
++----------------+---------------+------+------+------+--------+------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+----------------------------------------+-------------------------------------+
+| Type            | Options                                | Location                            |
++-----------------+----------------------------------------+-------------------------------------+
+| array_partition | variable=img_in type=cyclic factor=2   | conv2D0.cpp:9 in conv2d0, img_in    |
+| array_partition | variable=img_out type=cyclic factor=2  | conv2D0.cpp:10 in conv2d0, img_out  |
+| array_partition | variable=weights type=cyclic factor=2  | conv2D0.cpp:11 in conv2d0, weights  |
+| array_partition | variable=img_inT type=cyclic factor=2  | conv2D0.cpp:17 in conv2d0, img_inT  |
+| array_partition | variable=img_outT type=cyclic factor=2 | conv2D0.cpp:18 in conv2d0, img_outT |
+| array_partition | variable=weightsT type=cyclic factor=2 | conv2D0.cpp:19 in conv2d0, weightsT |
++-----------------+----------------------------------------+-------------------------------------+
+
+

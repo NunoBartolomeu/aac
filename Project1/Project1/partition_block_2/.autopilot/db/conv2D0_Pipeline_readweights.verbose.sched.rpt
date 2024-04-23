@@ -1,0 +1,169 @@
+
+
+================================================================
+== Vitis HLS Report for 'conv2D0_Pipeline_readweights'
+================================================================
+* Date:           Thu Apr 11 18:47:37 2024
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        Project1
+* Solution:       partition_block_2 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z010i-clg225-1L
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.625 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       11|       11|  0.110 us|  0.110 us|   11|   11|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |               |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |   Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- readweights  |        9|        9|         2|          1|          1|     9|       yes|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 6.62>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%phi_mul = alloca i32 1"   --->   Operation 5 'alloca' 'phi_mul' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%i_1 = alloca i32 1" [conv2D0.cpp:23]   --->   Operation 6 'alloca' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %weights_1, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %weights_0, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (1.58ns)   --->   "%store_ln23 = store i4 0, i4 %i_1" [conv2D0.cpp:23]   --->   Operation 9 'store' 'store_ln23' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 10 [1/1] (1.58ns)   --->   "%store_ln0 = store i8 0, i8 %phi_mul"   --->   Operation 10 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc12"   --->   Operation 11 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%phi_mul_load = load i8 %phi_mul" [conv2D0.cpp:23]   --->   Operation 12 'load' 'phi_mul_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%i = load i4 %i_1" [conv2D0.cpp:23]   --->   Operation 13 'load' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%zext_ln23_1 = zext i8 %phi_mul_load" [conv2D0.cpp:23]   --->   Operation 14 'zext' 'zext_ln23_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%trunc_ln23 = trunc i4 %i" [conv2D0.cpp:23]   --->   Operation 15 'trunc' 'trunc_ln23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (1.73ns)   --->   "%icmp_ln23 = icmp_eq  i4 %i, i4 9" [conv2D0.cpp:23]   --->   Operation 16 'icmp' 'icmp_ln23' <Predicate = true> <Delay = 1.73> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (1.73ns)   --->   "%add_ln23 = add i4 %i, i4 1" [conv2D0.cpp:23]   --->   Operation 17 'add' 'add_ln23' <Predicate = true> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln23 = br i1 %icmp_ln23, void %for.inc12.split, void %loop_ocol.preheader.exitStub" [conv2D0.cpp:23]   --->   Operation 18 'br' 'br_ln23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (1.73ns)   --->   "%icmp_ln23_1 = icmp_ult  i4 %i, i4 5" [conv2D0.cpp:23]   --->   Operation 19 'icmp' 'icmp_ln23_1' <Predicate = (!icmp_ln23)> <Delay = 1.73> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (1.65ns)   --->   "%add_ln23_1 = add i3 %trunc_ln23, i3 3" [conv2D0.cpp:23]   --->   Operation 20 'add' 'add_ln23_1' <Predicate = (!icmp_ln23)> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.98ns)   --->   "%select_ln23 = select i1 %icmp_ln23_1, i3 %trunc_ln23, i3 %add_ln23_1" [conv2D0.cpp:23]   --->   Operation 21 'select' 'select_ln23' <Predicate = (!icmp_ln23)> <Delay = 0.98> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln23 = zext i3 %select_ln23" [conv2D0.cpp:23]   --->   Operation 22 'zext' 'zext_ln23' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (1.91ns)   --->   "%add_ln23_2 = add i8 %phi_mul_load, i8 26" [conv2D0.cpp:23]   --->   Operation 23 'add' 'add_ln23_2' <Predicate = (!icmp_ln23)> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i12.i32, i12 %zext_ln23_1, i32 7" [conv2D0.cpp:23]   --->   Operation 24 'bitselect' 'tmp' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%weights_0_addr = getelementptr i8 %weights_0, i64 0, i64 %zext_ln23" [conv2D0.cpp:24]   --->   Operation 25 'getelementptr' 'weights_0_addr' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_1 : Operation 26 [2/2] (2.32ns)   --->   "%weights_0_load = load i3 %weights_0_addr" [conv2D0.cpp:24]   --->   Operation 26 'load' 'weights_0_load' <Predicate = (!icmp_ln23)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 5> <RAM>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%weights_1_addr = getelementptr i8 %weights_1, i64 0, i64 %zext_ln23" [conv2D0.cpp:24]   --->   Operation 27 'getelementptr' 'weights_1_addr' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_1 : Operation 28 [2/2] (2.32ns)   --->   "%weights_1_load = load i3 %weights_1_addr" [conv2D0.cpp:24]   --->   Operation 28 'load' 'weights_1_load' <Predicate = (!icmp_ln23)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 5> <RAM>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%weightsT_addr = getelementptr i8 %weightsT, i64 0, i64 %zext_ln23" [conv2D0.cpp:24]   --->   Operation 29 'getelementptr' 'weightsT_addr' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%weightsT_1_addr = getelementptr i8 %weightsT_1, i64 0, i64 %zext_ln23" [conv2D0.cpp:24]   --->   Operation 30 'getelementptr' 'weightsT_1_addr' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln24 = br i1 %tmp, void %arrayidx11.case.0, void %arrayidx11.case.1" [conv2D0.cpp:24]   --->   Operation 31 'br' 'br_ln24' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (1.58ns)   --->   "%store_ln23 = store i4 %add_ln23, i4 %i_1" [conv2D0.cpp:23]   --->   Operation 32 'store' 'store_ln23' <Predicate = (!icmp_ln23)> <Delay = 1.58>
+ST_1 : Operation 33 [1/1] (1.58ns)   --->   "%store_ln23 = store i8 %add_ln23_2, i8 %phi_mul" [conv2D0.cpp:23]   --->   Operation 33 'store' 'store_ln23' <Predicate = (!icmp_ln23)> <Delay = 1.58>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%br_ln23 = br void %for.inc12" [conv2D0.cpp:23]   --->   Operation 34 'br' 'br_ln23' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 45 'ret' 'ret_ln0' <Predicate = (icmp_ln23)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 5.89>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%specpipeline_ln23 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0" [conv2D0.cpp:23]   --->   Operation 35 'specpipeline' 'specpipeline_ln23' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%speclooptripcount_ln23 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 9, i64 9, i64 9" [conv2D0.cpp:23]   --->   Operation 36 'speclooptripcount' 'speclooptripcount_ln23' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%specloopname_ln23 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3" [conv2D0.cpp:23]   --->   Operation 37 'specloopname' 'specloopname_ln23' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/2] (2.32ns)   --->   "%weights_0_load = load i3 %weights_0_addr" [conv2D0.cpp:24]   --->   Operation 38 'load' 'weights_0_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 5> <RAM>
+ST_2 : Operation 39 [1/2] (2.32ns)   --->   "%weights_1_load = load i3 %weights_1_addr" [conv2D0.cpp:24]   --->   Operation 39 'load' 'weights_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 5> <RAM>
+ST_2 : Operation 40 [1/1] (1.24ns)   --->   "%select_ln24 = select i1 %tmp, i8 %weights_1_load, i8 %weights_0_load" [conv2D0.cpp:24]   --->   Operation 40 'select' 'select_ln24' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 41 [1/1] (2.32ns)   --->   "%store_ln24 = store i8 %select_ln24, i3 %weightsT_addr" [conv2D0.cpp:24]   --->   Operation 41 'store' 'store_ln24' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 5> <RAM>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%br_ln24 = br void %arrayidx11.exit" [conv2D0.cpp:24]   --->   Operation 42 'br' 'br_ln24' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (2.32ns)   --->   "%store_ln24 = store i8 %select_ln24, i3 %weightsT_1_addr" [conv2D0.cpp:24]   --->   Operation 43 'store' 'store_ln24' <Predicate = (tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 5> <RAM>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln24 = br void %arrayidx11.exit" [conv2D0.cpp:24]   --->   Operation 44 'br' 'br_ln24' <Predicate = (tmp)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 6.625ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln23', conv2D0.cpp:23) of constant 0 on local variable 'i', conv2D0.cpp:23 [9]  (1.588 ns)
+	'load' operation 4 bit ('i', conv2D0.cpp:23) on local variable 'i', conv2D0.cpp:23 [14]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln23_1', conv2D0.cpp:23) [24]  (1.735 ns)
+	'select' operation 3 bit ('select_ln23', conv2D0.cpp:23) [26]  (0.980 ns)
+	'getelementptr' operation 3 bit ('weights_0_addr', conv2D0.cpp:24) [30]  (0.000 ns)
+	'load' operation 8 bit ('weights_0_load', conv2D0.cpp:24) on array 'weights_0' [31]  (2.322 ns)
+
+ <State 2>: 5.892ns
+The critical path consists of the following:
+	'load' operation 8 bit ('weights_0_load', conv2D0.cpp:24) on array 'weights_0' [31]  (2.322 ns)
+	'select' operation 8 bit ('select_ln24', conv2D0.cpp:24) [34]  (1.248 ns)
+	'store' operation 0 bit ('store_ln24', conv2D0.cpp:24) of variable 'select_ln24', conv2D0.cpp:24 on array 'weightsT_1' [42]  (2.322 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-1016] The critical path in module 'matrixmul_Pipeline_Row' consists of the following:&#xD;&#xA;&#x9;'store' operation 0 bit ('i_write_ln9', ../../../labs/Lab4/Lab4/matrixmul.cpp:9) of constant 0 on local variable 'i', ../../../labs/Lab4/Lab4/matrixmul.cpp:9 [33]  (1.588 ns)&#xD;&#xA;&#x9;'load' operation 2 bit ('i', ../../../labs/Lab4/Lab4/matrixmul.cpp:9) on local variable 'i', ../../../labs/Lab4/Lab4/matrixmul.cpp:9 [36]  (0.000 ns)&#xD;&#xA;&#x9;'sub' operation 4 bit ('empty', ../../../labs/Lab4/Lab4/matrixmul.cpp:9) [43]  (1.735 ns)&#xD;&#xA;&#x9;'add' operation 4 bit ('empty_7', ../../../labs/Lab4/Lab4/matrixmul.cpp:9) [49]  (1.735 ns)&#xD;&#xA;&#x9;'getelementptr' operation 4 bit ('a_addr_2', ../../../labs/Lab4/Lab4/matrixmul.cpp:9) [51]  (0.000 ns)&#xD;&#xA;&#x9;'load' operation 8 bit ('a_load_2', ../../../labs/Lab4/Lab4/matrixmul.cpp:9) on array 'a' [60]  (2.322 ns)&#xD;&#xA;&#xD;&#xA;Resolution: For help on HLS 200-1016 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=200-1016.html" projectName="lab42" solutionName="solution2" date="2024-03-19T12:13:53.468+0000" type="Warning"/>
+        <logs message="WARNING: [HLS 200-871] Estimated clock period (7.380 ns) exceeds the target (target clock period: 10.000 ns, clock uncertainty: 2.700 ns, effective delay budget: 7.300 ns).&#xD;&#xA;Resolution: For help on HLS 200-871 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=200-871.html" projectName="lab42" solutionName="solution2" date="2024-03-19T12:13:53.468+0000" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'matrixmul_Pipeline_Row' (loop 'Row'): Unable to schedule 'load' operation 8 bit ('a_load', ../../../labs/Lab4/Lab4/matrixmul.cpp:9) on array 'a' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'a'.&#xD;&#xA;Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=200-885.html" projectName="lab42" solutionName="solution2" date="2024-03-19T12:13:53.437+0000" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

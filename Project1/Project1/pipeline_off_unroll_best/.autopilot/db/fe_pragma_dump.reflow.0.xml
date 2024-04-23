@@ -1,0 +1,16 @@
+<pragmas>
+<pragma file="conv2D0.cpp" line="46" pragmaType="unroll" parentfunction="conv2D0" factor="4" skip_exit_check="0"/>
+<pragma file="conv2D0.cpp" line="45" pragmaType="pipeline" parentfunction="conv2D0" off="1" ii="0" rewind="0" style=""/>
+<pragma file="conv2D0.cpp" line="24" pragmaType="unroll" parentfunction="conv2D0" factor="2" skip_exit_check="0"/>
+<pragma file="conv2D0.cpp" line="23" pragmaType="pipeline" parentfunction="conv2D0" off="1" ii="0" rewind="0" style=""/>
+<pragma file="conv2D0.cpp" line="27" pragmaType="unroll" parentfunction="conv2D0" factor="2" skip_exit_check="0"/>
+<pragma file="conv2D0.cpp" line="26" pragmaType="pipeline" parentfunction="conv2D0" off="1" ii="0" rewind="0" style=""/>
+<pragma file="conv2D0.cpp" line="31" pragmaType="unroll" parentfunction="conv2D0" factor="3" skip_exit_check="0"/>
+<pragma file="conv2D0.cpp" line="30" pragmaType="pipeline" parentfunction="conv2D0" off="1" ii="0" rewind="0" style=""/>
+<pragma file="conv2D0.cpp" line="34" pragmaType="unroll" parentfunction="conv2D0" factor="3" skip_exit_check="0"/>
+<pragma file="conv2D0.cpp" line="33" pragmaType="pipeline" parentfunction="conv2D0" off="1" ii="0" rewind="0" style=""/>
+<pragma file="conv2D0.cpp" line="19" pragmaType="unroll" parentfunction="conv2D0" factor="9" skip_exit_check="0"/>
+<pragma file="conv2D0.cpp" line="18" pragmaType="pipeline" parentfunction="conv2D0" off="1" ii="0" rewind="0" style=""/>
+<pragma file="conv2D0.cpp" line="15" pragmaType="unroll" parentfunction="conv2D0" factor="16" skip_exit_check="0"/>
+<pragma file="conv2D0.cpp" line="14" pragmaType="pipeline" parentfunction="conv2D0" off="1" ii="0" rewind="0" style=""/>
+</pragmas>

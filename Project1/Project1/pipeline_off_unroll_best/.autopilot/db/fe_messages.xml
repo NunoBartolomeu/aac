@@ -1,0 +1,93 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off_unroll_best/csynth.tcl:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="conv2D0" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=conv2D0" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off_unroll_best/directives.tcl:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="conv2D0" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=conv2D0" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv2D0.cpp:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2D0" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv2D0.cpp:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2D0" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=16" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv2D0.cpp:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2D0" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv2D0.cpp:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2D0" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=9" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv2D0.cpp:23:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2D0" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv2D0.cpp:24:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2D0" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv2D0.cpp:26:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2D0" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv2D0.cpp:27:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2D0" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv2D0.cpp:30:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2D0" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv2D0.cpp:31:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2D0" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=3" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv2D0.cpp:33:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2D0" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv2D0.cpp:34:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2D0" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=3" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv2D0.cpp:45:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2D0" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv2D0.cpp:46:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2D0" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=4" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-359" msg_severity="INFO" msg_loc="conv2D0.cpp:7:0" msg_body="Unrolling loop 'writeImg' (conv2D0.cpp:44:12) in function 'conv2D0': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).">
+        <args Factor="4" LoopLoc="conv2D0.cpp:44:12" LoopName="writeImg" TripCount="4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="conv2D0.cpp:7:0" msg_body="Unrolling loop 'writeImg' (conv2D0.cpp:44:12) in function 'conv2D0' completely with a factor of 4">
+        <args Factor="4" LoopLoc="conv2D0.cpp:44:12" LoopName="writeImg"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-359" msg_severity="INFO" msg_loc="conv2D0.cpp:7:0" msg_body="Unrolling loop 'loop_orow' (conv2D0.cpp:22:13) in function 'conv2D0': changing partial unrolling into complete unrolling since the unrolling factor (=2) is no less than the loop trip count (=2).">
+        <args Factor="2" LoopLoc="conv2D0.cpp:22:13" LoopName="loop_orow" TripCount="2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="conv2D0.cpp:7:0" msg_body="Unrolling loop 'loop_orow' (conv2D0.cpp:22:13) in function 'conv2D0' completely with a factor of 2">
+        <args Factor="2" LoopLoc="conv2D0.cpp:22:13" LoopName="loop_orow"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-359" msg_severity="INFO" msg_loc="conv2D0.cpp:7:0" msg_body="Unrolling loop 'loop_ocol' (conv2D0.cpp:25:13) in function 'conv2D0': changing partial unrolling into complete unrolling since the unrolling factor (=2) is no less than the loop trip count (=2).">
+        <args Factor="2" LoopLoc="conv2D0.cpp:25:13" LoopName="loop_ocol" TripCount="2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="conv2D0.cpp:7:0" msg_body="Unrolling loop 'loop_ocol' (conv2D0.cpp:25:13) in function 'conv2D0' completely with a factor of 2">
+        <args Factor="2" LoopLoc="conv2D0.cpp:25:13" LoopName="loop_ocol"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-359" msg_severity="INFO" msg_loc="conv2D0.cpp:7:0" msg_body="Unrolling loop 'loop_k1' (conv2D0.cpp:29:13) in function 'conv2D0': changing partial unrolling into complete unrolling since the unrolling factor (=3) is no less than the loop trip count (=3).">
+        <args Factor="3" LoopLoc="conv2D0.cpp:29:13" LoopName="loop_k1" TripCount="3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="conv2D0.cpp:7:0" msg_body="Unrolling loop 'loop_k1' (conv2D0.cpp:29:13) in function 'conv2D0' completely with a factor of 3">
+        <args Factor="3" LoopLoc="conv2D0.cpp:29:13" LoopName="loop_k1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-359" msg_severity="INFO" msg_loc="conv2D0.cpp:7:0" msg_body="Unrolling loop 'loop_k2' (conv2D0.cpp:32:11) in function 'conv2D0': changing partial unrolling into complete unrolling since the unrolling factor (=3) is no less than the loop trip count (=3).">
+        <args Factor="3" LoopLoc="conv2D0.cpp:32:11" LoopName="loop_k2" TripCount="3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="conv2D0.cpp:7:0" msg_body="Unrolling loop 'loop_k2' (conv2D0.cpp:32:11) in function 'conv2D0' completely with a factor of 3">
+        <args Factor="3" LoopLoc="conv2D0.cpp:32:11" LoopName="loop_k2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-359" msg_severity="INFO" msg_loc="conv2D0.cpp:7:0" msg_body="Unrolling loop 'readweights' (conv2D0.cpp:17:15) in function 'conv2D0': changing partial unrolling into complete unrolling since the unrolling factor (=9) is no less than the loop trip count (=9).">
+        <args Factor="9" LoopLoc="conv2D0.cpp:17:15" LoopName="readweights" TripCount="9"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="conv2D0.cpp:7:0" msg_body="Unrolling loop 'readweights' (conv2D0.cpp:17:15) in function 'conv2D0' completely with a factor of 9">
+        <args Factor="9" LoopLoc="conv2D0.cpp:17:15" LoopName="readweights"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-359" msg_severity="INFO" msg_loc="conv2D0.cpp:7:0" msg_body="Unrolling loop 'readImg' (conv2D0.cpp:13:11) in function 'conv2D0': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16).">
+        <args Factor="16" LoopLoc="conv2D0.cpp:13:11" LoopName="readImg" TripCount="16"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="conv2D0.cpp:7:0" msg_body="Unrolling loop 'readImg' (conv2D0.cpp:13:11) in function 'conv2D0' completely with a factor of 16">
+        <args Factor="16" LoopLoc="conv2D0.cpp:13:11" LoopName="readImg"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue Mar 19 12:24:10 2024
+# Process ID: 1920
+# Current directory: D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution1/sim/verilog
+# Command line: vivado.exe -source open_wave.tcl
+# Log file: D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution1/sim/verilog/vivado.log
+# Journal file: D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution1/sim/verilog\vivado.jou
+# Running On: DariaIsPeach, OS: Windows, CPU Frequency: 1992 MHz, CPU Physical cores: 4, Host memory: 12756 MB
+#-----------------------------------------------------------
+start_gui
+ssource open_wave.tclopen_wave_config D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution1/sim/verilog/functionDF.wcfg
+cclose_sim

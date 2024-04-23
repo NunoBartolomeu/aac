@@ -1,0 +1,45 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/Cadeiras/AAC/labs/Project1/Project1/pipeline/csynth.tcl:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="conv2D0" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=conv2D0" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/Cadeiras/AAC/labs/Project1/Project1/pipeline/directives.tcl:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="conv2D0" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=conv2D0" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv2D0.cpp:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2D0" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv2D0.cpp:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2D0" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="conv2D0.cpp:22:13" msg_body="Loop 'loop_k1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="loop_k1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="conv2D0.cpp:23:14" msg_body="Loop 'loop_k2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="loop_k2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="conv2D0.cpp:7:0" msg_body="Unrolling loop 'loop_k1' (conv2D0.cpp:22:13) in function 'conv2D0' completely with a factor of 3">
+        <args Factor="3" LoopLoc="conv2D0.cpp:22:13" LoopName="loop_k1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="conv2D0.cpp:7:0" msg_body="Unrolling loop 'loop_k2' (conv2D0.cpp:23:14) in function 'conv2D0' completely with a factor of 3">
+        <args Factor="3" LoopLoc="conv2D0.cpp:23:14" LoopName="loop_k2"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="conv2D0.cpp:8:16" msg_body="array_partition dim=1 type=complete  variable=img_inT 1 conv2D0 conv2D0.cpp:8:16 img_inT">
+        <args PragmaFunction="conv2D0" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=img_inT" PragmaType="array_partition" VarName="img_inT" varLoc="conv2D0.cpp:8:16"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="conv2D0.cpp:8:16" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'img_inT' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="img_inT" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="conv2D0.cpp:10:14" msg_body="array_partition dim=1 type=complete  variable=weightsT 1 conv2D0 conv2D0.cpp:10:14 weightsT">
+        <args PragmaFunction="conv2D0" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=weightsT" PragmaType="array_partition" VarName="weightsT" varLoc="conv2D0.cpp:10:14"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="conv2D0.cpp:10:14" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'weightsT' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="weightsT" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="conv2D0.cpp:8:16" msg_body="Applying array_partition to 'img_inT': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="img_inT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="conv2D0.cpp:10:14" msg_body="Applying array_partition to 'weightsT': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="weightsT"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

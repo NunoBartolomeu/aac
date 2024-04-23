@@ -1,0 +1,5 @@
+<pragmas>
+<pragma file="../../../labs/Lab4/Lab4/matrixmul.cpp" line="10" pragmaType="pipeline" parentfunction="matrixmul" off="1" ii="0" rewind="0" style=""/>
+<pragma file="../../../labs/Lab4/Lab4/matrixmul.cpp" line="13" pragmaType="pipeline" parentfunction="matrixmul" off="1" ii="0" rewind="0" style=""/>
+<pragma file="../../../labs/Lab4/Lab4/matrixmul.cpp" line="17" pragmaType="pipeline" parentfunction="matrixmul" off="1" ii="0" rewind="0" style=""/>
+</pragmas>

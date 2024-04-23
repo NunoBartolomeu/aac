@@ -1,0 +1,520 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z010i-clg225-1L'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z010i-clg225-1L 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./Project1/pipeline_off/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name conv2D0 conv2D0 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.148 seconds; current allocated memory: 110.238 MB.
+INFO: [HLS 200-10] Analyzing design file 'conv2D0.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.243 seconds; current allocated memory: 112.062 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 122 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 91 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 78 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 74 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 138 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 276 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 175 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 180 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 198 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< loop_ocol> at conv2D0.cpp:20:14 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< writeImg> at conv2D0.cpp:33:12 
+INFO: [HLS 214-291] Loop 'loop_k1' is marked as complete unroll implied by the pipeline pragma (conv2D0.cpp:22:13)
+INFO: [HLS 214-291] Loop 'loop_k2' is marked as complete unroll implied by the pipeline pragma (conv2D0.cpp:23:14)
+INFO: [HLS 214-186] Unrolling loop 'loop_k1' (conv2D0.cpp:22:13) in function 'conv2D0' completely with a factor of 3 (conv2D0.cpp:7:0)
+INFO: [HLS 214-186] Unrolling loop 'loop_k2' (conv2D0.cpp:23:14) in function 'conv2D0' completely with a factor of 3 (conv2D0.cpp:7:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'img_inT' due to pipeline pragma (conv2D0.cpp:8:16)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'weightsT' due to pipeline pragma (conv2D0.cpp:10:14)
+INFO: [HLS 214-248] Applying array_partition to 'img_inT': Complete partitioning on dimension 1. (conv2D0.cpp:8:16)
+INFO: [HLS 214-248] Applying array_partition to 'weightsT': Complete partitioning on dimension 1. (conv2D0.cpp:10:14)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 8.93 seconds; current allocated memory: 114.359 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 114.359 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.064 seconds; current allocated memory: 119.539 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 120.945 MB.
+INFO: [XFORM 203-102] Automatically partitioning small array 'img_outT' (conv2D0.cpp:9) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'img_outT' (conv2D0.cpp:9) in dimension 1 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'conv2D0' (conv2D0.cpp:7:34)...15 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.169 seconds; current allocated memory: 143.039 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'loop_orow'(conv2D0.cpp:19:13) and 'loop_ocol'(conv2D0.cpp:20:14) in function 'conv2D0' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_orow' (conv2D0.cpp:19:13) in function 'conv2D0'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.127 seconds; current allocated memory: 155.855 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'conv2D0' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D0_Pipeline_loop_orow_loop_ocol' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln26_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln26_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln26_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln26_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln26) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'loop_orow_loop_ocol'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'loop_orow_loop_ocol'
+WARNING: [HLS 200-871] Estimated clock period (7.571 ns) exceeds the target (target clock period: 10.000 ns, clock uncertainty: 2.700 ns, effective delay budget: 7.300 ns).
+WARNING: [HLS 200-1016] The critical path in module 'conv2D0_Pipeline_loop_orow_loop_ocol' consists of the following:
+	'store' operation 0 bit ('orow_write_ln19', conv2D0.cpp:19) of constant 0 on local variable 'orow', conv2D0.cpp:19 [63]  (1.588 ns)
+	'load' operation 2 bit ('orow_load', conv2D0.cpp:19) on local variable 'orow', conv2D0.cpp:19 [73]  (0.000 ns)
+	'add' operation 2 bit ('add_ln19_1', conv2D0.cpp:19) [78]  (1.565 ns)
+	'select' operation 2 bit ('select_ln19_1', conv2D0.cpp:19) [79]  (0.993 ns)
+	'shl' operation 2 bit ('shl_ln29', conv2D0.cpp:29) [110]  (0.000 ns)
+	'sub' operation 2 bit ('sub_ln29', conv2D0.cpp:29) [111]  (1.565 ns)
+	blocking operation 1.86009 ns on control path)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.338 seconds; current allocated memory: 160.992 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.114 seconds; current allocated memory: 162.438 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D0_Pipeline_writeImg' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'writeImg'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'writeImg'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 162.895 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.065 seconds; current allocated memory: 163.047 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.153 seconds; current allocated memory: 164.273 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.086 seconds; current allocated memory: 164.430 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D0_Pipeline_loop_orow_loop_ocol' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D0_Pipeline_loop_orow_loop_ocol' pipeline 'loop_orow_loop_ocol' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_8s_8ns_8_4_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8s_8s_8_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_13_3_8_1_1': 9 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D0_Pipeline_loop_orow_loop_ocol'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.205 seconds; current allocated memory: 168.023 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D0_Pipeline_writeImg' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mux_4_2_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D0_Pipeline_writeImg'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.387 seconds; current allocated memory: 171.008 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D0/img_in' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D0/img_out' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D0/weights' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'conv2D0' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D0'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.164 seconds; current allocated memory: 172.250 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.732 seconds; current allocated memory: 177.801 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.797 seconds; current allocated memory: 183.391 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for conv2D0.
+INFO: [VLOG 209-307] Generating Verilog RTL for conv2D0.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 132.08 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 14.025 seconds; current allocated memory: 73.527 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z010i-clg225-1L'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z010i-clg225-1L 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./Project1/pipeline_off/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name conv2D0 conv2D0 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.157 seconds; current allocated memory: 109.848 MB.
+INFO: [HLS 200-10] Analyzing design file 'conv2D0.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.225 seconds; current allocated memory: 111.379 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 122 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 126 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 108 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 97 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 97 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 97 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 97 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 97 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 97 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 99 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 97 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 163 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 340 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 177 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 183 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 203 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-188] Unrolling loop 'readweights' (conv2D0.cpp:16:15) in function 'conv2D0' partially with a factor of 3 (conv2D0.cpp:7:0)
+INFO: [HLS 214-188] Unrolling loop 'readImg' (conv2D0.cpp:12:11) in function 'conv2D0' partially with a factor of 4 (conv2D0.cpp:7:0)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< loop_ocol> at conv2D0.cpp:22:14 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< writeImg> at conv2D0.cpp:35:12 
+INFO: [HLS 214-291] Loop 'loop_k1' is marked as complete unroll implied by the pipeline pragma (conv2D0.cpp:24:13)
+INFO: [HLS 214-291] Loop 'loop_k2' is marked as complete unroll implied by the pipeline pragma (conv2D0.cpp:25:14)
+INFO: [HLS 214-186] Unrolling loop 'loop_k1' (conv2D0.cpp:24:13) in function 'conv2D0' completely with a factor of 3 (conv2D0.cpp:7:0)
+INFO: [HLS 214-186] Unrolling loop 'loop_k2' (conv2D0.cpp:25:14) in function 'conv2D0' completely with a factor of 3 (conv2D0.cpp:7:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'img_inT' due to pipeline pragma (conv2D0.cpp:8:16)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'weightsT' due to pipeline pragma (conv2D0.cpp:10:14)
+INFO: [HLS 214-248] Applying array_partition to 'img_inT': Complete partitioning on dimension 1. (conv2D0.cpp:8:16)
+INFO: [HLS 214-248] Applying array_partition to 'weightsT': Complete partitioning on dimension 1. (conv2D0.cpp:10:14)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 9.017 seconds; current allocated memory: 113.984 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.004 seconds; current allocated memory: 113.984 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.053 seconds; current allocated memory: 119.379 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.038 seconds; current allocated memory: 120.816 MB.
+INFO: [XFORM 203-102] Automatically partitioning small array 'img_outT' (conv2D0.cpp:9) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'img_outT' (conv2D0.cpp:9) in dimension 1 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'conv2D0' (conv2D0.cpp:7:34)...15 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.137 seconds; current allocated memory: 142.812 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'loop_orow'(conv2D0.cpp:21:13) and 'loop_ocol'(conv2D0.cpp:22:14) in function 'conv2D0' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_orow' (conv2D0.cpp:21:13) in function 'conv2D0'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.121 seconds; current allocated memory: 155.395 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'conv2D0' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D0_Pipeline_loop_orow_loop_ocol' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'loop_orow_loop_ocol'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'loop_orow_loop_ocol'
+WARNING: [HLS 200-871] Estimated clock period (7.571 ns) exceeds the target (target clock period: 10.000 ns, clock uncertainty: 2.700 ns, effective delay budget: 7.300 ns).
+WARNING: [HLS 200-1016] The critical path in module 'conv2D0_Pipeline_loop_orow_loop_ocol' consists of the following:
+	'store' operation 0 bit ('orow_write_ln21', conv2D0.cpp:21) of constant 0 on local variable 'orow', conv2D0.cpp:21 [63]  (1.588 ns)
+	'load' operation 2 bit ('orow_load', conv2D0.cpp:21) on local variable 'orow', conv2D0.cpp:21 [73]  (0.000 ns)
+	'add' operation 2 bit ('add_ln21_1', conv2D0.cpp:21) [78]  (1.565 ns)
+	'select' operation 2 bit ('select_ln21_1', conv2D0.cpp:21) [79]  (0.993 ns)
+	'shl' operation 2 bit ('shl_ln31', conv2D0.cpp:31) [110]  (0.000 ns)
+	'sub' operation 2 bit ('sub_ln31', conv2D0.cpp:31) [111]  (1.565 ns)
+	blocking operation 1.86009 ns on control path)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.419 seconds; current allocated memory: 160.891 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.106 seconds; current allocated memory: 162.230 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D0_Pipeline_writeImg' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'writeImg'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'writeImg'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.135 seconds; current allocated memory: 162.586 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.066 seconds; current allocated memory: 162.703 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.124 seconds; current allocated memory: 163.891 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.092 seconds; current allocated memory: 164.188 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D0_Pipeline_loop_orow_loop_ocol' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D0_Pipeline_loop_orow_loop_ocol' pipeline 'loop_orow_loop_ocol' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_8s_8ns_8_4_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8s_8s_8_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_13_3_8_1_1': 9 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D0_Pipeline_loop_orow_loop_ocol'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.187 seconds; current allocated memory: 167.336 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D0_Pipeline_writeImg' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mux_4_2_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D0_Pipeline_writeImg'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.287 seconds; current allocated memory: 170.355 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D0/img_in' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D0/img_out' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D0/weights' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'conv2D0' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D0'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.165 seconds; current allocated memory: 171.914 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.791 seconds; current allocated memory: 177.723 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.915 seconds; current allocated memory: 183.375 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for conv2D0.
+INFO: [VLOG 209-307] Generating Verilog RTL for conv2D0.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 132.08 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 14.192 seconds; current allocated memory: 73.867 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z010i-clg225-1L'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z010i-clg225-1L 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./Project1/pipeline_off/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name conv2D0 conv2D0 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.157 seconds; current allocated memory: 109.945 MB.
+INFO: [HLS 200-10] Analyzing design file 'conv2D0.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.257 seconds; current allocated memory: 111.316 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 122 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 91 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 78 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 74 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 138 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 276 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 175 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 180 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 198 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< loop_ocol> at conv2D0.cpp:20:14 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< writeImg> at conv2D0.cpp:33:12 
+INFO: [HLS 214-291] Loop 'loop_k1' is marked as complete unroll implied by the pipeline pragma (conv2D0.cpp:22:13)
+INFO: [HLS 214-291] Loop 'loop_k2' is marked as complete unroll implied by the pipeline pragma (conv2D0.cpp:23:14)
+INFO: [HLS 214-186] Unrolling loop 'loop_k1' (conv2D0.cpp:22:13) in function 'conv2D0' completely with a factor of 3 (conv2D0.cpp:7:0)
+INFO: [HLS 214-186] Unrolling loop 'loop_k2' (conv2D0.cpp:23:14) in function 'conv2D0' completely with a factor of 3 (conv2D0.cpp:7:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'img_inT' due to pipeline pragma (conv2D0.cpp:8:16)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'weightsT' due to pipeline pragma (conv2D0.cpp:10:14)
+INFO: [HLS 214-248] Applying array_partition to 'img_inT': Complete partitioning on dimension 1. (conv2D0.cpp:8:16)
+INFO: [HLS 214-248] Applying array_partition to 'weightsT': Complete partitioning on dimension 1. (conv2D0.cpp:10:14)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 8.948 seconds; current allocated memory: 113.742 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.004 seconds; current allocated memory: 113.742 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.059 seconds; current allocated memory: 119.133 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.041 seconds; current allocated memory: 120.375 MB.
+INFO: [XFORM 203-102] Automatically partitioning small array 'img_outT' (conv2D0.cpp:9) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'img_outT' (conv2D0.cpp:9) in dimension 1 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'conv2D0' (conv2D0.cpp:7:34)...15 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.158 seconds; current allocated memory: 142.223 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'loop_orow'(conv2D0.cpp:19:13) and 'loop_ocol'(conv2D0.cpp:20:14) in function 'conv2D0' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_orow' (conv2D0.cpp:19:13) in function 'conv2D0'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.138 seconds; current allocated memory: 155.215 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'conv2D0' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D0_Pipeline_loop_orow_loop_ocol' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln26_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln26_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln26_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln26_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln26) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'loop_orow_loop_ocol'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'loop_orow_loop_ocol'
+WARNING: [HLS 200-871] Estimated clock period (7.571 ns) exceeds the target (target clock period: 10.000 ns, clock uncertainty: 2.700 ns, effective delay budget: 7.300 ns).
+WARNING: [HLS 200-1016] The critical path in module 'conv2D0_Pipeline_loop_orow_loop_ocol' consists of the following:
+	'store' operation 0 bit ('orow_write_ln19', conv2D0.cpp:19) of constant 0 on local variable 'orow', conv2D0.cpp:19 [63]  (1.588 ns)
+	'load' operation 2 bit ('orow_load', conv2D0.cpp:19) on local variable 'orow', conv2D0.cpp:19 [73]  (0.000 ns)
+	'add' operation 2 bit ('add_ln19_1', conv2D0.cpp:19) [78]  (1.565 ns)
+	'select' operation 2 bit ('select_ln19_1', conv2D0.cpp:19) [79]  (0.993 ns)
+	'shl' operation 2 bit ('shl_ln29', conv2D0.cpp:29) [110]  (0.000 ns)
+	'sub' operation 2 bit ('sub_ln29', conv2D0.cpp:29) [111]  (1.565 ns)
+	blocking operation 1.86009 ns on control path)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.361 seconds; current allocated memory: 160.465 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 161.910 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D0_Pipeline_writeImg' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'writeImg'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'writeImg'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.129 seconds; current allocated memory: 162.254 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.077 seconds; current allocated memory: 162.418 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.134 seconds; current allocated memory: 163.500 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.102 seconds; current allocated memory: 163.695 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D0_Pipeline_loop_orow_loop_ocol' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D0_Pipeline_loop_orow_loop_ocol' pipeline 'loop_orow_loop_ocol' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_8s_8ns_8_4_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8s_8s_8_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_13_3_8_1_1': 9 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D0_Pipeline_loop_orow_loop_ocol'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.214 seconds; current allocated memory: 167.414 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D0_Pipeline_writeImg' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mux_4_2_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D0_Pipeline_writeImg'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.315 seconds; current allocated memory: 170.578 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D0/img_in' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D0/img_out' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D0/weights' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'conv2D0' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D0'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 171.590 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.855 seconds; current allocated memory: 177.090 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.859 seconds; current allocated memory: 183.043 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for conv2D0.
+INFO: [VLOG 209-307] Generating Verilog RTL for conv2D0.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 132.08 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 14.321 seconds; current allocated memory: 73.422 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z010i-clg225-1L'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z010i-clg225-1L 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./Project1/pipeline_off/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name conv2D0 conv2D0 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.115 seconds; current allocated memory: 110.168 MB.
+INFO: [HLS 200-10] Analyzing design file 'conv2D0.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.932 seconds; current allocated memory: 111.660 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 122 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 91 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 78 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 74 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 78 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 100 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: D:/Cadeiras/AAC/labs/Project1/Project1/pipeline_off/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.814 seconds; current allocated memory: 113.402 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 113.402 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.182 seconds; current allocated memory: 118.535 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.032 seconds; current allocated memory: 119.910 MB.
+INFO: [XFORM 203-102] Automatically partitioning small array 'img_outT' (conv2D0.cpp:10) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'img_outT' (conv2D0.cpp:10) in dimension 1 completely.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.138 seconds; current allocated memory: 142.059 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.127 seconds; current allocated memory: 142.062 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'conv2D0' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=acc) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.188 seconds; current allocated memory: 142.062 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 142.742 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D0/img_in' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D0/img_out' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D0/weights' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'conv2D0' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_8s_8ns_8_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_4_2_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D0'.
+INFO: [RTMG 210-278] Implementing memory 'conv2D0_img_inT_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'conv2D0_weightsT_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.257 seconds; current allocated memory: 145.352 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.529 seconds; current allocated memory: 151.602 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.623 seconds; current allocated memory: 157.043 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for conv2D0.
+INFO: [VLOG 209-307] Generating Verilog RTL for conv2D0.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 215.33 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 11.084 seconds; current allocated memory: 47.039 MB.

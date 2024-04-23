@@ -1,0 +1,770 @@
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartially2FullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        writeImg
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:38:12'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
+  - Factor:          '4'
+  - String:          ') is no less than the loop trip count (='
+  - TripCount:       '4'
+  - String:          ').'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        writeImg
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:38:12'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartially2FullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_orow
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:20:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
+  - Factor:          '2'
+  - String:          ') is no less than the loop trip count (='
+  - TripCount:       '2'
+  - String:          ').'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_orow
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:20:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartially2FullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_ocol
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:22:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
+  - Factor:          '2'
+  - String:          ') is no less than the loop trip count (='
+  - TripCount:       '2'
+  - String:          ').'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_ocol
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:22:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartially2FullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k1
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:25:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
+  - Factor:          '3'
+  - String:          ') is no less than the loop trip count (='
+  - TripCount:       '3'
+  - String:          ').'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k1
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:25:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartially2FullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:27:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
+  - Factor:          '3'
+  - String:          ') is no less than the loop trip count (='
+  - TripCount:       '3'
+  - String:          ').'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:27:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartially2FullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:27:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
+  - Factor:          '3'
+  - String:          ') is no less than the loop trip count (='
+  - TripCount:       '3'
+  - String:          ').'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:27:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartially2FullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:27:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
+  - Factor:          '3'
+  - String:          ') is no less than the loop trip count (='
+  - TripCount:       '3'
+  - String:          ').'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:27:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartially2FullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k1
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:25:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
+  - Factor:          '3'
+  - String:          ') is no less than the loop trip count (='
+  - TripCount:       '3'
+  - String:          ').'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k1
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:25:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartially2FullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:27:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
+  - Factor:          '3'
+  - String:          ') is no less than the loop trip count (='
+  - TripCount:       '3'
+  - String:          ').'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:27:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartially2FullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:27:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
+  - Factor:          '3'
+  - String:          ') is no less than the loop trip count (='
+  - TripCount:       '3'
+  - String:          ').'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:27:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartially2FullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:27:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
+  - Factor:          '3'
+  - String:          ') is no less than the loop trip count (='
+  - TripCount:       '3'
+  - String:          ').'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:27:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartially2FullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_ocol
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:22:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
+  - Factor:          '2'
+  - String:          ') is no less than the loop trip count (='
+  - TripCount:       '2'
+  - String:          ').'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_ocol
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:22:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartially2FullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k1
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:25:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
+  - Factor:          '3'
+  - String:          ') is no less than the loop trip count (='
+  - TripCount:       '3'
+  - String:          ').'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k1
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:25:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartially2FullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:27:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
+  - Factor:          '3'
+  - String:          ') is no less than the loop trip count (='
+  - TripCount:       '3'
+  - String:          ').'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:27:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartially2FullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:27:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
+  - Factor:          '3'
+  - String:          ') is no less than the loop trip count (='
+  - TripCount:       '3'
+  - String:          ').'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:27:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartially2FullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:27:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
+  - Factor:          '3'
+  - String:          ') is no less than the loop trip count (='
+  - TripCount:       '3'
+  - String:          ').'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:27:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartially2FullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k1
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:25:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
+  - Factor:          '3'
+  - String:          ') is no less than the loop trip count (='
+  - TripCount:       '3'
+  - String:          ').'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k1
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:25:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartially2FullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:27:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
+  - Factor:          '3'
+  - String:          ') is no less than the loop trip count (='
+  - TripCount:       '3'
+  - String:          ').'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:27:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartially2FullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:27:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
+  - Factor:          '3'
+  - String:          ') is no less than the loop trip count (='
+  - TripCount:       '3'
+  - String:          ').'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:27:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartially2FullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:27:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
+  - Factor:          '3'
+  - String:          ') is no less than the loop trip count (='
+  - TripCount:       '3'
+  - String:          ').'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_k2
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:27:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartially2FullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        readweights
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:16:15'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
+  - Factor:          '9'
+  - String:          ') is no less than the loop trip count (='
+  - TripCount:       '9'
+  - String:          ').'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        readweights
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:16:15'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''' completely with a factor of '
+  - Factor:          '9'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartially2FullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        readImg
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:13:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
+  - Factor:          '16'
+  - String:          ') is no less than the loop trip count (='
+  - TripCount:       '16'
+  - String:          ').'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: conv2D0.cpp, Line: 7, Column: 0 }
+Function:        _Z7conv2D0PhPaS0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        readImg
+  - String:          ''' ('
+  - LoopLoc:         'conv2D0.cpp:13:11'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2D0
+  - String:          ''' completely with a factor of '
+  - Factor:          '16'
+...

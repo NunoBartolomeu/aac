@@ -1,0 +1,223 @@
+
+
+================================================================
+== Synthesis Summary Report of 'conv2D0'
+================================================================
++ General Information: 
+    * Date:           Thu Apr 11 22:13:03 2024
+    * Version:        2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:        Project1
+    * Solution:       partition_block_best_unroll_best (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z010i-clg225-1L
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------+------+------+---------+--------+----------+---------+------+----------+------+----------+----------+----------+-----+
+    |  Modules  | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |          |          |          |     |
+    |  & Loops  | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM |    DSP   |    FF    |    LUT   | URAM|
+    +-----------+------+------+---------+--------+----------+---------+------+----------+------+----------+----------+----------+-----+
+    |+ conv2D0  |     -|  1.03|        5|  50.000|         -|        6|     -|        no|     -|  20 (25%)|  38 (~0%)|  817 (4%)|    -|
+    +-----------+------+------+---------+--------+----------+---------+------+----------+------+----------+----------+----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* Other Ports
++-----------+---------+-----------+----------+
+| Port      | Mode    | Direction | Bitwidth |
++-----------+---------+-----------+----------+
+| img_in_0  | ap_none | in        | 8        |
+| img_in_1  | ap_none | in        | 8        |
+| img_in_10 | ap_none | in        | 8        |
+| img_in_11 | ap_none | in        | 8        |
+| img_in_12 | ap_none | in        | 8        |
+| img_in_13 | ap_none | in        | 8        |
+| img_in_14 | ap_none | in        | 8        |
+| img_in_15 | ap_none | in        | 8        |
+| img_in_2  | ap_none | in        | 8        |
+| img_in_3  | ap_none | in        | 8        |
+| img_in_4  | ap_none | in        | 8        |
+| img_in_5  | ap_none | in        | 8        |
+| img_in_6  | ap_none | in        | 8        |
+| img_in_7  | ap_none | in        | 8        |
+| img_in_8  | ap_none | in        | 8        |
+| img_in_9  | ap_none | in        | 8        |
+| img_out_0 | ap_vld  | out       | 8        |
+| img_out_1 | ap_vld  | out       | 8        |
+| img_out_2 | ap_vld  | out       | 8        |
+| img_out_3 | ap_vld  | out       | 8        |
+| weights_0 | ap_none | in        | 8        |
+| weights_1 | ap_none | in        | 8        |
+| weights_2 | ap_none | in        | 8        |
+| weights_3 | ap_none | in        | 8        |
+| weights_4 | ap_none | in        | 8        |
+| weights_5 | ap_none | in        | 8        |
+| weights_6 | ap_none | in        | 8        |
+| weights_7 | ap_none | in        | 8        |
+| weights_8 | ap_none | in        | 8        |
++-----------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------------+
+| Argument | Direction | Datatype       |
++----------+-----------+----------------+
+| img_in   | in        | unsigned char* |
+| img_out  | out       | signed char*   |
+| weights  | in        | signed char*   |
++----------+-----------+----------------+
+
+* SW-to-HW Mapping
++----------+------------------+---------+
+| Argument | HW Interface     | HW Type |
++----------+------------------+---------+
+| img_in   | img_in_0         | port    |
+| img_in   | img_in_1         | port    |
+| img_in   | img_in_2         | port    |
+| img_in   | img_in_3         | port    |
+| img_in   | img_in_4         | port    |
+| img_in   | img_in_5         | port    |
+| img_in   | img_in_6         | port    |
+| img_in   | img_in_7         | port    |
+| img_in   | img_in_8         | port    |
+| img_in   | img_in_9         | port    |
+| img_in   | img_in_10        | port    |
+| img_in   | img_in_11        | port    |
+| img_in   | img_in_12        | port    |
+| img_in   | img_in_13        | port    |
+| img_in   | img_in_14        | port    |
+| img_in   | img_in_15        | port    |
+| img_out  | img_out_0        | port    |
+| img_out  | img_out_0_ap_vld | port    |
+| img_out  | img_out_1        | port    |
+| img_out  | img_out_1_ap_vld | port    |
+| img_out  | img_out_2        | port    |
+| img_out  | img_out_2_ap_vld | port    |
+| img_out  | img_out_3        | port    |
+| img_out  | img_out_3_ap_vld | port    |
+| weights  | weights_0        | port    |
+| weights  | weights_1        | port    |
+| weights  | weights_2        | port    |
+| weights  | weights_3        | port    |
+| weights  | weights_4        | port    |
+| weights  | weights_5        | port    |
+| weights  | weights_6        | port    |
+| weights  | weights_7        | port    |
+| weights  | weights_8        | port    |
++----------+------------------+---------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------+-----+--------+-------------+-----+-----------+---------+
+| Name                             | DSP | Pragma | Variable    | Op  | Impl      | Latency |
++----------------------------------+-----+--------+-------------+-----+-----------+---------+
+| + conv2D0                        | 20  |        |             |     |           |         |
+|   mac_muladd_8s_8s_8ns_8_4_1_U29 | 1   |        | acc         | mul | dsp_slice | 3       |
+|   mul_8s_8s_8_1_1_U9             |     |        | mul_ln39    | mul | auto      | 0       |
+|   mul_8s_8s_8_1_1_U10            |     |        | mul_ln39_1  | mul | auto      | 0       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U30 | 1   |        | mul_ln39_2  | mul | dsp_slice | 3       |
+|   mul_8s_8s_8_1_1_U5             |     |        | mul_ln39_3  | mul | auto      | 0       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U21 | 1   |        | mul_ln39_4  | mul | dsp_slice | 3       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U22 | 1   |        | mul_ln39_5  | mul | dsp_slice | 3       |
+|   mul_8s_8s_8_1_1_U1             |     |        | mul_ln39_6  | mul | auto      | 0       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U17 | 1   |        | mul_ln39_7  | mul | dsp_slice | 3       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U29 | 1   |        | add_ln39    | add | dsp_slice | 3       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U30 | 1   |        | add_ln39_1  | add | dsp_slice | 3       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U21 | 1   |        | add_ln39_3  | add | dsp_slice | 3       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U17 | 1   |        | add_ln39_4  | add | dsp_slice | 3       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U22 | 1   |        | add_ln39_5  | add | dsp_slice | 3       |
+|   add_ln39_6_fu_307_p2           |     |        | add_ln39_6  | add | fabric    | 0       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U31 | 1   |        | acc_2       | mul | dsp_slice | 3       |
+|   mul_8s_8s_8_1_1_U11            |     |        | mul_ln39_9  | mul | auto      | 0       |
+|   mul_8s_8s_8_1_1_U12            |     |        | mul_ln39_10 | mul | auto      | 0       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U32 | 1   |        | mul_ln39_11 | mul | dsp_slice | 3       |
+|   mul_8s_8s_8_1_1_U6             |     |        | mul_ln39_12 | mul | auto      | 0       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U23 | 1   |        | mul_ln39_13 | mul | dsp_slice | 3       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U24 | 1   |        | mul_ln39_14 | mul | dsp_slice | 3       |
+|   mul_8s_8s_8_1_1_U2             |     |        | mul_ln39_15 | mul | auto      | 0       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U18 | 1   |        | mul_ln39_16 | mul | dsp_slice | 3       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U31 | 1   |        | add_ln39_8  | add | dsp_slice | 3       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U32 | 1   |        | add_ln39_9  | add | dsp_slice | 3       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U23 | 1   |        | add_ln39_11 | add | dsp_slice | 3       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U18 | 1   |        | add_ln39_12 | add | dsp_slice | 3       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U24 | 1   |        | add_ln39_13 | add | dsp_slice | 3       |
+|   add_ln39_14_fu_323_p2          |     |        | add_ln39_14 | add | fabric    | 0       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U33 | 1   |        | acc_4       | mul | dsp_slice | 3       |
+|   mul_8s_8s_8_1_1_U13            |     |        | mul_ln39_18 | mul | auto      | 0       |
+|   mul_8s_8s_8_1_1_U14            |     |        | mul_ln39_19 | mul | auto      | 0       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U34 | 1   |        | mul_ln39_20 | mul | dsp_slice | 3       |
+|   mul_8s_8s_8_1_1_U7             |     |        | mul_ln39_21 | mul | auto      | 0       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U25 | 1   |        | mul_ln39_22 | mul | dsp_slice | 3       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U26 | 1   |        | mul_ln39_23 | mul | dsp_slice | 3       |
+|   mul_8s_8s_8_1_1_U3             |     |        | mul_ln39_24 | mul | auto      | 0       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U19 | 1   |        | mul_ln39_25 | mul | dsp_slice | 3       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U33 | 1   |        | add_ln39_16 | add | dsp_slice | 3       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U34 | 1   |        | add_ln39_17 | add | dsp_slice | 3       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U25 | 1   |        | add_ln39_19 | add | dsp_slice | 3       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U19 | 1   |        | add_ln39_20 | add | dsp_slice | 3       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U26 | 1   |        | add_ln39_21 | add | dsp_slice | 3       |
+|   add_ln39_22_fu_337_p2          |     |        | add_ln39_22 | add | fabric    | 0       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U35 | 1   |        | acc_6       | mul | dsp_slice | 3       |
+|   mul_8s_8s_8_1_1_U15            |     |        | mul_ln39_27 | mul | auto      | 0       |
+|   mul_8s_8s_8_1_1_U16            |     |        | mul_ln39_28 | mul | auto      | 0       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U36 | 1   |        | mul_ln39_29 | mul | dsp_slice | 3       |
+|   mul_8s_8s_8_1_1_U8             |     |        | mul_ln39_30 | mul | auto      | 0       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U27 | 1   |        | mul_ln39_31 | mul | dsp_slice | 3       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U28 | 1   |        | mul_ln39_32 | mul | dsp_slice | 3       |
+|   mul_8s_8s_8_1_1_U4             |     |        | mul_ln39_33 | mul | auto      | 0       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U20 | 1   |        | mul_ln39_34 | mul | dsp_slice | 3       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U35 | 1   |        | add_ln39_24 | add | dsp_slice | 3       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U36 | 1   |        | add_ln39_25 | add | dsp_slice | 3       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U27 | 1   |        | add_ln39_27 | add | dsp_slice | 3       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U20 | 1   |        | add_ln39_28 | add | dsp_slice | 3       |
+|   mac_muladd_8s_8s_8ns_8_4_1_U28 | 1   |        | add_ln39_29 | add | dsp_slice | 3       |
+|   add_ln39_30_fu_351_p2          |     |        | add_ln39_30 | add | fabric    | 0       |
++----------------------------------+-----+--------+-------------+-----+-----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+---------------------------------+-------------------------------------+
+| Type            | Options                         | Location                            |
++-----------------+---------------------------------+-------------------------------------+
+| array_partition | variable=img_in type=complete   | conv2D0.cpp:9 in conv2d0, img_in    |
+| array_partition | variable=img_out type=complete  | conv2D0.cpp:10 in conv2d0, img_out  |
+| array_partition | variable=weights type=complete  | conv2D0.cpp:11 in conv2d0, weights  |
+| array_partition | variable=img_inT type=complete  | conv2D0.cpp:17 in conv2d0, img_inT  |
+| array_partition | variable=img_outT type=complete | conv2D0.cpp:18 in conv2d0, img_outT |
+| array_partition | variable=weightsT type=complete | conv2D0.cpp:19 in conv2d0, weightsT |
+| unroll          | factor=16                       | conv2D0.cpp:22 in conv2d0           |
+| unroll          | factor=9                        | conv2D0.cpp:25 in conv2d0           |
+| unroll          | factor=2                        | conv2D0.cpp:29 in conv2d0           |
+| unroll          | factor=2                        | conv2D0.cpp:31 in conv2d0           |
+| unroll          | factor=3                        | conv2D0.cpp:34 in conv2d0           |
+| unroll          | factor=3                        | conv2D0.cpp:36 in conv2d0           |
+| unroll          | factor=4                        | conv2D0.cpp:47 in conv2d0           |
++-----------------+---------------------------------+-------------------------------------+
+
+

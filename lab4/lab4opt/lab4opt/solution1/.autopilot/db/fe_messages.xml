@@ -1,0 +1,15 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5559" msg_severity="WARNING" msg_loc="../../../labs/Lab4/Lab4/functionDF.cpp:45:9" msg_body="missing argument for 'variable'">
+        <args ClangWarningOption="invalid-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/Cadeiras/AAC/aac/lab4/lab4opt/lab4opt/solution1/csynth.tcl:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="functionDF" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=functionDF" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../../labs/Lab4/Lab4/functionDF.cpp:45:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="functionDF" ARG_PragmaIsValid="0" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../../labs/Lab4/Lab4/functionDF.cpp:46:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="functionDF" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+
