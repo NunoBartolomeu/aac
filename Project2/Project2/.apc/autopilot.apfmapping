@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="conv2D0.cpp" path="D:\Cadeiras\AAC\labs\Project2\conv2D0.cpp"/>
+    <originFiles name="image_sizes.h" path="D:\Cadeiras\AAC\labs\Project2\image_sizes.h"/>
+  </source>
+  <testbench>
+    <originFiles name="tb_conv2D.cpp" path="D:\Cadeiras\AAC\labs\Project2\tb_conv2D.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
